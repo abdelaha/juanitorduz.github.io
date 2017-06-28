@@ -28,8 +28,6 @@ MARKUP = ('md', 'Rmd', 'rmd',)
 EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8') if os.path.exists('_nb_header.html') else None
 
 
-
-
 NOTEBOOK_DIR = 'notebooks'
 
 # Blogroll
@@ -47,7 +45,8 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-THEME="themes/pelican-alchemy/alchemy"
+#THEME="themes/pelican-alchemy/alchemy"
+THEME="themes/pelican-elegant"
 
 PLUGIN_PATHS=['pelican-plugins','plugins']
 PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal']
