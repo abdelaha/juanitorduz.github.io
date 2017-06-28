@@ -6,7 +6,7 @@ I am a math PhD student at [Humboldt Universität zu Berlin](https://www.mathema
 
 My research interests are differential geometry, topology and geometric analysis, in particular variants of the [Atiyah-Singer Index Theorem](https://en.wikipedia.org/wiki/Atiyah–Singer_index_theorem) for singular spaces. Currently I'm more interested around topics in data analysis, statistics and machine learning.
 
-# Work Experience
+### Work Experience
 
 - 01/01/2017-30/06/2017 **Trainee - Data Analyst**, [GoEuro](https://www.goeuro.com), Berlin, Germany.
 
@@ -26,7 +26,7 @@ My research interests are differential geometry, topology and geometric analysis
 
 - 06/2007-08/2007 **Camp Counselor**, [Skylake Yosemite Camp](http://www.skylake.com), Wishon, CA 93669, USA.
 
-# Education
+### Education
 
 - since 07/2014 **PhD candidate in Mathematics**, [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie), Berlin, Germany.
 Advisor: [Prof. Jochen Brüning](https://www2.mathematik.hu-berlin.de/~bruening/)
@@ -38,16 +38,16 @@ Title of the Thesis: Induced Dirac-Schrödinger on quotients of semi-free circle
 
 - 2005-2011 **B.Sc. Physics (Cum Laude)**, [Universidad de los Andes](https://matematicas.uniandes.edu.co), Bogotá, Colombia.
 
-# Languages 
+### Languages 
 
 - Spanish: Native proficiency.
 - English: Full professional proficiency.
 - German: Professional working proficiency.
 
-# Hobbies
+### Hobbies
 
 - Sports, music and [photography](https://www.flickr.com/photos/143384299@N04/). 
 
-# Contact 
+### Contact 
 
 [Here](https://www.linkedin.com/in/juanitorduz) is my LinkedIn page. 
