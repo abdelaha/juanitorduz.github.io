@@ -972,14 +972,6 @@ h6:hover .anchor-link {
 
 .ansi-bold { font-weight: bold; }
 &lt;/style&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Plebicito-Colombia-02.10.2016"&gt;Plebicito Colombia 02.10.2016&lt;a class="anchor-link" href="#Plebicito-Colombia-02.10.2016"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
@@ -1060,7 +1052,7 @@ It contains two columns:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[6]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[4]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
@@ -1087,7 +1079,7 @@ It contains two columns:&lt;/p&gt;
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[6]:&lt;/div&gt;
+&lt;div class="prompt output_prompt"&gt;Out[4]:&lt;/div&gt;
 
 
 
@@ -1290,6 +1282,71 @@ It contains two columns:&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[5]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;departments&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;      Department                                 path
+0       AMAZONAS  ../99PL/DPL60ZZZZZZZZZZZZZZZ_L1.htm
+1      ANTIOQUIA  ../99PL/DPL01ZZZZZZZZZZZZZZZ_L1.htm
+2         ARAUCA  ../99PL/DPL40ZZZZZZZZZZZZZZZ_L1.htm
+3      ATLANTICO  ../99PL/DPL03ZZZZZZZZZZZZZZZ_L1.htm
+4    BOGOTA D.C.  ../99PL/DPL16ZZZZZZZZZZZZZZZ_L1.htm
+5        BOLIVAR  ../99PL/DPL05ZZZZZZZZZZZZZZZ_L1.htm
+6         BOYACA  ../99PL/DPL07ZZZZZZZZZZZZZZZ_L1.htm
+7         CALDAS  ../99PL/DPL09ZZZZZZZZZZZZZZZ_L1.htm
+8        CAQUETA  ../99PL/DPL44ZZZZZZZZZZZZZZZ_L1.htm
+9       CASANARE  ../99PL/DPL46ZZZZZZZZZZZZZZZ_L1.htm
+10         CAUCA  ../99PL/DPL11ZZZZZZZZZZZZZZZ_L1.htm
+11         CESAR  ../99PL/DPL12ZZZZZZZZZZZZZZZ_L1.htm
+12         CHOCO  ../99PL/DPL17ZZZZZZZZZZZZZZZ_L1.htm
+13    CONSULADOS  ../99PL/DPL88ZZZZZZZZZZZZZZZ_L1.htm
+14       CORDOBA  ../99PL/DPL13ZZZZZZZZZZZZZZZ_L1.htm
+15  CUNDINAMARCA  ../99PL/DPL15ZZZZZZZZZZZZZZZ_L1.htm
+16       GUAINIA  ../99PL/DPL50ZZZZZZZZZZZZZZZ_L1.htm
+17      GUAVIARE  ../99PL/DPL54ZZZZZZZZZZZZZZZ_L1.htm
+18         HUILA  ../99PL/DPL19ZZZZZZZZZZZZZZZ_L1.htm
+19    LA GUAJIRA  ../99PL/DPL48ZZZZZZZZZZZZZZZ_L1.htm
+20     MAGDALENA  ../99PL/DPL21ZZZZZZZZZZZZZZZ_L1.htm
+21          META  ../99PL/DPL52ZZZZZZZZZZZZZZZ_L1.htm
+22       NARIÃO  ../99PL/DPL23ZZZZZZZZZZZZZZZ_L1.htm
+23  NORTE DE SAN  ../99PL/DPL25ZZZZZZZZZZZZZZZ_L1.htm
+24      PUTUMAYO  ../99PL/DPL64ZZZZZZZZZZZZZZZ_L1.htm
+25       QUINDIO  ../99PL/DPL26ZZZZZZZZZZZZZZZ_L1.htm
+26     RISARALDA  ../99PL/DPL24ZZZZZZZZZZZZZZZ_L1.htm
+27    SAN ANDRES  ../99PL/DPL56ZZZZZZZZZZZZZZZ_L1.htm
+28     SANTANDER  ../99PL/DPL27ZZZZZZZZZZZZZZZ_L1.htm
+29         SUCRE  ../99PL/DPL28ZZZZZZZZZZZZZZZ_L1.htm
+30        TOLIMA  ../99PL/DPL29ZZZZZZZZZZZZZZZ_L1.htm
+31         VALLE  ../99PL/DPL31ZZZZZZZZZZZZZZZ_L1.htm
+32        VAUPES  ../99PL/DPL68ZZZZZZZZZZZZZZZ_L1.htm
+33       VICHADA  ../99PL/DPL72ZZZZZZZZZZZZZZZ_L1.htm
+&lt;/pre&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
