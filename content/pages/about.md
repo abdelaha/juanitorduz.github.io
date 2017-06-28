@@ -20,7 +20,7 @@ My research interests are differential geometry, topology and geometric analysis
 
 *Courses: Linear Algebra, Basic Physics II, Riemannian Geometry.*
 
-# Volunteering Activities
+### Volunteering Activities
 
 - 03/2011-08/2011 **Mathematics Teacher**, [ColombiaCrece](http://www.colombiacrece.org/#educacion-solidaria), Bogotá, Colombia. 
 
