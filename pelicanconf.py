@@ -22,19 +22,15 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 
-# Tell Pelican to change the path to 'static/custom.css' in the output dir
-EXTRA_PATH_METADATA = {
-    'extra/custom.css': {'path': 'static/custom.css'}
-}
-
-MARKUP = ('md', 'Rmd', 'rmd')
+MARKUP = ('md', 'Rmd', 'rmd',)
 
 
-# For IPython Notebooks
-EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
+EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8') if os.path.exists('_nb_header.html') else None
+
+
+
+
 NOTEBOOK_DIR = 'notebooks'
-
-CUSTOM_CSS = 'static/custom.css'
 
 # Blogroll
 LINKS = (
@@ -54,11 +50,12 @@ DEFAULT_PAGINATION = 10
 THEME="themes/pelican-alchemy/alchemy"
 
 PLUGIN_PATHS=['pelican-plugins','plugins']
-PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
-           'liquid_tags.include_code', 'liquid_tags.notebook',
-           'liquid_tags.literal', 'ipynb.liquid']
+PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal']
 
 STATIC=['notebooks']
+
+DELETE_OUTPUT_DIRECTORY = False
+LOAD_CONTENT_CACHE = False
 
 
 

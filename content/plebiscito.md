@@ -11,5 +11,4 @@ Summary: Plebiscito Colombia
 # Hola
 
 
-
-{% notebook notebooks/plebiscito.ipynb %}
+{% notebook plebiscito.ipynb %}
