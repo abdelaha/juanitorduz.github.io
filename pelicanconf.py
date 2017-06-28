@@ -41,10 +41,19 @@ PLUGINS=['liquid_tags.notebook', 'ipynb.liquid',]
 
 STATIC=['notebooks']
 
-#EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
+EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
 
 DISQUS_SITENAME = "juanitorduz"
 
-MARKUP = ('md', )
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.toc': {},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
+
 
 
