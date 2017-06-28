@@ -45,8 +45,8 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-#THEME="themes/pelican-alchemy/alchemy"
-THEME="themes/pelican-elegant"
+THEME="themes/pelican-alchemy/alchemy"
+#THEME="themes/pelican-elegant"
 
 PLUGIN_PATHS=['pelican-plugins','plugins']
 PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal']
