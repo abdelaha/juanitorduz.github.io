@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Juan Camilo Orduz'
-SITENAME = u'Juan Camilo Orduz'
+AUTHOR = 'Juan Camilo Orduz'
+SITENAME = 'Juan Camilo Orduz'
 SITEURL = 'http://juanitorduz.github.io'
 
 PATH = 'content'
@@ -34,14 +34,14 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-THEME="themes/pelican-elegant"
+THEME="themes/blue-penguin"
 
 PLUGIN_PATHS=['pelican-plugins','plugins']
 PLUGINS=['liquid_tags.notebook', 'ipynb.liquid',]
 
 STATIC=['notebooks']
 
-#EXTRA_HEADER = open('_nb_header.html').read()
+#EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
 
 DISQUS_SITENAME = "juanitorduz"
 

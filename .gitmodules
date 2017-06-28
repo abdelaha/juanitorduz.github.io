@@ -4,3 +4,6 @@
 [submodule "pelican-plugins"]
 	path = pelican-plugins
 	url = https://github.com/getpelican/pelican-plugins.git
+[submodule "themes/blue-penguin"]
+	path = themes/blue-penguin
+	url = https://github.com/jody-frankowski/blue-penguin.git
