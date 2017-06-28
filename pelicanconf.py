@@ -31,7 +31,7 @@ MARKUP = ('md', 'Rmd', 'rmd')
 
 
 # For IPython Notebooks
-#EXTRA_HEADER = open('_nb_header.html').read()
+EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
 NOTEBOOK_DIR = 'notebooks'
 
 CUSTOM_CSS = 'static/custom.css'
@@ -51,7 +51,7 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-THEME="themes/pelican-elegant"
+THEME="themes/pelican-alchemy/alchemy"
 
 PLUGIN_PATHS=['pelican-plugins','plugins']
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
