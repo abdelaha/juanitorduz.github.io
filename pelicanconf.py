@@ -10,7 +10,7 @@ PATH = 'content'
 
 TIMEZONE = 'Europe/Berlin'
 
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -34,7 +34,7 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-THEME="themes/blue-penguin"
+THEME="themes/pelican-elegant"
 
 PLUGIN_PATHS=['pelican-plugins','plugins']
 PLUGINS=['liquid_tags.notebook', 'ipynb.liquid',]
@@ -44,5 +44,7 @@ STATIC=['notebooks']
 #EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
 
 DISQUS_SITENAME = "juanitorduz"
+
+MARKUP = ('md', )
 
 
