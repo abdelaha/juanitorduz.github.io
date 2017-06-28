@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+import os
+
 AUTHOR = 'Juan Camilo Orduz'
 SITENAME = 'Juan Camilo Orduz'
 SITEURL = 'http://juanitorduz.github.io'
@@ -34,26 +36,14 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-THEME="themes/pelican-elegant"
+THEME="themes/pelican-bootstrap3"
 
 PLUGIN_PATHS=['pelican-plugins','plugins']
-PLUGINS=['liquid_tags.notebook', 'ipynb.liquid',]
+PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
+           'liquid_tags.include_code', 'liquid_tags.notebook',
+           'liquid_tags.literal', 'ipynb.liquid']
 
 STATIC=['notebooks']
-
-EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
-
-DISQUS_SITENAME = "juanitorduz"
-
-MARKDOWN = {
-    'extension_configs': {
-        'markdown.extensions.codehilite': {'css_class': 'highlight'},
-        'markdown.extensions.extra': {},
-        'markdown.extensions.toc': {},
-        'markdown.extensions.meta': {},
-    },
-    'output_format': 'html5',
-}
 
 
 
