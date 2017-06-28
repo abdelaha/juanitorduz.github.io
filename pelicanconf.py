@@ -41,7 +41,7 @@ PLUGINS=['liquid_tags.notebook', 'ipynb.liquid',]
 
 STATIC=['notebooks']
 
-EXTRA_HEADER = open('_nb_header.html').read()
+#EXTRA_HEADER = open('_nb_header.html').read()
 
 DISQUS_SITENAME = "juanitorduz"
 
