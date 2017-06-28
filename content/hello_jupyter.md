@@ -1,10 +1,10 @@
-Title: Hello Pelican with Jupyter!
-Date: 2016-04-03 0:54
-Category: Pelican
-Tags: pelican, python, jupyter
-slug:hello-jupyter
+Title: Plebiscito Colombia (October 2nd)
+Date: 2017-06-28
+Category: Python
+Tags: python, jupyter
+slug: plebiscito
 Authors: Foo Bar
-Summary: This blog post was written in a Jupyter notebook. It can be included in a post using a liquid tag.
+Summary: Plebiscito Colombia
 
 # Hola
 
