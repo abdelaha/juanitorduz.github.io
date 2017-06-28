@@ -21,6 +21,21 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+
+# Tell Pelican to change the path to 'static/custom.css' in the output dir
+EXTRA_PATH_METADATA = {
+    'extra/custom.css': {'path': 'static/custom.css'}
+}
+
+MARKUP = ('md', 'Rmd', 'rmd')
+
+
+# For IPython Notebooks
+#EXTRA_HEADER = open('_nb_header.html').read()
+NOTEBOOK_DIR = 'notebooks'
+
+CUSTOM_CSS = 'static/custom.css'
+
 # Blogroll
 LINKS = (
     ('LinkedIn', 'https://www.linkedin.com/in/juanitorduz'),
@@ -36,7 +51,7 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-THEME="themes/pelican-bootstrap3"
+THEME="themes/pelican-elegant"
 
 PLUGIN_PATHS=['pelican-plugins','plugins']
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
