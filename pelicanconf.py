@@ -20,10 +20,10 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = (
+    ('LinkedIn', 'https://www.linkedin.com/in/juanitorduz'),
+    #('You can modify those links in your config file', '#'),
+    )
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
@@ -43,5 +43,6 @@ STATIC=['notebooks']
 
 EXTRA_HEADER = open('_nb_header.html').read()
 
+DISQUS_SITENAME = "juanitorduz"
 
 
