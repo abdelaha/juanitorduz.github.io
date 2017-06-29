@@ -29,8 +29,10 @@ My research interests are differential geometry, topology and geometric analysis
 ### Education
 
 - since 07/2014 **PhD candidate in Mathematics**, [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie), Berlin, Germany.
-Advisor: [Prof. Jochen Brüning](https://www2.mathematik.hu-berlin.de/~bruening/)
-Title of the Thesis: Induced Dirac-Schrödinger on quotients of semi-free circle actions.
+
+*Advisor:* [Prof. Jochen Brüning](https://www2.mathematik.hu-berlin.de/~bruening/)
+
+*Title of the Thesis:* Induced Dirac-Schrödinger on quotients of semi-free circle actions.
 
 - 2011-2014 **M.Sc. Mathematics**, [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie), Berlin, Germany.
 
@@ -54,7 +56,7 @@ Title of the Thesis: Induced Dirac-Schrödinger on quotients of semi-free circle
 - [Applied Plotting, Charting & Data Representation in Python](https://www.coursera.org/account/accomplishments/certificate/9KXJ898KD9D6) (Coursera)
 *Tools:* pyplot, matplotlib and seaborn
 
-- [{Applied Machine Learning in Python](https://www.coursera.org/account/accomplishments/certificate/HW68UVKPCS45) (Coursera)
+- [Applied Machine Learning in Python](https://www.coursera.org/account/accomplishments/certificate/HW68UVKPCS45) (Coursera)
 *Tools:* scikit-learn
 
 - [Machine Learning](https://www.coursera.org/account/accomplishments/certificate/R9HMKKTMYERD)(Coursera)
@@ -95,11 +97,11 @@ Title of the Thesis: Induced Dirac-Schrödinger on quotients of semi-free circle
 
 ### Selected Talks and Events
 
-- 07-2017 [Workshop on Loop Spaces, Supersymmetry and Index Theory](http://www.math.nus.edu.sg/~mathanf/LSI/Loop%20space%20and%20supersymmetry.html), Chern Institute of Mathematics, Tianjin, China.
+- 07/2017 [Workshop on Loop Spaces, Supersymmetry and Index Theory](http://www.math.nus.edu.sg/~mathanf/LSI/Loop%20space%20and%20supersymmetry.html), Chern Institute of Mathematics, Tianjin, China.
 
-- 07-2017 [PyData Berlin](https://pydata.org/berlin2017/), Hochschule für Technik und Wirtschaft, Berlin, Germany.
+- 07/2017 [PyData Berlin](https://pydata.org/berlin2017/), Hochschule für Technik und Wirtschaft, Berlin, Germany.
 
-- 08-2016 [Focus Program on Topology, Stratified Spaces and Particle Physics]{\href{http://www.fields.utoronto.ca/activities/16-17/stratifiedspaces}, The Fields Institute for Research in Mathematical Sciences, Toronto, Canada.
+- 08/2016 [Focus Program on Topology, Stratified Spaces and Particle Physics](http://www.fields.utoronto.ca/activities/16-17/stratifiedspaces), The Fields Institute for Research in Mathematical Sciences, Toronto, Canada.
 
 - 07/2016 [Contributed Talk: Induced Dirac-Schrödinger operators on quotients of semi-free circle actions](http://www.7ecm.de/download/7ECM_Scientific\%20Programm.pdf), [7th European Congress of Mathematics](\href{http://www.7ecm.de/home.html), Berlin, Germany. 
 
