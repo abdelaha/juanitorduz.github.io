@@ -11838,6 +11838,7 @@ jQuery(document).ready(function($) {
           <h1 class="title"><a href="/">Juan Camilo Orduz</a></h1>
           <ul class="list-inline">
             <li class="list-inline-item"><a href="https://www.linkedin.com/in/juanitorduz" target="_blank">LinkedIn</a></li>
+            <li class="list-inline-item"><a href="https://github.com/juanitorduz" target="_blank">GitHub</a></li>
             <li class="list-inline-item text-muted">|</li>
             <li class="list-inline-item"><a href="/pages/about.html">About</a></li>
             <li class=" list-inline-item text-muted">|</li>
@@ -11875,7 +11876,7 @@ jQuery(document).ready(function($) {
   <div class="content">
     <p>The objective of this post is to explore <a href="http://docs.mathjax.org/en/latest/index.html">MathJax</a>, a JavaScript display engine for LaTeX. Being my first post writen with this tool, I want to present a short but fun example: I will give a description of the explicit computation of the <a href="https://en.wikipedia.org/wiki/Dirac_operator">spin-Dirac</a> operator (of the unique complex spinor bundle!) on the 2-sphere \(S^2\) equipped with the standar round metric. A more detailed treatment can be found in my expository <a href="https://arxiv.org">paper</a>.</p>
 <h2>The Levi-Civita connection</h2>
-<p>Let us consider a 2-sphere of radius <span class="math">\((r&gt;0)\)</span></p>
+<p>Let us consider a 2-sphere of radius <span class="math">\(r&gt;0\)</span>,</p>
 <div class="math">\begin{equation*}
 S^{2}(r):= \{(x_1,x_2,x_3) \: | \: x_1^2+x_2^2+x_3^2=r^{2}\}\subset\mathbb{R}^3
 \end{equation*}</div>
@@ -11951,11 +11952,9 @@ de^2+\omega_{21}\wedge e^1=\frac{\cot\theta}{r}e^1\wedge e^2+\frac{\cot\theta}{r
 \end{align*}</div>
 <h3>The Gauß-Bonnet Theorem</h3>
 <p>If we integrate the 2-form \(\Omega_{12}/2\pi\) over \(S^2(r)\) we obtain</p>
-<div class="math">$$
-\begin{equation}\label{Eqn:GB}
+<p>\begin{equation}\label{Eqn:GB}
 \int_{S^{2}(r)}\frac{\Omega_{12}}{2\pi}=\frac{1}{2\pi r^2}\int_{S^{2}(r)}e^1\wedge e^2=\frac{4\pi r^2}{2\pi r^2}=2,
-\end{\equation}
-$$</div>
+\end{\equation}</p>
 <p>which verifies the <a href="https://en.wikipedia.org/wiki/Gauss–Bonnet_theorem">Gauß-Bonnet theorem</a> since the <a href="https://en.wikipedia.org/wiki/Euler_characteristic">Euler characteristic</a> \(\chi(S^{2}(r))=2\) for any <span class="math">\(r&gt;0\)</span>. </p>
 <h2>Spin strucrure</h2>
 <p>A topological condition for the existence of <a href="https://en.wikipedia.org/wiki/Spin_structure">spin structures</a> is the vanishing of the second 
@@ -12097,9 +12096,7 @@ z_0/z_1 &amp; 0\\
 \end{align*}</div>
 <p>As a consequence, the sections of <span class="math">\(\Sigma(S^2)\)</span>, called <em>spinors</em>, can be regarded as functions <span class="math">\(\psi:S^2\longrightarrow \mathbb{C}^2\)</span>.</p>
 <h2>The Dirac operator</h2>
-<p>We now want to construct the Dirac operator </p>
-<div class="math">$${D}_{S^2(r)}$$</div>
-<p> associated to the Clifford bundle <span class="math">\(\Sigma(S^2)\)</span>. This operator is defined by the formula </p>
+<p>We now want to construct the Dirac operator <span class="math">\({D}_{S^2(r)}\)</span> associated to the Clifford bundle <span class="math">\(\Sigma(S^2)\)</span>. This operator is defined by the formula </p>
 <div class="math">\begin{align*}
 {D}_{S^2(r)}:=\rho_2(e_1)\nabla^\Sigma_{e_{1}}+\rho_2(e_2)\nabla^\Sigma_{e_{2}}, 
 \end{align*}</div>
@@ -12126,7 +12123,7 @@ z_0/z_1 &amp; 0\\
 <div class="math">$$
 D^2_{S^2(r)} = \Delta^{\Sigma} + \frac{scal}{4} = \Delta^{\Sigma} + \frac{1}{2r^2}, 
 $$</div>
-<p>where <span class="math">\(scal\)</span><span class="math">\(is the the [scalar curvature](https://en.wikipedia.org/wiki/Scalar_curvature) and equals $scal=2/r^2\)</span> for the sphere.</p>
+<p>where <span class="math">\(scal\)</span> is the the <a href="https://en.wikipedia.org/wiki/Scalar_curvature">scalar curvature</a> and equals <span class="math">\(scal=2/r^2\)</span> for the sphere.</p>
 <h2>The spectrum</h2>
 <p>The spin-Dirac operator is a first order, self-adjoint elliptic operator, which implies (as <span class="math">\(S^2\)</span> is compact) that it has a discrete spectrum. The eigenvalues of <span class="math">\(D_{S^2}\)</span> are given by <span class="math">\(\pm(k+1)\)</span>, for <span class="math">\(k\geq 0\)</span>, with multiplicities </p>
 <div class="math">\begin{equation*}
