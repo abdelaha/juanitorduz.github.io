@@ -43,9 +43,9 @@ This function idicates whether a given point lies within a distance dist of a gi
 
 2. For the y-coordinate it evaluates two cases:
 
-   - It checks if its outside the Rectangle but still within a distance less that dist (checks to the left and to the right).
+   * It checks if its outside the Rectangle but still within a distance less that dist (checks to the left and to the right).
 
-   - It checks if it is inside the Rectangle. 
+   * It checks if it is inside the Rectangle. 
 
 ```python
 import math
