@@ -11882,8 +11882,8 @@ jQuery(document).ready(function($) {
 <div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">init_x</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">init_y</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="o">=</span><span class="n">init_x</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="o">=</span><span class="n">init_y</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">init_x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">init_y</span>
 </pre></div>
 
 
@@ -11891,18 +11891,27 @@ jQuery(document).ready(function($) {
 <div class="highlight"><pre><span></span> <span class="k">class</span> <span class="nc">Rectangle</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bottom_left_x</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">bottom_left_y</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">init_width</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">init_height</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">bottom_left</span><span class="o">=</span><span class="n">Point</span><span class="p">(</span><span class="n">bottom_left_x</span><span class="p">,</span> <span class="n">bottom_left_y</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="o">=</span><span class="n">init_width</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="o">=</span><span class="n">init_height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bottom_left</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">bottom_left_x</span><span class="p">,</span> <span class="n">bottom_left_y</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">init_width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">init_height</span>
 </pre></div>
 
 
-<p>This function idicates whether a given point lies within a distance dist of a given Rectangle, returning a boolen value.
-1. First function verifies if the x-coordinate of the Point is at a distance less than dist. If it is then it verifies the y-coordinate.
-2. For the y-coordinate it evaluates three cases:
-   1. It checks if its outside the Rectangle but still within a 
-       distance less that dist (checks to the left and to the right).
-   2. It checks if it is inside the Rectangle. </p>
+<p>This function idicates whether a given point lies within a distance dist of a given Rectangle, returning a boolen value.</p>
+<ol>
+<li>
+<p>First function verifies if the x-coordinate of the Point is at a distance less than dist. If it is then it verifies the y-coordinate.</p>
+</li>
+<li>
+<p>For the y-coordinate it evaluates two cases:</p>
+</li>
+<li>
+<p>It checks if its outside the Rectangle but still within a distance less that dist (checks to the left and to the right).</p>
+</li>
+<li>
+<p>It checks if it is inside the Rectangle. </p>
+</li>
+</ol>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
 <span class="k">def</span> <span class="nf">is_point_within_dist_of_rect</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="n">Rectangle</span><span class="p">(),</span> <span class="n">point</span><span class="o">=</span><span class="n">Point</span><span class="p">(),</span> <span class="n">dist</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
@@ -11911,9 +11920,9 @@ jQuery(document).ready(function($) {
 
         <span class="k">if</span><span class="p">(</span><span class="n">point</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">rect</span><span class="o">.</span><span class="n">bottom_left</span><span class="o">.</span><span class="n">x</span><span class="p">):</span>
 
-            <span class="n">a</span><span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">bottom_left</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">point</span><span class="o">.</span><span class="n">x</span>
-            <span class="n">y_max</span><span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">bottom_left</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dist</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-            <span class="n">y_min</span><span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">bottom_left</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dist</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">bottom_left</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">point</span><span class="o">.</span><span class="n">x</span>
+            <span class="n">y_max</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">bottom_left</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dist</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="n">y_min</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">bottom_left</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dist</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
             <span class="k">if</span><span class="p">((</span><span class="n">y_min</span> <span class="o">&lt;</span> <span class="n">point</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="ow">and</span> <span class="n">point</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="n">y_max</span><span class="p">):</span>
                 <span class="k">return</span> <span class="bp">True</span>
@@ -11931,9 +11940,10 @@ jQuery(document).ready(function($) {
                 <span class="k">return</span> <span class="bp">False</span>
 
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">a</span><span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">bottom_left</span><span class="o">.</span><span class="n">x</span><span class="o">+</span><span class="n">rect</span><span class="o">.</span><span class="n">width</span> <span class="o">-</span> <span class="n">point</span><span class="o">.</span><span class="n">x</span>
-            <span class="n">y_max</span><span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">bottom_left</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dist</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-            <span class="n">y_min</span><span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">bottom_left</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dist</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+            <span class="n">a</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">bottom_left</span><span class="o">.</span><span class="n">x</span><span class="o">+</span><span class="n">rect</span><span class="o">.</span><span class="n">width</span> <span class="o">-</span> <span class="n">point</span><span class="o">.</span><span class="n">x</span>
+            <span class="n">y_max</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">bottom_left</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dist</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="n">y_min</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">bottom_left</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dist</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
             <span class="k">if</span><span class="p">((</span><span class="n">y_min</span> <span class="o">&lt;</span> <span class="n">point</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="ow">and</span> <span class="n">point</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="n">y_max</span><span class="p">):</span>
                 <span class="k">return</span> <span class="bp">True</span>
