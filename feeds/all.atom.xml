@@ -1531,21 +1531,15 @@ It contains two columns:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;This function idicates whether a given point lies within a distance dist of a given Rectangle, returning a boolen value.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;First function verifies if the x-coordinate of the Point is at a distance less than dist. If it is then it verifies the y-coordinate.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;For the y-coordinate it evaluates two cases:&lt;/p&gt;
-&lt;/li&gt;
+&lt;p&gt;This function idicates whether a given point lies within a distance dist of a given Rectangle, returning a boolen value. First function verifies if the x-coordinate of the Point is at a distance less than dist. If it is then it verifies the y-coordinate. For the y-coordinate it evaluates two cases:&lt;/p&gt;
+&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;It checks if its outside the Rectangle but still within a distance less that dist (checks to the left and to the right).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;It checks if it is inside the Rectangle. &lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt;
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;is_point_within_dist_of_rect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rect&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Rectangle&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;point&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Point&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;dist&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
