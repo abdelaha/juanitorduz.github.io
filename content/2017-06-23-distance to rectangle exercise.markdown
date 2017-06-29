@@ -37,7 +37,7 @@ We define a class that represents a Rectangle. Its position is determined by the
         self.height=init_height
 ```
 This function idicates whether a given point lies within a distance dist of a given Rectangle, returning a boolen value.
-1. First function veriies if the x-coordinate of the Point is at a distance less than dist. If it is then it verifies the y-coordinate.
+1. First function verifies if the x-coordinate of the Point is at a distance less than dist. If it is then it verifies the y-coordinate.
 2. For the y-coordinate it evaluates three cases:
    1. It checks if its outside the Rectangle but still within a 
        distance less that dist (checks to the left and to the right).
