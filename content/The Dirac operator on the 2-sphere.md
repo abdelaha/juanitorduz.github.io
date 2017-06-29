@@ -13,23 +13,22 @@ The objective of this post is to explore [MathJax](http://docs.mathjax.org/en/la
 
 ## The Levi-Civita connection
 
-Let us consider a 2-sphere of radius \\(r>0\\)
-\\[
-\begin{equation}
+Let us consider a 2-sphere of radius $(r>0)$
+
+\begin{equation*}
 S^{2}(r):=\\{(x_1,x_2,x_3) \\: | \\: x_1^2+x_2^2+x_3^2=r^{2}\\}\subset\mathbb{R}^3
-\end{equation}
-\\]
+\end{equation*}
+
 equipped with the induced Riemanian metric from \\(\mathbb{R}^3\\). With respect to a local parametrization given by polar coordinates
 
-$$
-\begin{align}\label{Def:SphericalCoord}
+\begin{align*}
 x_1(r,\theta,\phi)=&\cos\phi\sin\theta,\\
 x_2(r,\theta,\phi)=&\sin\phi\sin\theta,\\
 x_3(r,\theta,\phi)=&\cos\theta,
-\end{align}
-$$
+\end{align*}
 
-where \\(0<\theta<\pi\\) and \\(0<\phi<2\pi\\), the metric can be written as 
+
+where $0<\theta<\pi$ and $0<\phi<2\pi$, the metric can be written as 
 
 $$
 \begin{align}
@@ -59,7 +58,7 @@ $$
 
 ## The curvature form
 
-Let us consider the following local orthonotmal basis for $$TS^2(r)$$,
+Let us consider the following local orthonotmal basis for $TS^2(r)$,
 
 $$
 \begin{align}
