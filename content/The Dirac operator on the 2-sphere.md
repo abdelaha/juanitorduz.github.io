@@ -16,7 +16,7 @@ The objective of this post is to explore [MathJax](http://docs.mathjax.org/en/la
 Let us consider a 2-sphere of radius $(r>0)$
 
 \begin{equation*}
-S^{2}(r):=\\{(x_1,x_2,x_3) \\: | \\: x_1^2+x_2^2+x_3^2=r^{2}\\}\subset\mathbb{R}^3
+S^{2}(r):= \{(x_1,x_2,x_3) \: | \: x_1^2+x_2^2+x_3^2=r^{2}\}\subset\mathbb{R}^3
 \end{equation*}
 
 equipped with the induced Riemanian metric from \\(\mathbb{R}^3\\). With respect to a local parametrization given by polar coordinates
@@ -30,98 +30,80 @@ x_3(r,\theta,\phi)=&\cos\theta,
 
 where $0<\theta<\pi$ and $0<\phi<2\pi$, the metric can be written as 
 
-$$
-\begin{align}
+\begin{align*}
 g^{TS^2(r)}=r^2d\theta^2+r^2\sin^{2}\theta d\phi^2.
-\end{align}
-$$
+\end{align*}
 
 A straight forward computation shows that for the Levi-Civita connection we have 
 
-$$
-\begin{align}
+\begin{align*}
 \nabla_{\partial_\theta}\partial_{\theta}=&0,\\
 \nabla_{\partial_\phi}\partial_\phi=&-\sin\theta\cos\theta\partial_\theta,\\
 \nabla_{\partial_\theta}\partial_\phi=&\cot\theta\partial_\phi,\\
 \nabla_{\partial_\phi}\partial_\theta=&\cot\theta\partial_\phi.
-\end{align}
-$$
+\end{align*}
 
 Indeed, the Christoffel symbols are
 
-$$
-\begin{align}
+\begin{align*}
 \Gamma_{\phi\phi}^{\theta}=&\frac{1}{2r^2}(-\partial_\theta (r^2\sin^2\theta))=-\sin\theta\cos\theta,\\
 \Gamma_{\theta\phi}^{\phi}=&\frac{1}{2r^2\sin^2\theta}(\partial_\theta (r^2\sin^2\theta))=\cot\theta.
-\end{align}
-$$
+\end{align*}
 
 ## The curvature form
 
 Let us consider the following local orthonotmal basis for $TS^2(r)$,
 
-$$
-\begin{align}
+\begin{align*}
 e_1:=&\frac{\partial_\theta}{r},\\
 e_2:=&\frac{\partial_\phi}{r\sin\theta},
-\end{align}
-$$
+\end{align*}
+
 
 with associated dual basis 
 
-$$
-\begin{align}
+\begin{align*}
 e^1:=&rd\theta,\\
 e^2:=&r\sin\theta d\theta.
-\end{align}
-$$
+\end{align*}
 
 With respect to this basis the volume form is \\(vol_{S^2(r)}=e^1\wedge e^2\\). To be precise we consider the orientation such that 
-\\(vol_{\mathbb{R}^3}=rdr\wedge vol_{S^2(r)}\\). For further reference we compute the exterior derivative 
+$vol_{\mathbb{R}^3}=rdr\wedge vol_{S^2(r)}$. For further reference we compute the exterior derivative 
 
-$$
-\begin{align}
+\begin{align*}
 de^1=&0,\\
 de^2=& d(r\sin\theta d\phi)=r\cos\theta d\theta\wedge d\phi=\frac{\cot\theta}{r} e^1\wedge e^2. 
-\end{align}
-$$
+\end{align*}
 
 We now calculate the components $$\omega_{ij}$$ of the connection 1-form associated with this basis, which are defined by the relations
 
-$$
-\begin{align}
+\begin{align*}
 \nabla  e_j=:\omega_{ij}\otimes e_i, 
-\end{align}
-$$
+\end{align*}
 
 where the sum over repeated indices is understood. From the expression of the [Levi-Civita connection](https://en.wikipedia.org/wiki/Levi-Civita_connection) we verify
 
-$$
-\begin{align}
+\begin{align*}
 \nabla_{e_1}e_1=&0,\\
 \nabla_{e_1}e_2=&\partial_\theta\left(\frac{1}{r^2\sin\theta}\right)\partial_\phi+\left(\frac{1}{r^2\sin\theta}\right)\nabla_{\partial_\theta}\partial_\phi=-\frac{\cos\theta}{r^2}\partial_\phi+\frac{\cos\theta}{r^2}\partial_\phi =0,\\
 \nabla_{e_2}e_1=&\left(\frac{1}{r^2\sin\theta}\right)\nabla_{\partial_\phi}\partial_\theta=\left(\frac{1}{r^2\sin\theta}\right)\cot\theta\partial_\phi=\frac{\cot\theta}{r}e_2,\\
 \nabla_{e_2}e_2=&\left(\frac{1}{r\sin\theta}\right)^2\nabla_{\partial_\phi}\partial_\phi=-\left(\frac{1}{r\sin\theta}\right)^2\sin\theta\cos\theta\partial_\theta=-\frac{\cot\theta}{r} e_1.\\
-\end{align}
-$$
+\end{align*}
+
 
 Thus
 
-$$
-\begin{align}
+\begin{align*}
 \omega_{12}=-\omega_{21}=-\frac{\cot\theta}{r} e^2. 
-\end{align}
-$$
+\end{align*}
 
-Since the Levi-Civita connection is compatible with metric then \\(\omega_{ij}=-\omega_{ji}\\). In addition, since it is also torsion-free then the components satisfy the structure equations 
+Since the Levi-Civita connection is compatible with metric then $\omega_{ij}=-\omega_{ji}$. In addition, since it is also torsion-free then the components satisfy the structure equations 
 
-$$
-\begin{align}\label{Eqn:Structure}
+\begin{align*}
 de^i+\omega_{ij}\wedge e^j=0. 
-\end{align}
-$$
+\end{align*}
 
-Note for example for \\(i=2\\),
+Note for example for $i=2$,
 
 \begin{align}
 de^2+\omega_{21}\wedge e^1=\frac{\cot\theta}{r}e^1\wedge e^2+\frac{\cot\theta}{r}e^2\wedge e^1=0. 
@@ -129,19 +111,16 @@ de^2+\omega_{21}\wedge e^1=\frac{\cot\theta}{r}e^1\wedge e^2+\frac{\cot\theta}{r
 
 From the components of the connection 1-form we can compute the components \\(\Omega_{ij}\\) of the curvature using the relation 
 
-$$
-\begin{align}
+\begin{align*}
 \Omega_{ij}=d\omega_{ij}+\omega_{ik}\wedge\omega_{kj}. 
-\end{align}
-$$
+\end{align*}
+
 
 In this particular case we have
 
-$$
-\begin{align}
+\begin{align*}
 \Omega_{12}=&d\omega_{12}=\frac{\csc^2\theta}{r^2} e^1\wedge e^2-\frac{\cot\theta}{r} de^2=\frac{\csc^2\theta}{r^2} e^1\wedge e^2-\frac{\cot^2\theta}{r^2} e^1\wedge e^2=\frac{1}{r^2}e^1\wedge e^2.
-\end{align}
-$$
+\end{align*}
 
 ### The Gauß-Bonnet Theorem
 
@@ -153,20 +132,20 @@ $$
 \end{align}
 $$
 
-which verifies the [Gauß-Bonnet theorem](https://en.wikipedia.org/wiki/Gauss–Bonnet_theorem) since the [Euler characteristic](https://en.wikipedia.org/wiki/Euler_characteristic) \\(\chi(S^{2}(r))=2\\) for any $$r>0$$. 
+which verifies the [Gauß-Bonnet theorem](https://en.wikipedia.org/wiki/Gauss–Bonnet_theorem) since the [Euler characteristic](https://en.wikipedia.org/wiki/Euler_characteristic) \\(\chi(S^{2}(r))=2\\) for any $r>0$. 
 
 ## Spin strucrure
 
-A topological condition for the existence of [spin structures](https://en.wikipedia.org/wiki/Spin_structure) is the vanishing of the second [Stiefel-Whitney](https://en.wikipedia.org/wiki/Stiefel–Whitney_class) class $$w_2(TS^2)\in H^2(S^2;\mathbb{Z}/2\mathbb{Z}$$). This characteristic class is the $$\mathbb{Z}/2\mathbb{Z}$$-reduction of the Euler class of $$TS^2$$. By the Gau\ss-Bonnet theorem we know that the integral of this Euler class equals the Euler characteristic $$\chi(S^2)=2$$, which modulo $$\mathbb{Z}/2\mathbb{Z}$$ is zero. This shows that $$S^2$$ is a spin manifold. Moreover, the spin structures are classified by the group $$H^1(S^2;\mathbb{Z}/2\mathbb{Z})=0$$, so we conclude that $$S^2$$ has only one spin structure. This result is actually valid for all spheres.
+A topological condition for the existence of [spin structures](https://en.wikipedia.org/wiki/Spin_structure) is the vanishing of the second 
+[Stiefel-Whitney](https://en.wikipedia.org/wiki/Stiefel–Whitney_class) class $w_2(TS^2)\in H^2(S^2;\mathbb{Z}/2\mathbb{Z})$. This characteristic class is the $$\mathbb{Z}/2\mathbb{Z}$$-reduction of the Euler class of $$TS^2$$. By the Gau\ss-Bonnet theorem we know that the integral of this Euler class equals the Euler characteristic $\chi(S^2)=2$, which modulo $\mathbb{Z}/2\mathbb{Z}$ is zero. This shows that $$S^2$$ is a spin manifold. Moreover, the spin structures are classified by the group $H^1(S^2;\mathbb{Z}/2\mathbb{Z})=0$, so we conclude that $$S^2$$ has only one spin structure. This result is actually valid for all spheres.
 
 ## The spinor bundle
 
-Now we construct the [spinor bundle](https://en.wikipedia.org/wiki/Spinor_bundle) $$\Sigma(S^2)$$ as an associated bundle $$\Sigma(S^2)=Spin(S^2)\times_{\rho_2}\Sigma_2$$ where, $$Spin(S^2)$$ the principal $$Spin$$-bundle correspinding to the unique spin structure, $$\rho_2:S^1\longrightarrow \text{Aut}(\Sigma_2)$$ is the [spin representation](https://en.wikipedia.org/wiki/Spin_representation) and $$\Sigma_2=\mathbb{C}^2$$ is the spinor space. 
+Now we construct the [spinor bundle](https://en.wikipedia.org/wiki/Spinor_bundle) $$\Sigma(S^2)$$ as an associated bundle $\Sigma(S^2)=Spin(S^2)\times_{\rho_2}\Sigma_2$ where, $Spin(S^2)$ the principal $$Spin$$-bundle correspinding to the unique spin structure, $\rho_2:S^1\longrightarrow \text{Aut}(\Sigma_2)$ is the [spin representation](https://en.wikipedia.org/wiki/Spin_representation) and $\Sigma_2=\mathbb{C}^2$ is the spinor space. 
 
-To begin with we describe the spin representation of the Clifford algebra $$Cl(2)$$ on the spinor vector space $$\Sigma_2=\mathbb{C}^{2}$$. To to so its enough to describe the action on basis elements. Recall the definition of the [Pauli matrices](https://en.wikipedia.org/wiki/Pauli_matrices),
+To begin with we describe the spin representation of the Clifford algebra $Cl(2)$ on the spinor vector space $\Sigma_2=\mathbb{C}^{2}$. To to so its enough to describe the action on basis elements. Recall the definition of the [Pauli matrices](https://en.wikipedia.org/wiki/Pauli_matrices),
 
-$$
-\begin{align}
+\begin{align*}
 \sigma_1:=\left(
 \begin{array}{cc}
 0 & 1\\
@@ -185,40 +164,32 @@ i & 0
 0 & -1
 \end{array}
 \right).
-\end{align}
-$$
+\end{align*}
 
 These matrices satisfy the relations
 
-$$
-\begin{align}
+\begin{align*}
 \sigma_j^\dagger=&\sigma_j,\\
 \sigma_j^2=&1,\\
 \sigma_1\sigma_2=&i\sigma_3,\\
 \sigma_j\sigma_k+\sigma_k\sigma_j=&2\delta_{jk}\quad\text{for $j=1,2,3$}.
-\end{align}
-$$
+\end{align*}
 
-Let $$\{v_1,v_2\}$$ be the standard orthonormal basis of $$\mathbb{R}^2$$, we define the Clifford action $$\rho_2(v_j):=-i\sigma_j$$ for $$j=1,2$$. It then follows that
+Let $\{v_1,v_2\}$ be the standard orthonormal basis of $\mathbb{R}^2$, we define the Clifford action $\rho_2(v_j):=-i\sigma_j$ for $j=1,2$. It then follows that
 
-$$
-\begin{align}
+\begin{align*}
 \rho_2(v_j)\rho_2(v_k)+\rho_2(v_k)\rho_2(v_j)=-2\delta_{jk}.
-\end{align}
-$$
+\end{align*}
 
-We now want to study the restriction of this representation to $$Spin(2)\subset Cl(2)$$. Note that every element of $$Spin(2)$$ can be written as 
+We now want to study the restriction of this representation to $Spin(2)\subset Cl(2)$. Note that every element of $Spin(2)$ can be written as 
 
-$$
-\begin{align}
+\begin{align*}
 \cos t+\sin t v_1v_2=-(\sin(t/2)v_1+\cos(t/2)v_2)(\cos(t/2)v_1+\sin(t/2)v_2),
-\end{align}
-$$
+\end{align*}
 
-for $$t\in[0,2\pi]$$, so
+for $t\in[0,2\pi]$, so
 
-$$
-\begin{align}
+\begin{align*}
 \rho_2(\cos t+\sin t v_1v_2)=&
 \left(
 \begin{array}{cc}
@@ -238,13 +209,12 @@ e^{-it} & 0\\
 0 & e^{it}
 \end{array}
 \right).
-\end{align}
-$$
+\end{align*}
 
-This shows that the spin representation restricted to $$Spin(2)=S^1$$ is given by
 
-$$
-\begin{align}
+This shows that the spin representation restricted to $Spin(2)=S^1$ is given by
+
+\begin{align*}
 \rho_2(z)
 =
 \left(
@@ -253,8 +223,8 @@ $$
 0 & z
 \end{array}
 \right).
-\end{align}
-$$
+\end{align*}
+
 
 We now compute the transition functions of the spinor bundle $$\Sigma(S^2)=Spin(S^2)\times_{\rho_2}\Sigma_2$$. These are obtained by composing the transition functions of the [Hopf bundle](https://en.wikipedia.org/wiki/Hopf_fibration) $$\pi:S^3\subset\mathbb{C}^2\longrightarrow S^2$$ (which defines the Spin structure on $$S^2$$) with $$\rho_2$$, i.e. for $$\pi(z_0,z_1)\in U_N\cap U_S=S^1$$ we have
 
