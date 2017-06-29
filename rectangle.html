@@ -11874,7 +11874,9 @@ jQuery(document).ready(function($) {
     </ul>
   </header>
   <div class="content">
-    <p>I this first post I want to explore the basics of blogging with <a href="https://jekyllrb.com">Jekyll</a>, in particular on the style of the markdown structure in python. I treat an example of a little python challenge which I encountered in my job hunt process. I particularly like it because it is a geometric problem.   </p>
+    <p>In this first post I want to explore the basics of blogging with <a href="http://docs.getpelican.com/en/stable/#">Pelican</a>, a static site generator, written in 
+<a href="https://www.python.org">Python</a>. To contruct this website I used <a href="https://pages.github.com">GitHub Pages</a> and a variant of the procedure described in the nice post <a href="https://www.dataquest.io/blog/how-to-setup-a-data-science-blog/">Building a data science portfolio: Making a data science blog</a>. I must admit that the integration of the <a href="https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags">liquid_tags plugin</a> was somehow tricky.</p>
+<p>I treat an example of a little python challenge which I encountered in my job hunt process. I particularly like it because it is a geometric problem.   </p>
 <h1>Problem</h1>
 <p><em>Write a function that tests if a point falls within a specified distance "dist" of any part of a solid, 2D rectangle.  The rectangle is specified by the bottom left corner, a width, and a height.</em> </p>
 <h2>Suggested Solution</h2>
@@ -11897,7 +11899,11 @@ jQuery(document).ready(function($) {
 </pre></div>
 
 
-<p>This function idicates whether a given point lies within a distance dist of a given Rectangle, returning a boolen value. First function verifies if the x-coordinate of the Point is at a distance less than dist. If it is then it verifies the y-coordinate. For the y-coordinate it evaluates two cases:</p>
+<p>This function idicates whether a given point lies within a distance dist of a given Rectangle, returning a boolen value. That is, if <span class="math">\(A\subset \mathbb{R}^2\)</span> denotes the given rectangle, we want to compute the indicatior function of the open set</p>
+<div class="math">\begin{equation}
+U_{dist}:= \{ p \in\mathbb{R}^2\: : \: \exists q \in R \quad \text{such that} \quad ||p-q|| &lt; dist \}.
+\end{equation}</div>
+<p>First function verifies if the x-coordinate of the Point is at a distance less than dist. If it is then it verifies the y-coordinate. For the y-coordinate it evaluates two cases:</p>
 <ol>
 <li>
 <p>It checks if its outside the Rectangle but still within a distance less that dist (checks to the left and to the right).</p>
@@ -11946,6 +11952,135 @@ jQuery(document).ready(function($) {
 
     <span class="k">return</span> <span class="bp">False</span>
 </pre></div>
+
+
+<h2>Eamples</h2>
+<p>We consider square of side 2 with the center of mass at the origin.</p>
+<div class="highlight"><pre><span></span><span class="n">rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+
+<p>We check that the origin is in the square.</p>
+<div class="highlight"><pre><span></span><span class="n">point_1</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">is_point_within_dist_of_rect</span><span class="p">(</span><span class="n">rectangle</span><span class="p">,</span> <span class="n">point_1</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>True
+</pre></div>
+
+
+<p>We check that the upper right corner is in the square.</p>
+<div class="highlight"><pre><span></span><span class="n">point_2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">is_point_within_dist_of_rect</span><span class="p">(</span><span class="n">rectangle</span><span class="p">,</span> <span class="n">point_2</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>True
+</pre></div>
+
+
+<p>We check a point outside a the square.</p>
+<div class="highlight"><pre><span></span><span class="n">point_3</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">is_point_within_dist_of_rect</span><span class="p">(</span><span class="n">rectangle</span><span class="p">,</span> <span class="n">point_3</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>False
+</pre></div>
+
+
+<p>Now we consider a limit case. First we define:</p>
+<div class="highlight"><pre><span></span><span class="n">threshold_value</span><span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">epsilon</span><span class="o">=</span><span class="mf">0.0001</span>
+</pre></div>
+
+
+<p>We consider two cases:</p>
+<ul>
+<li>We check a point close (outside) to the region boundary.</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">point_4</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">threshold_value</span> <span class="o">+</span> <span class="n">epsilon</span><span class="p">,</span> <span class="n">threshold_value</span> <span class="o">+</span> <span class="n">epsilon</span><span class="p">)</span>
+
+<span class="n">is_point_within_dist_of_rect</span><span class="p">(</span><span class="n">rectangle</span><span class="p">,</span> <span class="n">point_4</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>False
+</pre></div>
+
+
+<ul>
+<li>We check a point close (inside) to the region boundary.</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">point_5</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">threshold_value</span> <span class="o">-</span> <span class="n">epsilon</span><span class="p">,</span> <span class="n">threshold_value</span> <span class="o">-</span> <span class="n">epsilon</span><span class="p">)</span>
+
+<span class="n">is_point_within_dist_of_rect</span><span class="p">(</span><span class="n">rectangle</span><span class="p">,</span> <span class="n">point_5</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>True
+</pre></div>
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
   </div>
 </article>
     </div>
