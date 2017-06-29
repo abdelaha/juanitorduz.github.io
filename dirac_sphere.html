@@ -11875,23 +11875,17 @@ jQuery(document).ready(function($) {
   <div class="content">
     <p>The objective of this post is to explore <a href="http://docs.mathjax.org/en/latest/index.html">MathJax</a>, a JavaScript display engine for LaTeX. Being my first post writen with this tool, I want to present a short but fun example: I will give a description of the explicit computation of the <a href="https://en.wikipedia.org/wiki/Dirac_operator">spin-Dirac</a> operator (of the unique complex spinor bundle!) on the 2-sphere \(S^2\) equipped with the standar round metric. A more detailed treatment can be found in my expository <a href="https://arxiv.org">paper</a>.</p>
 <h2>The Levi-Civita connection</h2>
-<p>Let us consider a 2-sphere of radius \(r&gt;0\)
-\[
-</p>
-<div class="math">\begin{equation}
+<p>Let us consider a 2-sphere of radius <span class="math">\((r&gt;0)\)</span></p>
+<div class="math">\begin{equation*}
 S^{2}(r):=\\{(x_1,x_2,x_3) \\: | \\: x_1^2+x_2^2+x_3^2=r^{2}\\}\subset\mathbb{R}^3
-\end{equation}</div>
-<p>
-\]
-equipped with the induced Riemanian metric from \(\mathbb{R}^3\). With respect to a local parametrization given by polar coordinates</p>
-<div class="math">$$
-\begin{align}\label{Def:SphericalCoord}
+\end{equation*}</div>
+<p>equipped with the induced Riemanian metric from \(\mathbb{R}^3\). With respect to a local parametrization given by polar coordinates</p>
+<div class="math">\begin{align*}
 x_1(r,\theta,\phi)=&amp;\cos\phi\sin\theta,\\
 x_2(r,\theta,\phi)=&amp;\sin\phi\sin\theta,\\
 x_3(r,\theta,\phi)=&amp;\cos\theta,
-\end{align}
-$$</div>
-<p>where \(0&lt;\theta&lt;\pi\) and \(0&lt;\phi&lt;2\pi\), the metric can be written as </p>
+\end{align*}</div>
+<p>where <span class="math">\(0&lt;\theta&lt;\pi\)</span> and <span class="math">\(0&lt;\phi&lt;2\pi\)</span>, the metric can be written as </p>
 <div class="math">$$
 \begin{align}
 g^{TS^2(r)}=r^2d\theta^2+r^2\sin^{2}\theta d\phi^2.
@@ -11914,9 +11908,7 @@ $$</div>
 \end{align}
 $$</div>
 <h2>The curvature form</h2>
-<p>Let us consider the following local orthonotmal basis for </p>
-<div class="math">$$TS^2(r)$$</div>
-<p>,</p>
+<p>Let us consider the following local orthonotmal basis for <span class="math">\(TS^2(r)\)</span>,</p>
 <div class="math">$$
 \begin{align}
 e_1:=&amp;\frac{\partial_\theta}{r},\\
