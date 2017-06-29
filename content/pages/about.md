@@ -48,6 +48,3 @@ Title of the Thesis: Induced Dirac-Schrödinger on quotients of semi-free circle
 
 - Sports, music and [photography](https://www.flickr.com/photos/143384299@N04/). 
 
-### Contact 
-
-[Here](https://www.linkedin.com/in/juanitorduz) is my LinkedIn page. 

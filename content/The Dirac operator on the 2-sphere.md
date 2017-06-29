@@ -126,16 +126,16 @@ In this particular case we have
 
 If we integrate the 2-form \\(\Omega_{12}/2\pi\\) over \\(S^2(r)\\) we obtain
 
-\begin{equation}\label{Eqn:GB}
+\begin{equation*}
 \int_{S^{2}(r)}\frac{\Omega_{12}}{2\pi}=\frac{1}{2\pi r^2}\int_{S^{2}(r)}e^1\wedge e^2=\frac{4\pi r^2}{2\pi r^2}=2,
-\end{\equation}
+\end{\equation*}
 
 which verifies the [Gauß-Bonnet theorem](https://en.wikipedia.org/wiki/Gauss–Bonnet_theorem) since the [Euler characteristic](https://en.wikipedia.org/wiki/Euler_characteristic) \\(\chi(S^{2}(r))=2\\) for any $r>0$. 
 
 ## Spin strucrure
 
 A topological condition for the existence of [spin structures](https://en.wikipedia.org/wiki/Spin_structure) is the vanishing of the second 
-[Stiefel-Whitney](https://en.wikipedia.org/wiki/Stiefel–Whitney_class) class $w_2(TS^2)\in H^2(S^2;\mathbb{Z}/2\mathbb{Z})$. This characteristic class is the $\mathbb{Z}/2\mathbb{Z}$-reduction of the Euler class of $TS^2$. By the Gau\ss-Bonnet theorem (see \eqref{Eqn:GB}) we know that the integral of this Euler class equals the Euler characteristic $\chi(S^2)=2$, which modulo $\mathbb{Z}/2\mathbb{Z}$ is zero. This shows that $S^2$ is a spin manifold. Moreover, the spin structures are classified by the group $H^1(S^2;\mathbb{Z}/2\mathbb{Z})=0$, so we conclude that $S^2$ has only one spin structure. This result is actually valid for all spheres.
+[Stiefel-Whitney](https://en.wikipedia.org/wiki/Stiefel–Whitney_class) class $w_2(TS^2)\in H^2(S^2;\mathbb{Z}/2\mathbb{Z})$. This characteristic class is the $\mathbb{Z}/2\mathbb{Z}$-reduction of the Euler class of $TS^2$. By the Gau\ss-Bonnet theorem we know that the integral of this Euler class equals the Euler characteristic $\chi(S^2)=2$, which modulo $\mathbb{Z}/2\mathbb{Z}$ is zero. This shows that $S^2$ is a spin manifold. Moreover, the spin structures are classified by the group $H^1(S^2;\mathbb{Z}/2\mathbb{Z})=0$, so we conclude that $S^2$ has only one spin structure. This result is actually valid for all spheres.
 
 ## The spinor bundle
 
@@ -381,5 +381,5 @@ D_{S^2(r)}^{+} & 0
 \right). 
 \end{equation*}
 
-Finally, by the [Atiyah-Singer Index Theorem](https://en.wikipedia.org/wiki/Atiyah–Singer_index_theorem), we have $\text{ind}(D_{S^2(r)}^{+})=0$ as the $\widehat{A}$-polynomial is a polynomial in the [Pontryagin classes](https://en.wikipedia.org/wiki/Pontryagin_class) which are of degree $4j$, for $j\in\mathbb{N}_0$$.
+Finally, by the [Atiyah-Singer Index Theorem](https://en.wikipedia.org/wiki/Atiyah–Singer_index_theorem), we have $\text{ind}(D_{S^2(r)}^{+})=0$ as the $\widehat{A}$-polynomial is a polynomial in the [Pontryagin classes](https://en.wikipedia.org/wiki/Pontryagin_class) which are of degree $4j$, for $j\in\mathbb{N}_0$.
 
