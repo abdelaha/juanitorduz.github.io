@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Juan Camilo Orduz - Geometry</title><link href="/" rel="alternate"></link><link href="/feeds/geometry.atom.xml" rel="self"></link><id>/</id><updated>2017-06-29T00:00:00+02:00</updated><entry><title>The Dirac operator on the 2-sphere</title><link href="/dirac_sphere.html" rel="alternate"></link><published>2017-06-29T00:00:00+02:00</published><updated>2017-06-29T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2017-06-29:/dirac_sphere.html</id><summary type="html">&lt;p&gt;summary&lt;/p&gt;</summary><content type="html">&lt;p&gt;The objective of this post is to explore &lt;a href="http://docs.mathjax.org/en/latest/index.html"&gt;MathJax&lt;/a&gt;, a JavaScript display engine for LaTeX. Being my first post writen with this tool, I want to present a short but fun example: I will give a description of the explicit computation of the &lt;a href="https://en.wikipedia.org/wiki/Dirac_operator"&gt;spin-Dirac&lt;/a&gt; operator (of the unique complex spinor bundle!) on the 2-sphere \(S^2\) equipped with the standar round metric. A more detailed treatment can be found in my expository &lt;a href="https://arxiv.org"&gt;paper&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;The Levi-Civita connection&lt;/h2&gt;
-&lt;p&gt;Let us consider a 2-sphere of radius &lt;span class="math"&gt;\((r&amp;gt;0)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Let us consider a 2-sphere of radius &lt;span class="math"&gt;\(r&amp;gt;0\)&lt;/span&gt;,&lt;/p&gt;
 &lt;div class="math"&gt;\begin{equation*}
 S^{2}(r):= \{(x_1,x_2,x_3) \: | \: x_1^2+x_2^2+x_3^2=r^{2}\}\subset\mathbb{R}^3
 \end{equation*}&lt;/div&gt;
@@ -77,11 +77,9 @@ de^2+\omega_{21}\wedge e^1=\frac{\cot\theta}{r}e^1\wedge e^2+\frac{\cot\theta}{r
 \end{align*}&lt;/div&gt;
 &lt;h3&gt;The Gauß-Bonnet Theorem&lt;/h3&gt;
 &lt;p&gt;If we integrate the 2-form \(\Omega_{12}/2\pi\) over \(S^2(r)\) we obtain&lt;/p&gt;
-&lt;div class="math"&gt;$$
-\begin{equation}\label{Eqn:GB}
+&lt;p&gt;\begin{equation}\label{Eqn:GB}
 \int_{S^{2}(r)}\frac{\Omega_{12}}{2\pi}=\frac{1}{2\pi r^2}\int_{S^{2}(r)}e^1\wedge e^2=\frac{4\pi r^2}{2\pi r^2}=2,
-\end{\equation}
-$$&lt;/div&gt;
+\end{\equation}&lt;/p&gt;
 &lt;p&gt;which verifies the &lt;a href="https://en.wikipedia.org/wiki/Gauss–Bonnet_theorem"&gt;Gauß-Bonnet theorem&lt;/a&gt; since the &lt;a href="https://en.wikipedia.org/wiki/Euler_characteristic"&gt;Euler characteristic&lt;/a&gt; \(\chi(S^{2}(r))=2\) for any &lt;span class="math"&gt;\(r&amp;gt;0\)&lt;/span&gt;. &lt;/p&gt;
 &lt;h2&gt;Spin strucrure&lt;/h2&gt;
 &lt;p&gt;A topological condition for the existence of &lt;a href="https://en.wikipedia.org/wiki/Spin_structure"&gt;spin structures&lt;/a&gt; is the vanishing of the second 
@@ -223,9 +221,7 @@ z_0/z_1 &amp;amp; 0\\
 \end{align*}&lt;/div&gt;
 &lt;p&gt;As a consequence, the sections of &lt;span class="math"&gt;\(\Sigma(S^2)\)&lt;/span&gt;, called &lt;em&gt;spinors&lt;/em&gt;, can be regarded as functions &lt;span class="math"&gt;\(\psi:S^2\longrightarrow \mathbb{C}^2\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2&gt;The Dirac operator&lt;/h2&gt;
-&lt;p&gt;We now want to construct the Dirac operator &lt;/p&gt;
-&lt;div class="math"&gt;$${D}_{S^2(r)}$$&lt;/div&gt;
-&lt;p&gt; associated to the Clifford bundle &lt;span class="math"&gt;\(\Sigma(S^2)\)&lt;/span&gt;. This operator is defined by the formula &lt;/p&gt;
+&lt;p&gt;We now want to construct the Dirac operator &lt;span class="math"&gt;\({D}_{S^2(r)}\)&lt;/span&gt; associated to the Clifford bundle &lt;span class="math"&gt;\(\Sigma(S^2)\)&lt;/span&gt;. This operator is defined by the formula &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
 {D}_{S^2(r)}:=\rho_2(e_1)\nabla^\Sigma_{e_{1}}+\rho_2(e_2)\nabla^\Sigma_{e_{2}}, 
 \end{align*}&lt;/div&gt;
@@ -252,7 +248,7 @@ z_0/z_1 &amp;amp; 0\\
 &lt;div class="math"&gt;$$
 D^2_{S^2(r)} = \Delta^{\Sigma} + \frac{scal}{4} = \Delta^{\Sigma} + \frac{1}{2r^2}, 
 $$&lt;/div&gt;
-&lt;p&gt;where &lt;span class="math"&gt;\(scal\)&lt;/span&gt;&lt;span class="math"&gt;\(is the the [scalar curvature](https://en.wikipedia.org/wiki/Scalar_curvature) and equals $scal=2/r^2\)&lt;/span&gt; for the sphere.&lt;/p&gt;
+&lt;p&gt;where &lt;span class="math"&gt;\(scal\)&lt;/span&gt; is the the &lt;a href="https://en.wikipedia.org/wiki/Scalar_curvature"&gt;scalar curvature&lt;/a&gt; and equals &lt;span class="math"&gt;\(scal=2/r^2\)&lt;/span&gt; for the sphere.&lt;/p&gt;
 &lt;h2&gt;The spectrum&lt;/h2&gt;
 &lt;p&gt;The spin-Dirac operator is a first order, self-adjoint elliptic operator, which implies (as &lt;span class="math"&gt;\(S^2\)&lt;/span&gt; is compact) that it has a discrete spectrum. The eigenvalues of &lt;span class="math"&gt;\(D_{S^2}\)&lt;/span&gt; are given by &lt;span class="math"&gt;\(\pm(k+1)\)&lt;/span&gt;, for &lt;span class="math"&gt;\(k\geq 0\)&lt;/span&gt;, with multiplicities &lt;/p&gt;
 &lt;div class="math"&gt;\begin{equation*}

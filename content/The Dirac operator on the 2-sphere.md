@@ -13,7 +13,7 @@ The objective of this post is to explore [MathJax](http://docs.mathjax.org/en/la
 
 ## The Levi-Civita connection
 
-Let us consider a 2-sphere of radius $(r>0)$
+Let us consider a 2-sphere of radius $r>0$,
 
 \begin{equation*}
 S^{2}(r):= \{(x_1,x_2,x_3) \: | \: x_1^2+x_2^2+x_3^2=r^{2}\}\subset\mathbb{R}^3
@@ -126,11 +126,9 @@ In this particular case we have
 
 If we integrate the 2-form \\(\Omega_{12}/2\pi\\) over \\(S^2(r)\\) we obtain
 
-$$
 \begin{equation}\label{Eqn:GB}
 \int_{S^{2}(r)}\frac{\Omega_{12}}{2\pi}=\frac{1}{2\pi r^2}\int_{S^{2}(r)}e^1\wedge e^2=\frac{4\pi r^2}{2\pi r^2}=2,
 \end{\equation}
-$$
 
 which verifies the [Gauß-Bonnet theorem](https://en.wikipedia.org/wiki/Gauss–Bonnet_theorem) since the [Euler characteristic](https://en.wikipedia.org/wiki/Euler_characteristic) \\(\chi(S^{2}(r))=2\\) for any $r>0$. 
 
@@ -303,7 +301,7 @@ As a consequence, the sections of $\Sigma(S^2)$, called *spinors*, can be regard
 
 ## The Dirac operator
 
-We now want to construct the Dirac operator $${D}_{S^2(r)}$$ associated to the Clifford bundle $\Sigma(S^2)$. This operator is defined by the formula 
+We now want to construct the Dirac operator ${D}_{S^2(r)}$ associated to the Clifford bundle $\Sigma(S^2)$. This operator is defined by the formula 
 
 \begin{align*}
 {D}_{S^2(r)}:=\rho_2(e_1)\nabla^\Sigma_{e_{1}}+\rho_2(e_2)\nabla^\Sigma_{e_{2}}, 
@@ -345,7 +343,7 @@ $$
 D^2_{S^2(r)} = \Delta^{\Sigma} + \frac{scal}{4} = \Delta^{\Sigma} + \frac{1}{2r^2}, 
 $$
 
-where $scal$$is the the [scalar curvature](https://en.wikipedia.org/wiki/Scalar_curvature) and equals $scal=2/r^2$ for the sphere.
+where $scal$ is the the [scalar curvature](https://en.wikipedia.org/wiki/Scalar_curvature) and equals $scal=2/r^2$ for the sphere.
 
 ## The spectrum
 

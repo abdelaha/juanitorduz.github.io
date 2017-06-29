@@ -33,6 +33,7 @@ NOTEBOOK_DIR = 'notebooks'
 # Blogroll
 LINKS = (
     ('LinkedIn', 'https://www.linkedin.com/in/juanitorduz'),
+    ('GitHub', 'https://github.com/juanitorduz'),
     #('You can modify those links in your config file', '#'),
     )
 
