@@ -8,7 +8,10 @@ Authors: Juan Camilo Orduz
 Summary: rectangle
 ---
 
-I this first post I want to explore the basics of blogging with [Jekyll](https://jekyllrb.com), in particular on the style of the markdown structure in python. I treat an example of a little python challenge which I encountered in my job hunt process. I particularly like it because it is a geometric problem.   
+In this first post I want to explore the basics of blogging with [Pelican](http://docs.getpelican.com/en/stable/#), a static site generator, written in 
+[Python](https://www.python.org). To contruct this website I used [GitHub Pages](https://pages.github.com) and a variant of the procedure described in the nice post [Building a data science portfolio: Making a data science blog](https://www.dataquest.io/blog/how-to-setup-a-data-science-blog/). I must admit that the integration of the [liquid_tags plugin](https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags) was somehow tricky.
+
+ I treat an example of a little python challenge which I encountered in my job hunt process. I particularly like it because it is a geometric problem.   
 
 # Problem
 
@@ -37,7 +40,13 @@ We define a class that represents a Rectangle. Its position is determined by the
         self.height = init_height
 ```
 
-This function idicates whether a given point lies within a distance dist of a given Rectangle, returning a boolen value. First function verifies if the x-coordinate of the Point is at a distance less than dist. If it is then it verifies the y-coordinate. For the y-coordinate it evaluates two cases:
+This function idicates whether a given point lies within a distance dist of a given Rectangle, returning a boolen value. That is, if $A\subset \mathbb{R}^2$ denotes the given rectangle, we want to compute the indicatior function of the open set
+
+\begin{equation}
+U_{dist}:= \{ p \in\mathbb{R}^2\: : \: \exists q \in R \quad \text{such that} \quad ||p-q|| < dist \}.
+\end{equation}
+
+First function verifies if the x-coordinate of the Point is at a distance less than dist. If it is then it verifies the y-coordinate. For the y-coordinate it evaluates two cases:
 
    1. It checks if its outside the Rectangle but still within a distance less that dist (checks to the left and to the right).
 
@@ -85,3 +94,78 @@ def is_point_within_dist_of_rect(rect=Rectangle(), point=Point(), dist=0.0):
     return False
     
 ```
+
+## Eamples
+
+We consider square of side 2 with the center of mass at the origin.
+
+```python
+rectangle = Rectangle(-1,-1,2,2)
+```
+
+We check that the origin is in the square.
+
+```python
+point_1 = Point(0,0)
+
+is_point_within_dist_of_rect(rectangle, point_1, dist=1)
+```
+
+
+    True
+
+
+We check that the upper right corner is in the square.
+
+```python
+point_2 = Point(1,1)
+
+is_point_within_dist_of_rect(rectangle, point_2, dist=1)
+```
+
+
+    True
+
+
+We check a point outside a the square.
+
+```python
+point_3 = Point(0,3)
+
+is_point_within_dist_of_rect(rectangle, point_3, dist=1)
+```
+
+    False
+
+Now we consider a limit case. First we define:
+
+```python
+threshold_value= 1+math.sqrt(2)/2
+epsilon=0.0001
+```
+
+We consider two cases:
+
+- We check a point close (outside) to the region boundary.
+
+```python
+
+point_4 = Point(threshold_value + epsilon, threshold_value + epsilon)
+
+is_point_within_dist_of_rect(rectangle, point_4, dist=1)
+```
+
+
+    False
+
+
+- We check a point close (inside) to the region boundary.
+
+```python
+point_5 = Point(threshold_value - epsilon, threshold_value - epsilon)
+
+is_point_within_dist_of_rect(rectangle, point_5, dist=1)
+```
+
+
+    True

@@ -105,7 +105,7 @@ My research interests are differential geometry, topology and geometric analysis
 
 - 07/2016 [Contributed Talk: Induced Dirac-Schrödinger operators on quotients of semi-free circle actions](http://www.7ecm.de/download/7ECM_Scientific\%20Programm.pdf), [7th European Congress of Mathematics](\href{http://www.7ecm.de/home.html), Berlin, Germany. 
 
-- 06/2015 [Summer School: Geometric and Computational Spectral Theory](http://www.crm.umontreal.ca/sms/2015/index_e.php)Université de Montréal, Montrealm Canada.
+- 06/2015 [Summer School: Geometric and Computational Spectral Theory](http://www.crm.umontreal.ca/sms/2015/index_e.php)Université de Montréal, Montreal, Canada.
 
 - 09/2014 [Trimester Program: Non-commutative Geometry and its Applications](https://www.him.uni-bonn.de/programs/past-programs/past-trimester-programs/non-commutative-geometry-2014/description/), Hausdorff Research Institute for Mathematics, Bonn, Germany. 
 
