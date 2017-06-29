@@ -46,19 +46,52 @@ Title of the Thesis: Induced Dirac-Schrödinger on quotients of semi-free circle
 
 ### Certificates
 
-### Data Analysis and Machine Learning
+#### Data Analysis and Machine Learning
 
 - [Introduction to Data Science in Python](https://www.coursera.org/account/accomplishments/certificate/DNRZYZ9YPVWZ) (Coursera)
 *Tools:* scipy, numpy and pandas.
 
 - [Applied Plotting, Charting & Data Representation in Python](https://www.coursera.org/account/accomplishments/certificate/9KXJ898KD9D6) (Coursera)
-*Tools:* scipy, numpy and pandas.
+*Tools:* pyplot, matplotlib and seaborn
+
+- [{Applied Machine Learning in Python](https://www.coursera.org/account/accomplishments/certificate/HW68UVKPCS45) (Coursera)
+*Tools:* scikit-learn
+
+- [Machine Learning](https://www.coursera.org/account/accomplishments/certificate/R9HMKKTMYERD)(Coursera)
+*Tools:* matlab
 
 #### Statistical Analysis
 
-### Programming
+- [Bayesian Statistics: From Concept to Data Analysis](https://www.coursera.org/account/accomplishments/certificate/FXSZL5EGNFZS) (Coursera)
+*Tools:* R 
 
+- Bayesian Statistics: Techniques and Models (Coursera)
+*Tools:* R and JAGS 
 
+- [Econometrics: Methods and Applications](https://www.coursera.org/account/accomplishments/certificate/UE4YC74QZ3CA) (Coursera)
+*Tools:* pyton: statsmodels
+
+#### Programming
+
+##### Functional Programming in Scala Specialization (Coursera)
+
+- [Functional Programming Principles in Scala](https://www.coursera.org/account/accomplishments/certificate/D4RRBFQ69MT5)
+
+- [{Functional Program Design in Scala](https://www.coursera.org/account/accomplishments/certificate/QQJJTERTPDJX)
+
+- [Parallel Programming](https://www.coursera.org/account/accomplishments/certificate/Y2AWNDPB4FSU)
+
+- [Big Data Analysis with Scala and Spark](https://www.coursera.org/account/accomplishments/certificate/NF3NNPPDHJUM)
+
+- [Functional Programming in Scala Capstone Protect](https://www.coursera.org/account/accomplishments/certificate/JUUDBW4YMH8V)
+
+##### Python
+
+- [Python 3 Course](https://www.sololearn.com/Certificate/1073-1102912/pdf/)
+
+##### SQL
+
+- [SQL Course](https://www.sololearn.com/Certificate/1060-1102912/pdf/)
 
 ### Hobbies
 

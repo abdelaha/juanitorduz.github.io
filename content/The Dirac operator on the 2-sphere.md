@@ -347,7 +347,7 @@ where $scal$ is the the [scalar curvature](https://en.wikipedia.org/wiki/Scalar_
 
 ## The spectrum
 
-The spin-Dirac operator is a first order, self-adjoint elliptic operator, which implies (as $S^2$ is compact) that it has a discrete spectrum. The eigenvalues of $D_{S^2}$ are given by $\pm(k+1)$, for $k\geq 0$, with multiplicities 
+The spin-Dirac operator is a first order, self-adjoint elliptic operator, which implies (as $S^2$ is compact) that it has a discrete spectrum. The eigenvalues of $D_{S^2}$ (for $r=1$) are given by $\pm(k+1)$, for $k\geq 0$, with multiplicities 
 
 \begin{equation*}
 2\left(
@@ -369,7 +369,7 @@ The chirality operator of associated to the spinor bundle $\Sigma(S^2)$ is
 \Gamma=i(-i\sigma_1)(-i\sigma_2)=\sigma_3. 
 \end{align*}
 
-Since the dimension of $S^2$ is even we can verify that ${D}_{S^2(r)}\sigma_3+\sigma_3{D}_{S^2(r)}=0$. With respect to $$\Gamma$$ we can therefore decompose 
+Since the dimension of $S^2$ is even we can verify that ${D}_{S^2(r)}\sigma_3+\sigma_3{D}_{S^2(r)}=0$. With respect to $\Gamma$ we can therefore decompose 
 
 \begin{equation*}
 D_{S^2(r)} =

@@ -250,7 +250,7 @@ D^2_{S^2(r)} = \Delta^{\Sigma} + \frac{scal}{4} = \Delta^{\Sigma} + \frac{1}{2r^
 $$&lt;/div&gt;
 &lt;p&gt;where &lt;span class="math"&gt;\(scal\)&lt;/span&gt; is the the &lt;a href="https://en.wikipedia.org/wiki/Scalar_curvature"&gt;scalar curvature&lt;/a&gt; and equals &lt;span class="math"&gt;\(scal=2/r^2\)&lt;/span&gt; for the sphere.&lt;/p&gt;
 &lt;h2&gt;The spectrum&lt;/h2&gt;
-&lt;p&gt;The spin-Dirac operator is a first order, self-adjoint elliptic operator, which implies (as &lt;span class="math"&gt;\(S^2\)&lt;/span&gt; is compact) that it has a discrete spectrum. The eigenvalues of &lt;span class="math"&gt;\(D_{S^2}\)&lt;/span&gt; are given by &lt;span class="math"&gt;\(\pm(k+1)\)&lt;/span&gt;, for &lt;span class="math"&gt;\(k\geq 0\)&lt;/span&gt;, with multiplicities &lt;/p&gt;
+&lt;p&gt;The spin-Dirac operator is a first order, self-adjoint elliptic operator, which implies (as &lt;span class="math"&gt;\(S^2\)&lt;/span&gt; is compact) that it has a discrete spectrum. The eigenvalues of &lt;span class="math"&gt;\(D_{S^2}\)&lt;/span&gt; (for &lt;span class="math"&gt;\(r=1\)&lt;/span&gt;) are given by &lt;span class="math"&gt;\(\pm(k+1)\)&lt;/span&gt;, for &lt;span class="math"&gt;\(k\geq 0\)&lt;/span&gt;, with multiplicities &lt;/p&gt;
 &lt;div class="math"&gt;\begin{equation*}
 2\left(
 \begin{array}{c}
@@ -265,9 +265,7 @@ k
 &lt;div class="math"&gt;\begin{align*}
 \Gamma=i(-i\sigma_1)(-i\sigma_2)=\sigma_3. 
 \end{align*}&lt;/div&gt;
-&lt;p&gt;Since the dimension of &lt;span class="math"&gt;\(S^2\)&lt;/span&gt; is even we can verify that &lt;span class="math"&gt;\({D}_{S^2(r)}\sigma_3+\sigma_3{D}_{S^2(r)}=0\)&lt;/span&gt;. With respect to &lt;/p&gt;
-&lt;div class="math"&gt;$$\Gamma$$&lt;/div&gt;
-&lt;p&gt; we can therefore decompose &lt;/p&gt;
+&lt;p&gt;Since the dimension of &lt;span class="math"&gt;\(S^2\)&lt;/span&gt; is even we can verify that &lt;span class="math"&gt;\({D}_{S^2(r)}\sigma_3+\sigma_3{D}_{S^2(r)}=0\)&lt;/span&gt;. With respect to &lt;span class="math"&gt;\(\Gamma\)&lt;/span&gt; we can therefore decompose &lt;/p&gt;
 &lt;div class="math"&gt;\begin{equation*}
 D_{S^2(r)} =
 \left(
