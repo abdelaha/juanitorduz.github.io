@@ -1198,14 +1198,8 @@ It contains two columns:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;This function idicates whether a given point lies within a distance dist of a given Rectangle, returning a boolen value.&lt;/p&gt;
+&lt;p&gt;This function idicates whether a given point lies within a distance dist of a given Rectangle, returning a boolen value. First function verifies if the x-coordinate of the Point is at a distance less than dist. If it is then it verifies the y-coordinate. For the y-coordinate it evaluates two cases:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;First function verifies if the x-coordinate of the Point is at a distance less than dist. If it is then it verifies the y-coordinate.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;For the y-coordinate it evaluates two cases:&lt;/p&gt;
-&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;It checks if its outside the Rectangle but still within a distance less that dist (checks to the left and to the right).&lt;/p&gt;
 &lt;/li&gt;

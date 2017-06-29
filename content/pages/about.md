@@ -44,6 +44,22 @@ Title of the Thesis: Induced Dirac-Schrödinger on quotients of semi-free circle
 - English: Full professional proficiency.
 - German: Professional working proficiency.
 
+### Certificates
+
+### Data Analysis and Machine Learning
+
+- [Introduction to Data Science in Python](https://www.coursera.org/account/accomplishments/certificate/DNRZYZ9YPVWZ) (Coursera)
+*Tools:* scipy, numpy and pandas.
+
+- [Applied Plotting, Charting & Data Representation in Python](https://www.coursera.org/account/accomplishments/certificate/9KXJ898KD9D6) (Coursera)
+*Tools:* scipy, numpy and pandas.
+
+#### Statistical Analysis
+
+### Programming
+
+
+
 ### Hobbies
 
 - Sports, music and [photography](https://www.flickr.com/photos/143384299@N04/). 

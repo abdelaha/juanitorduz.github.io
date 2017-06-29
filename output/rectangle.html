@@ -11897,14 +11897,8 @@ jQuery(document).ready(function($) {
 </pre></div>
 
 
-<p>This function idicates whether a given point lies within a distance dist of a given Rectangle, returning a boolen value.</p>
+<p>This function idicates whether a given point lies within a distance dist of a given Rectangle, returning a boolen value. First function verifies if the x-coordinate of the Point is at a distance less than dist. If it is then it verifies the y-coordinate. For the y-coordinate it evaluates two cases:</p>
 <ol>
-<li>
-<p>First function verifies if the x-coordinate of the Point is at a distance less than dist. If it is then it verifies the y-coordinate.</p>
-</li>
-<li>
-<p>For the y-coordinate it evaluates two cases:</p>
-</li>
 <li>
 <p>It checks if its outside the Rectangle but still within a distance less that dist (checks to the left and to the right).</p>
 </li>
