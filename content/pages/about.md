@@ -77,7 +77,7 @@ Title of the Thesis: Induced Dirac-Schrödinger on quotients of semi-free circle
 
 - [Functional Programming Principles in Scala](https://www.coursera.org/account/accomplishments/certificate/D4RRBFQ69MT5)
 
-- [{Functional Program Design in Scala](https://www.coursera.org/account/accomplishments/certificate/QQJJTERTPDJX)
+- [Functional Program Design in Scala](https://www.coursera.org/account/accomplishments/certificate/QQJJTERTPDJX)
 
 - [Parallel Programming](https://www.coursera.org/account/accomplishments/certificate/Y2AWNDPB4FSU)
 
@@ -92,6 +92,20 @@ Title of the Thesis: Induced Dirac-Schrödinger on quotients of semi-free circle
 ##### SQL
 
 - [SQL Course](https://www.sololearn.com/Certificate/1060-1102912/pdf/)
+
+### Selected Talks and Events
+
+- 07-2017 [Workshop on Loop Spaces, Supersymmetry and Index Theory](http://www.math.nus.edu.sg/~mathanf/LSI/Loop%20space%20and%20supersymmetry.html), Chern Institute of Mathematics, Tianjin, China.
+
+- 07-2017 [PyData Berlin](https://pydata.org/berlin2017/), Hochschule für Technik und Wirtschaft, Berlin, Germany.
+
+- 08-2016 [Focus Program on Topology, Stratified Spaces and Particle Physics]{\href{http://www.fields.utoronto.ca/activities/16-17/stratifiedspaces}, The Fields Institute for Research in Mathematical Sciences, Toronto, Canada.
+
+- 07/2016 [Contributed Talk: Induced Dirac-Schrödinger operators on quotients of semi-free circle actions](http://www.7ecm.de/download/7ECM_Scientific\%20Programm.pdf), [7th European Congress of Mathematics](\href{http://www.7ecm.de/home.html), Berlin, Germany. 
+
+- 06/2015 [Summer School: Geometric and Computational Spectral Theory](http://www.crm.umontreal.ca/sms/2015/index_e.php)Université de Montréal, Montrealm Canada.
+
+- 09/2014 [Trimester Program: Non-commutative Geometry and its Applications](https://www.him.uni-bonn.de/programs/past-programs/past-trimester-programs/non-commutative-geometry-2014/description/), Hausdorff Research Institute for Mathematics, Bonn, Germany. 
 
 ### Hobbies
 
