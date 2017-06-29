@@ -49,7 +49,7 @@ THEME="themes/pelican-alchemy/alchemy"
 #THEME="themes/pelican-elegant"
 
 PLUGIN_PATHS=['pelican-plugins','plugins']
-PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal']
+PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal', 'render_math']
 
 STATIC=['notebooks']
 
