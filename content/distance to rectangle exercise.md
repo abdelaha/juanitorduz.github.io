@@ -5,7 +5,7 @@ Category: Python
 Tags: python
 slug: rectangle
 Authors: Juan Camilo Orduz
-Summary: rectangle
+Summary: In this first post we get started with a small python script to explore the basic capabilities of Pelican.
 ---
 
 In this first post I want to explore the basics of blogging with [Pelican](http://docs.getpelican.com/en/stable/#), a static site generator, written in 
