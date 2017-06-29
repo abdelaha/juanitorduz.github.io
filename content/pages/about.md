@@ -30,9 +30,9 @@ My research interests are differential geometry, topology and geometric analysis
 
 - since 07/2014 **PhD candidate in Mathematics**, [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie), Berlin, Germany.
 
-⋅⋅⋅*Advisor:* [Prof. Jochen Brüning](https://www2.mathematik.hu-berlin.de/~bruening/)
+*Advisor:* [Prof. Jochen Brüning](https://www2.mathematik.hu-berlin.de/~bruening/)
 
-⋅⋅⋅*Title of the Thesis:* Induced Dirac-Schrödinger on quotients of semi-free circle actions.
+*Title of the Thesis:* Induced Dirac-Schrödinger on quotients of semi-free circle actions.
 
 - 2011-2014 **M.Sc. Mathematics**, [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie), Berlin, Germany.
 
