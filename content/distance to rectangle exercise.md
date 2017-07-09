@@ -9,7 +9,7 @@ Summary: In this first post we get started with a small python script to explore
 ---
 
 In this first post I want to explore the basics of blogging with [Pelican](http://docs.getpelican.com/en/stable/#), a static site generator, written in 
-[Python](https://www.python.org). To contruct this website I used [GitHub Pages](https://pages.github.com) and a variant of the procedure described in the nice post [Building a data science portfolio: Making a data science blog](https://www.dataquest.io/blog/how-to-setup-a-data-science-blog/). I must admit that the integration of the [liquid_tags plugin](https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags) was somehow tricky.
+[Python](https://www.python.org). To contruct this website I used [GitHub Pages](https://pages.github.com) and a variant of the procedure described in the nice post [Building a data science portfolio: Making a data science blog](https://www.dataquest.io/blog/how-to-setup-a-data-science-blog/). In addition, I had some guidance by [Dror Atariah](http://drorata.github.io/). I must admit that the integration of the [liquid_tags plugin](https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags) was somehow tricky.
 
  I treat an example of a little python challenge which I encountered in my job hunt process. I particularly like it because it is a geometric problem.   
 

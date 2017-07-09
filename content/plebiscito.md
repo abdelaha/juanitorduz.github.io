@@ -1,6 +1,6 @@
 ---
 Title: Plebiscito Colombia (October 2nd)
-Date: 2017-07-08
+Date: 2017-07-09
 Category: Python
 Tags: python, jupyter
 slug: plebiscito
