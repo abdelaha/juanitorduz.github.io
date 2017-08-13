@@ -69,7 +69,7 @@ P(A|B)=\frac{P(B|A)P(A)}{P(B)} = \frac{0.7\times 0.5}{0.4} = 0.875.
 f(\theta|y)=\frac{f(y|\theta)f(\theta)}{f(y)} = 
 \displaystyle{\frac{f(y|\theta)f(\theta)}{\int f(y|\theta)f(\theta)d\theta}}
 \end{equation}&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The function $f(y|\theta)$ is caled the &lt;em&gt;likelihood&lt;/em&gt;.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;The function $f(y|\theta)$ is called the &lt;em&gt;likelihood&lt;/em&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;$f(\theta)$ is the &lt;em&gt;prior&lt;/em&gt; distribution of $\theta$.&lt;/p&gt;
 &lt;/li&gt;
@@ -1224,10 +1224,10 @@ $$&lt;/p&gt;
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;Auto-assigning NUTS sampler...
 Initializing NUTS using ADVI...
-Average Loss = 174.82:   4%|▍         | 8456/200000 [00:01&amp;lt;00:29, 6577.41it/s]
+Average Loss = 175.21:   4%|▍         | 8203/200000 [00:01&amp;lt;00:28, 6752.78it/s]
 Convergence archived at 8500
 Interrupted at 8,500 [4%]: Average Loss = 188.36
-100%|██████████| 2500/2500 [00:05&amp;lt;00:00, 425.56it/s]
+100%|██████████| 2500/2500 [00:04&amp;lt;00:00, 562.12it/s]
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -3350,10 +3350,10 @@ iEgF+F/+pR5KGbGCngAAAABJRU5ErkJggg==
 &lt;div class="output_subarea output_stream output_stderr output_text"&gt;
 &lt;pre&gt;Auto-assigning NUTS sampler...
 Initializing NUTS using ADVI...
-Average Loss = 413.68:   5%|▌         | 10073/200000 [00:02&amp;lt;00:51, 3673.52it/s]
+Average Loss = 413.34:   5%|▌         | 10199/200000 [00:03&amp;lt;00:49, 3805.65it/s]
 Convergence archived at 10300
 Interrupted at 10,300 [5%]: Average Loss = 768.84
-100%|██████████| 1500/1500 [00:15&amp;lt;00:00, 99.92it/s] 
+100%|██████████| 1500/1500 [00:18&amp;lt;00:00, 79.46it/s] 
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -8146,7 +8146,7 @@ J5wDLE4be59WkfcHgX8E/n8aNvozcHr7n4JZZzwbqJnZkHINwMxsSLkAMDMbUi4AzMyGlAsAM7Mh
 
 
 &lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;&amp;lt;matplotlib.text.Text at 0x11c650780&amp;gt;&lt;/pre&gt;
+&lt;pre&gt;&amp;lt;matplotlib.text.Text at 0x120551518&amp;gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
