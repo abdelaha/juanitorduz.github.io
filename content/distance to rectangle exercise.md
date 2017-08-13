@@ -140,8 +140,8 @@ is_point_within_dist_of_rect(rectangle, point_3, dist=1)
 Now we consider a limit case. First we define:
 
 ```python
-threshold_value= 1+math.sqrt(2)/2
-epsilon=0.0001
+threshold_value= 1 + math.sqrt(2)/2
+epsilon = 0.0001
 ```
 
 We consider two cases:

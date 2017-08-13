@@ -5,7 +5,7 @@ Category: Geometry
 Tags: mathematics, geometry 
 slug: dirac_sphere
 Authors: Juan Camilo Orduz
-Summary: summary
+Summary: We describe the explicit construction of the spin-Dirac operator over the 2-sphere with respect associated to the round metric and its unique spin structure. 
 ---
 
 
