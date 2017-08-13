@@ -1,0 +1,8 @@
+pelican content -o output -s publishconf.py
+
+git add -A s
+git commit -m"message"
+git push 
+
+ghp-import output -b master
+git push origin master
