@@ -14,8 +14,7 @@ My research interests are differential geometry, topology and geometric analysis
 
 - 01/07/2017-Present  **Junior Consultant Smart Darta**, [trommsdorff + drüner, innovation + marketing consultants GmbH](https://www.td-berlin.com), Berlin, Germany.
 
-*Apply skills in data mining, quantitative analysis, and the presentation of data, integrating and unifying data from various sources. Consult on the selection of data sources and their usage, identify key performance indicators and give recommendations in meaningful presentations beyond numbers. Collaborate closely with a wide range of international clients, understanding their business needs and challenges. Model and visualize great amounts of commercial data and build tracking solutions to create statistical models of future behavior, market drivers, trends and growth potential. Create insightful reports and interactive dashboards based on digital data sources (including web analytics, Buzz Tracking, CRM, Search).*
-
+*Apply skills in data mining, quantitative analysis, and the presentation of data, integrating and unifying data from various sources. Develop algorithms for a variety of business problems (e.g. sales predictions, media mix allocation) by applying your knowledge in feature engineering, variable selection and modeling. Consult on the selection of data sources and their usage, identify key performance indicators and give recommendations in meaningful presentations beyond numbers. Collaborate closely with a wide range of international clients, understanding their business needs and challenges. Model and visualize great amounts of commercial data and build tracking solutions to create statistical models of future behavior, market drivers, trends and growth potential. Create insightful reports and interactive dashboards based on digital data sources (including web analytics, Buzz Tracking, CRM, Search).*
 
 - 01/01/2017-30/06/2017 **Trainee - Data Analyst**, [GoEuro](https://www.goeuro.com), Berlin, Germany.
 
@@ -106,6 +105,8 @@ My research interests are differential geometry, topology and geometric analysis
 - [SQL Course](https://www.sololearn.com/Certificate/1060-1102912/pdf/) (SoloLearn)
 
 ### Selected Talks and Events
+
+- 08/2017 [Introduction to Bayesian modeling with PyMC3](https://www.meetup.com/Python-Users-Berlin-PUB/events/237520865/), Python Users Berlin (PUB), Germany.
 
 - 07/2017 [Workshop on Loop Spaces, Supersymmetry and Index Theory](http://www.math.nus.edu.sg/~mathanf/LSI/Loop%20space%20and%20supersymmetry.html), Chern Institute of Mathematics, Tianjin, China.
 
