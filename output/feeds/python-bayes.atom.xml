@@ -1127,13 +1127,15 @@ iEgTUriLiDQhhbuISBNSuIuINCGFu4hIE/r/PfYsDz9lKXQAAAAASUVORK5CYII=
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="Metropolis&amp;#8211;Hastings-algorithm"&gt;Metropolis&amp;#8211;Hastings algorithm&lt;a class="anchor-link" href="#Metropolis&amp;#8211;Hastings-algorithm"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Let \(\phi\) be a function that is proportional to the desired probability distribution \(f\).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Initialization:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Pick \(x&lt;em&gt;{0}\) to be the first sample, and choose an arbitrary probability density 
-$$g(x&lt;/em&gt;{n+1}, x&lt;em&gt;{n})$$ that suggests a candidate for the next sample value \(x&lt;/em&gt;{n+1}\). Assume \(g\) symmetric.&lt;/p&gt;
+&lt;p&gt;Pick \(x_{0}\) to be the first sample, and choose an arbitrary probability density&lt;/p&gt;
+\begin{equation}
+g(x_{n+1}| x_{n})
+\end{equation}&lt;p&gt;that suggests a candidate for the next sample value \(x_{n+1}\). Assume \(g\) is symmetric.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;For each iteration:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Generate a candidate \(x^&lt;em&gt;\) for the next sample by picking from the distribution \(g(x^&lt;/em&gt;|x_n)\). Calculate the acceptance ratio&lt;/p&gt;
-$$
-\alpha(x^*|x_n):=\frac{f(x^*)}{f(x_n)} = \frac{\phi(x^*)}{\phi(x_n)}
-$$&lt;p&gt;If \(\alpha(x^&lt;em&gt;|x&lt;em&gt;n) ≥ 1\), automatically accept the candidate by setting \(x&lt;/em&gt;{n+1} = x^&lt;/em&gt;\). Otherwise, accept the candidate with probability \(\alpha(x^*|x&lt;em&gt;n)\). If the candidate is rejected, set \(x&lt;/em&gt;{n+1} = x_{n}\), instead.&lt;/p&gt;
+&lt;p&gt;Generate a candidate \(x\) for the next sample by picking from the distribution \(g(x|x_n)\). Calculate the &lt;em&gt;acceptance ratio&lt;/em&gt;&lt;/p&gt;
+\begin{equation}
+\alpha := \frac{f(x)}{f(x_n)} = \frac{\phi(x)}{\phi(x_n)}
+\end{equation}&lt;p&gt;If \(\alpha \geq 1\), automatically accept the candidate by setting \(\displaystyle{x&lt;em&gt;{n+1} = x}\). Otherwise, accept the candidate with probability \(\alpha \). If the candidate is rejected, set \(\displaystyle{x&lt;/em&gt;{n+1} = x_{n}}\) instead.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1154,7 +1156,7 @@ $$&lt;p&gt;If \(\alpha(x^&lt;em&gt;|x&lt;em&gt;n) ≥ 1\), automatically accept 
 &lt;h2 id="Ergodic-Theorem-for-Markov-Chains"&gt;Ergodic Theorem for Markov Chains&lt;a class="anchor-link" href="#Ergodic-Theorem-for-Markov-Chains"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Theorem (Ergodic Theorem for Markov Chains)&lt;/strong&gt; If \({x^{(1)} , x^{(2)} , . . .}\) is an &lt;em&gt;irreducible&lt;/em&gt;, &lt;em&gt;aperiodic&lt;/em&gt; and &lt;em&gt;recurrent&lt;/em&gt; &lt;a href="https://en.wikipedia.org/wiki/Markov_chain"&gt;Markov chain&lt;/a&gt;, then there is a unique probability distribution \(\pi\) such that as \(N\longrightarrow\infty\),&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;\(P(x^{(N)} ∈ A) \longrightarrow \pi(A)\).&lt;/li&gt;
-&lt;li&gt;\(\frac{1}{N}\sum_{n=1}^{N} g(x^{(n)})) \longrightarrow    \int g(x)\pi(x) dx\).&lt;/li&gt;
+&lt;li&gt;\(\displaystyle{\frac{1}{N}\sum_{n=1}^{N} g(x^{(n)})) \longrightarrow    \int g(x)\pi(x) dx }\).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Recall:&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
