@@ -13002,13 +13002,15 @@ iEgTUriLiDQhhbuISBNSuIuINCGFu4hIE/r/PfYsDz9lKXQAAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Metropolis&#8211;Hastings-algorithm">Metropolis&#8211;Hastings algorithm<a class="anchor-link" href="#Metropolis&#8211;Hastings-algorithm">&#194;&#182;</a></h2><p>Let \(\phi\) be a function that is proportional to the desired probability distribution \(f\).</p>
 <p><strong>Initialization:</strong></p>
-<p>Pick \(x<em>{0}\) to be the first sample, and choose an arbitrary probability density 
-$$g(x</em>{n+1}, x<em>{n})$$ that suggests a candidate for the next sample value \(x</em>{n+1}\). Assume \(g\) symmetric.</p>
+<p>Pick \(x_{0}\) to be the first sample, and choose an arbitrary probability density</p>
+\begin{equation}
+g(x_{n+1}| x_{n})
+\end{equation}<p>that suggests a candidate for the next sample value \(x_{n+1}\). Assume \(g\) is symmetric.</p>
 <p><strong>For each iteration:</strong></p>
-<p>Generate a candidate \(x^<em>\) for the next sample by picking from the distribution \(g(x^</em>|x_n)\). Calculate the acceptance ratio</p>
-$$
-\alpha(x^*|x_n):=\frac{f(x^*)}{f(x_n)} = \frac{\phi(x^*)}{\phi(x_n)}
-$$<p>If \(\alpha(x^<em>|x<em>n) ≥ 1\), automatically accept the candidate by setting \(x</em>{n+1} = x^</em>\). Otherwise, accept the candidate with probability \(\alpha(x^*|x<em>n)\). If the candidate is rejected, set \(x</em>{n+1} = x_{n}\), instead.</p>
+<p>Generate a candidate \(x\) for the next sample by picking from the distribution \(g(x|x_n)\). Calculate the <em>acceptance ratio</em></p>
+\begin{equation}
+\alpha := \frac{f(x)}{f(x_n)} = \frac{\phi(x)}{\phi(x_n)}
+\end{equation}<p>If \(\alpha \geq 1\), automatically accept the candidate by setting \(\displaystyle{x<em>{n+1} = x}\). Otherwise, accept the candidate with probability \(\alpha \). If the candidate is rejected, set \(\displaystyle{x</em>{n+1} = x_{n}}\) instead.</p>
 
 </div>
 </div>
@@ -13029,7 +13031,7 @@ $$<p>If \(\alpha(x^<em>|x<em>n) ≥ 1\), automatically accept the candidate by s
 <h2 id="Ergodic-Theorem-for-Markov-Chains">Ergodic Theorem for Markov Chains<a class="anchor-link" href="#Ergodic-Theorem-for-Markov-Chains">&#194;&#182;</a></h2><p><strong>Theorem (Ergodic Theorem for Markov Chains)</strong> If \({x^{(1)} , x^{(2)} , . . .}\) is an <em>irreducible</em>, <em>aperiodic</em> and <em>recurrent</em> <a href="https://en.wikipedia.org/wiki/Markov_chain">Markov chain</a>, then there is a unique probability distribution \(\pi\) such that as \(N\longrightarrow\infty\),</p>
 <ul>
 <li>\(P(x^{(N)} ∈ A) \longrightarrow \pi(A)\).</li>
-<li>\(\frac{1}{N}\sum_{n=1}^{N} g(x^{(n)})) \longrightarrow    \int g(x)\pi(x) dx\).</li>
+<li>\(\displaystyle{\frac{1}{N}\sum_{n=1}^{N} g(x^{(n)})) \longrightarrow    \int g(x)\pi(x) dx }\).</li>
 </ul>
 <p><em>Recall:</em></p>
 <ul>
