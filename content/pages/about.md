@@ -12,7 +12,7 @@ My research interests are differential geometry, topology and geometric analysis
 
 ### Work Experience
 
-- 01/07/2017-Present  **Junior Consultant Smart Darta**, [trommsdorff + drüner, innovation + marketing consultants GmbH](https://www.td-berlin.com), Berlin, Germany.
+- 01/07/2017-Present  **Junior Data Scientist**, [trommsdorff + drüner, innovation + marketing consultants GmbH](https://www.td-berlin.com), Berlin, Germany.
 
 *Apply skills in data mining, quantitative analysis, and the presentation of data, integrating and unifying data from various sources. Develop algorithms for a variety of business problems (e.g. sales predictions, media mix allocation) by applying your knowledge in feature engineering, variable selection and modeling. Consult on the selection of data sources and their usage, identify key performance indicators and give recommendations in meaningful presentations beyond numbers. Collaborate closely with a wide range of international clients, understanding their business needs and challenges. Model and visualize great amounts of commercial data and build tracking solutions to create statistical models of future behavior, market drivers, trends and growth potential. Create insightful reports and interactive dashboards based on digital data sources (including web analytics, Buzz Tracking, CRM, Search).*
 

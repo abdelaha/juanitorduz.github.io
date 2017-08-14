@@ -34,10 +34,10 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Conditional-Probability"&gt;Conditional Probability&lt;a class="anchor-link" href="#Conditional-Probability"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Let A and $B$ be two events, then the &lt;em&gt;conditional probability&lt;/em&gt; of $A$ given $B$ is defined as the ratio&lt;/p&gt;
+&lt;h2 id="Conditional-Probability"&gt;Conditional Probability&lt;a class="anchor-link" href="#Conditional-Probability"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Let \(A\) and \(B\) be two events, then the &lt;em&gt;conditional probability&lt;/em&gt; of \(A\) given \(B\) is defined as the ratio&lt;/p&gt;
 \begin{equation}
 P(A|B):=\frac{P(A\cap B)}{P(B)}
-\end{equation}&lt;p&gt;&lt;em&gt;Remark:&lt;/em&gt; Formally we have a &lt;a href="https://en.wikipedia.org/wiki/Probability_space"&gt;probability space&lt;/a&gt; $(\Omega, \mathcal{F}, P)$, where $\Omega$ is the sample space, $\mathcal{F}$ is a $\sigma$-algebra on $\Omega$ and $P$ is a probability measure. The events $A$, and $B$ are elements of $\mathcal{F}$ and we assume that $P(B)\neq 0$.&lt;/p&gt;
+\end{equation}&lt;p&gt;&lt;em&gt;Remark:&lt;/em&gt; Formally we have a &lt;a href="https://en.wikipedia.org/wiki/Probability_space"&gt;probability space&lt;/a&gt; \((\Omega, \mathcal{F}, P)\), where \(\Omega\) is the sample space, \(\mathcal{F}\) is a \(\sigma\)-algebra on \(\Omega\) and \(P\) is a probability measure. The events \(A\), and \(B\) are elements of \(\mathcal{F}\) and we assume that \(P(B)\neq 0\).&lt;/p&gt;
 &lt;p&gt;Observe in particular&lt;/p&gt;
 \begin{equation}
 P(A|B)P(B)=P(A\cap B)=P(B\cap A) = P(B|A)P(A)
@@ -53,7 +53,7 @@ P(A|B)P(B)=P(A\cap B)=P(B\cap A) = P(B|A)P(A)
 \begin{equation}
 P(A|B)=\frac{P(B|A)P(A)}{P(B)}
 \end{equation}&lt;p&gt;which is known as &lt;a href="https://en.wikipedia.org/wiki/Bayes%27_theorem"&gt;Bayes Theorem&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt; Suppose you are in the U-Bahn and you see a person with long hair. You want to know the probablity that this person is a woman. Consider the events $A=$ woman $B=$ long hair. You want to compute $P(A|B)$. Suppose that you estimate $P(A)=0.5$, $P(B)=0.4$ and $P(B|A)=0.7$ (the probability that a woman has long hair). Then, given these prior estimated probabilities, Bayes theorem gives&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt; Suppose you are in the U-Bahn and you see a person with long hair. You want to know the probablity that this person is a woman. Consider the events \(A=\) woman \(B=\) long hair. You want to compute \(P(A|B)\). Suppose that you estimate \(P(A)=0.5\), \(P(B)=0.4\) and \(P(B|A)=0.7\) (the probability that a woman has long hair). Then, given these prior estimated probabilities, Bayes theorem gives&lt;/p&gt;
 \begin{equation}
 P(A|B)=\frac{P(B|A)P(A)}{P(B)} = \frac{0.7\times 0.5}{0.4} = 0.875.
 \end{equation}
@@ -64,20 +64,20 @@ P(A|B)=\frac{P(B|A)P(A)}{P(B)} = \frac{0.7\times 0.5}{0.4} = 0.875.
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Bayesian-Approach-to-Data-Analysis"&gt;Bayesian Approach to Data Analysis&lt;a class="anchor-link" href="#Bayesian-Approach-to-Data-Analysis"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Assume that you have a sample of observations $y_1,..., y_n$ of a random variable $Y\sim f(y|\theta)$, where $\theta$ is a parameter for the distribution. Here we consider $\theta$ as a random variable as well. Following Bayes Theorem (its continuous version) we can write.&lt;/p&gt;
+&lt;h2 id="Bayesian-Approach-to-Data-Analysis"&gt;Bayesian Approach to Data Analysis&lt;a class="anchor-link" href="#Bayesian-Approach-to-Data-Analysis"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Assume that you have a sample of observations \(y_1,..., y_n\) of a random variable \(Y\sim f(y|\theta)\), where \(\theta\) is a parameter for the distribution. Here we consider \(\theta\) as a random variable as well. Following Bayes Theorem (its continuous version) we can write.&lt;/p&gt;
 \begin{equation}
 f(\theta|y)=\frac{f(y|\theta)f(\theta)}{f(y)} = 
 \displaystyle{\frac{f(y|\theta)f(\theta)}{\int f(y|\theta)f(\theta)d\theta}}
 \end{equation}&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The function $f(y|\theta)$ is called the &lt;em&gt;likelihood&lt;/em&gt;.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;The function \(f(y|\theta)\) is called the &lt;em&gt;likelihood&lt;/em&gt;.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;$f(\theta)$ is the &lt;em&gt;prior&lt;/em&gt; distribution of $\theta$.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;\(f(\theta)\) is the &lt;em&gt;prior&lt;/em&gt; distribution of \(\theta\).&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Note that $f(y)$ &lt;em&gt;does not&lt;/em&gt; depend on $\theta$ (just on the data), thus it can be considered as a "normalizing constant". In addition, it is often the case that the integral above is not easy to compute. Nevertheless, it is enough to consider the relation:&lt;/p&gt;
+&lt;p&gt;Note that \(f(y)\) &lt;em&gt;does not&lt;/em&gt; depend on \(\theta\) (just on the data), thus it can be considered as a "normalizing constant". In addition, it is often the case that the integral above is not easy to compute. Nevertheless, it is enough to consider the relation:&lt;/p&gt;
 \begin{equation}
 f(\theta|y)  \propto \text{likelihood} \times \text{prior}.
-\end{equation}&lt;p&gt;(Here $\propto$ denotes the proportionality relation)&lt;/p&gt;
+\end{equation}&lt;p&gt;(Here \(\propto\) denotes the proportionality relation)&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -86,12 +86,12 @@ f(\theta|y)  \propto \text{likelihood} \times \text{prior}.
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Example:-Poisson-Data"&gt;Example: Poisson Data&lt;a class="anchor-link" href="#Example:-Poisson-Data"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In order to give a better sense of the relation above we are going to study a concrete example. Consider a $n$ samples of $Y\sim Poiss(\lambda)$. Recall that the &lt;a href="https://en.wikipedia.org/wiki/Poisson_distribution"&gt;Poisson distribution&lt;/a&gt; is given by:&lt;/p&gt;
+&lt;h2 id="Example:-Poisson-Data"&gt;Example: Poisson Data&lt;a class="anchor-link" href="#Example:-Poisson-Data"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In order to give a better sense of the relation above we are going to study a concrete example. Consider a \(n\) samples of \(Y\sim Poiss(\lambda)\). Recall that the &lt;a href="https://en.wikipedia.org/wiki/Poisson_distribution"&gt;Poisson distribution&lt;/a&gt; is given by:&lt;/p&gt;
 $$
 \displaystyle{
 f(y_i|\lambda)=\frac{e^{-\lambda}\lambda^{y_i}}{y_i!}
 }
-$$&lt;p&gt;where $\lambda&amp;gt;0$. It is easy to verify that $E(Y)=\lambda$ and $Var(Y)=\lambda$. Parallel to the formal discussion, we are going to implement a numerical simulation:&lt;/p&gt;
+$$&lt;p&gt;where \(\lambda&amp;gt;0\). It is easy to verify that \(E(Y)=\lambda\) and \(Var(Y)=\lambda\). Parallel to the formal discussion, we are going to implement a numerical simulation:&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -321,10 +321,10 @@ oEtSIwx0SWqEgS5JjTDQJakRBrokNeL/ATFD4YMgCUh8AAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Prior:-Gamma-Distribution"&gt;Prior: Gamma Distribution&lt;a class="anchor-link" href="#Prior:-Gamma-Distribution"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Let us consider a &lt;a href="https://en.wikipedia.org/wiki/Gamma_distribution"&gt;gamma&lt;/a&gt; prior distribution for the parameter $\lambda \sim \Gamma(a,b)$. Recall that the density function for the gamma distribution is&lt;/p&gt;
-\begin{align}
+&lt;h3 id="Prior:-Gamma-Distribution"&gt;Prior: Gamma Distribution&lt;a class="anchor-link" href="#Prior:-Gamma-Distribution"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Let us consider a &lt;a href="https://en.wikipedia.org/wiki/Gamma_distribution"&gt;gamma&lt;/a&gt; prior distribution for the parameter \(\lambda \sim \Gamma(a,b)\). Recall that the density function for the gamma distribution is&lt;/p&gt;
+\begin{equation}
 f(\lambda)=\frac{b^a}{\Gamma(a)}\lambda^{a-1} e^{-b\lambda}
-\end{align}&lt;p&gt;where $a&amp;gt;0$ is the &lt;em&gt;shape&lt;/em&gt; parameter and $b&amp;gt;0$ is the &lt;em&gt;rate parameter&lt;/em&gt;.&lt;/p&gt;
+\end{equation}&lt;p&gt;where \(a&amp;gt;0\) is the &lt;em&gt;shape&lt;/em&gt; parameter and \(b&amp;gt;0\) is the &lt;em&gt;rate parameter&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;The &lt;em&gt;expected value&lt;/em&gt; and &lt;em&gt;variance&lt;/em&gt; of the gamma distribution is&lt;/p&gt;
 $$
 E(\lambda)=\frac{a}{b}
@@ -601,7 +601,7 @@ f(y|\lambda)=&amp;amp;\prod_{i=1}^{n} \frac{e^{-\lambda}\lambda^{y_i}}{y_i!}
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Posterior-distribution-for-$\lambda$-up-to-a-constant"&gt;Posterior distribution for $\lambda$ up to a constant&lt;a class="anchor-link" href="#Posterior-distribution-for-$\lambda$-up-to-a-constant"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;As we are just interested in the structure of the posterior distribution, up to a constant, we see&lt;/p&gt;
+&lt;h3 id="Posterior-distribution-for-\(\lambda\)-up-to-a-constant"&gt;Posterior distribution for \(\lambda\) up to a constant&lt;a class="anchor-link" href="#Posterior-distribution-for-\(\lambda\)-up-to-a-constant"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;As we are just interested in the structure of the posterior distribution, up to a constant, we see&lt;/p&gt;
 \begin{align}
 f(\lambda|y)\propto &amp;amp; \text{likelihood} \times \text{prior}\\
 \propto &amp;amp; \quad f(y|\lambda)f(\lambda)\\
@@ -831,7 +831,7 @@ kRqkcBcRqUEKdxGRGqRwFxGpQQp3EZEa9P8BZlmazFtAu7sAAAAASUVORK5CYII=
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="True-posterior-distribution-for-$\lambda$"&gt;True posterior distribution for $\lambda$&lt;a class="anchor-link" href="#True-posterior-distribution-for-$\lambda$"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In fact, as  $f(\lambda|y) \propto\: \lambda^{\left(\sum_{i=1}^n y_i+a\right)-1} e^{-(n+b)\lambda}$, one verifies that the posterior distribution is again a gamma&lt;/p&gt;
+&lt;h3 id="True-posterior-distribution-for-\(\lambda\)"&gt;True posterior distribution for \(\lambda\)&lt;a class="anchor-link" href="#True-posterior-distribution-for-\(\lambda\)"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In fact, as  \(f(\lambda|y) \propto\: \lambda^{\left(\sum_{i=1}^n y_i+a\right)-1} e^{-(n+b)\lambda}\), one verifies that the posterior distribution is again a gamma&lt;/p&gt;
 \begin{align}
 f(\lambda|y) = \Gamma\left(\sum_{i=1}^n y_i+a, n+b\right)
 \end{align}&lt;p&gt;This means that the gamma and Poisson distribution form a &lt;a href="https://en.wikipedia.org/wiki/Conjugate_prior"&gt;conjugate pair&lt;/a&gt;.&lt;/p&gt;
@@ -1063,12 +1063,11 @@ iEgTUriLiDQhhbuISBNSuIuINCGFu4hIE/r/PfYsDz9lKXQAAAAASUVORK5CYII=
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;We indeed see how the posterior distribution is concentrated around the true parameter $\lambda=2$.&lt;/p&gt;
-&lt;p&gt;Note that the posterior mean is
+&lt;p&gt;We indeed see how the posterior distribution is concentrated around the true parameter \(\lambda=2\).&lt;/p&gt;
+&lt;p&gt;Note that the posterior mean is&lt;/p&gt;
 \begin{align}
-\frac{\sum_{i=1}^n y&lt;em&gt;i+a}{n+b} = \frac{b}{n+b}\frac{a}{b}+\frac{n}{n+b}\frac{\sum&lt;/em&gt;{i=1}^n y_i}{n}
-\end{align}&lt;/p&gt;
-&lt;p&gt;That is, it is a weighted average of the prior mean $a/b$ and the sample average $\bar{y}$. As $n$ increases,&lt;/p&gt;
+\frac{\sum_{i=1}^n y_i+a}{n+b} = \frac{b}{n+b}\frac{a}{b}+\frac{n}{n+b}\frac{\sum_{i=1}^n y_i}{n}
+\end{align}&lt;p&gt;That is, it is a weighted average of the prior mean \(a/b\) and the sample average \(\bar{y}\). As \(n\) increases,&lt;/p&gt;
 \begin{align}
 \lim_{n\rightarrow +\infty}\frac{b}{n+b}\frac{a}{b}+\frac{n}{n+b}\frac{\sum_{i=1}^n y_i}{n} = \bar{y}.
 \end{align}
@@ -1126,19 +1125,15 @@ iEgTUriLiDQhhbuISBNSuIuINCGFu4hIE/r/PfYsDz9lKXQAAAAASUVORK5CYII=
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Metropolis&amp;#8211;Hastings-algorithm"&gt;Metropolis&amp;#8211;Hastings algorithm&lt;a class="anchor-link" href="#Metropolis&amp;#8211;Hastings-algorithm"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Let $\phi$ be a function that is proportional to the desired probability distribution $f$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Initialization:&lt;/strong&gt; Pick $x_0$ to be the first sample, and choose an arbitrary probability density ${\displaystyle g(x_{n+1}|x_n)}$ that suggests a candidate for the next sample value $x_{n+1}$. Assume g symmetric.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;For each iteration $n$:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Generate a candidate $x^*$ for the next sample by picking from the distribution ${\displaystyle g(x^*|x_n)}$.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Calculate the acceptance ratio 
+&lt;h2 id="Metropolis&amp;#8211;Hastings-algorithm"&gt;Metropolis&amp;#8211;Hastings algorithm&lt;a class="anchor-link" href="#Metropolis&amp;#8211;Hastings-algorithm"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Let \(\phi\) be a function that is proportional to the desired probability distribution \(f\).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Initialization:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Pick \(x&lt;em&gt;{0}\) to be the first sample, and choose an arbitrary probability density 
+$$g(x&lt;/em&gt;{n+1}, x&lt;em&gt;{n})$$ that suggests a candidate for the next sample value \(x&lt;/em&gt;{n+1}\). Assume \(g\) symmetric.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For each iteration:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Generate a candidate \(x^&lt;em&gt;\) for the next sample by picking from the distribution \(g(x^&lt;/em&gt;|x_n)\). Calculate the acceptance ratio&lt;/p&gt;
 $$
 \alpha(x^*|x_n):=\frac{f(x^*)}{f(x_n)} = \frac{\phi(x^*)}{\phi(x_n)}
-$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;If $\alpha(x^*|x_n) ≥ 1$, automatically accept the candidate by setting $x_{n+1} = x^*$. Otherwise, accept the candidate with probability $\alpha(x^*|x_n)$. If the candidate is rejected, set $x_{n+1} = x_{n}$, instead.&lt;/li&gt;
-&lt;/ul&gt;
+$$&lt;p&gt;If \(\alpha(x^&lt;em&gt;|x&lt;em&gt;n) ≥ 1\), automatically accept the candidate by setting \(x&lt;/em&gt;{n+1} = x^&lt;/em&gt;\). Otherwise, accept the candidate with probability \(\alpha(x^*|x&lt;em&gt;n)\). If the candidate is rejected, set \(x&lt;/em&gt;{n+1} = x_{n}\), instead.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1156,22 +1151,22 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Ergodic-Theorem-for-Markov-Chains"&gt;Ergodic Theorem for Markov Chains&lt;a class="anchor-link" href="#Ergodic-Theorem-for-Markov-Chains"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Theorem (Ergodic Theorem for Markov Chains)&lt;/strong&gt; If $\{x^{(1)} , x^{(2)} , . . .\}$ is an &lt;em&gt;irreducible&lt;/em&gt;, &lt;em&gt;aperiodic&lt;/em&gt; and &lt;em&gt;recurrent&lt;/em&gt; &lt;a href="https://en.wikipedia.org/wiki/Markov_chain"&gt;Markov chain&lt;/a&gt;, then there is a unique probability distribution $\pi$ such that as $N\longrightarrow\infty$,&lt;/p&gt;
+&lt;h2 id="Ergodic-Theorem-for-Markov-Chains"&gt;Ergodic Theorem for Markov Chains&lt;a class="anchor-link" href="#Ergodic-Theorem-for-Markov-Chains"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Theorem (Ergodic Theorem for Markov Chains)&lt;/strong&gt; If \({x^{(1)} , x^{(2)} , . . .}\) is an &lt;em&gt;irreducible&lt;/em&gt;, &lt;em&gt;aperiodic&lt;/em&gt; and &lt;em&gt;recurrent&lt;/em&gt; &lt;a href="https://en.wikipedia.org/wiki/Markov_chain"&gt;Markov chain&lt;/a&gt;, then there is a unique probability distribution \(\pi\) such that as \(N\longrightarrow\infty\),&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;$\displaystyle{P(x^{(N)} ∈ A) \longrightarrow \pi(A)}$.&lt;/li&gt;
-&lt;li&gt;$\displaystyle{\frac{1}{N}\sum_{n=1}^{N} g(x^{(n)}) \longrightarrow    \int g(x)\pi(x) dx}$.&lt;/li&gt;
+&lt;li&gt;\(P(x^{(N)} ∈ A) \longrightarrow \pi(A)\).&lt;/li&gt;
+&lt;li&gt;\(\frac{1}{N}\sum_{n=1}^{N} g(x^{(n)})) \longrightarrow    \int g(x)\pi(x) dx\).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Recall:&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;A Markov chain is said to be &lt;strong&gt;irreducible&lt;/strong&gt; if it is possible to get to any state from any state.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;A state $n$ has &lt;strong&gt;period&lt;/strong&gt; $k$ if any return to state $n$ must occur in multiples of $k$ time steps.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;A state \(n\) has &lt;strong&gt;period&lt;/strong&gt; \(k\) if any return to state \(n\) must occur in multiples of \(k\) time steps.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;If $k=1$, then the state is said to be &lt;strong&gt;aperiodic&lt;/strong&gt;.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;If \(k=1\), then the state is said to be &lt;strong&gt;aperiodic&lt;/strong&gt;.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;A state $n$ is said to be &lt;strong&gt;transient&lt;/strong&gt; if, given that we start in state $n$, there is a non-zero probability that we will never return to $i$.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;A state \(n\) is said to be &lt;strong&gt;transient&lt;/strong&gt; if, given that we start in state \(n\), there is a non-zero probability that we will never return to \(i\).&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;A state $n$ is &lt;strong&gt;recurrent&lt;/strong&gt;  if it is not transient.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;A state \(n\) is &lt;strong&gt;recurrent&lt;/strong&gt;  if it is not transient.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 

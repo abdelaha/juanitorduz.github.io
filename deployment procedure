@@ -1,6 +1,6 @@
 pelican content -o output -s publishconf.py
 
-git add -A s
+git add -A 
 git commit -m"message"
 git push 
 
