@@ -1135,7 +1135,7 @@ g(x_{n+1}| x_{n})
 &lt;p&gt;Generate a candidate \(x\) for the next sample by picking from the distribution \(g(x|x_n)\). Calculate the &lt;em&gt;acceptance ratio&lt;/em&gt;&lt;/p&gt;
 \begin{equation}
 \alpha := \frac{f(x)}{f(x_n)} = \frac{\phi(x)}{\phi(x_n)}
-\end{equation}&lt;p&gt;If \(\alpha \geq 1\), automatically accept the candidate by setting \(\displaystyle{x&lt;em&gt;{n+1} = x}\). Otherwise, accept the candidate with probability \(\alpha \). If the candidate is rejected, set \(\displaystyle{x&lt;/em&gt;{n+1} = x_{n}}\) instead.&lt;/p&gt;
+\end{equation}&lt;p&gt;If \(\alpha \geq 1\), automatically accept the candidate by setting \[x&lt;em&gt;{n+1} = x\). Otherwise, accept the candidate with probability \(\alpha \). If the candidate is rejected, set \(\displaystyle{x&lt;/em&gt;{n+1} = x_{n}}\) instead.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
