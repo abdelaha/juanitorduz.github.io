@@ -68,7 +68,7 @@ My research interests are differential geometry, topology and geometric analysis
 - [Applied Machine Learning in Python](https://www.coursera.org/account/accomplishments/certificate/HW68UVKPCS45) (Coursera)
 *Tools:* scikit-learn
  
-- [Applied Text Mining in Python]  (Coursera)
+- Applied Text Mining in Python (Coursera)
 
 - [Machine Learning](https://www.coursera.org/account/accomplishments/certificate/R9HMKKTMYERD)(Coursera)
 *Tools:* matlab
