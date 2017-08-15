@@ -14,7 +14,7 @@ My research interests are differential geometry, topology and geometric analysis
 
 - 01/07/2017-Present  **Junior Data Scientist**, [trommsdorff + drüner, innovation + marketing consultants GmbH](https://www.td-berlin.com), Berlin, Germany.
 
-*Apply skills in data mining, quantitative analysis, and the presentation of data, integrating and unifying data from various sources. Develop algorithms for a variety of business problems (e.g. sales predictions, media mix allocation) by applying your knowledge in feature engineering, variable selection and modeling. Consult on the selection of data sources and their usage, identify key performance indicators and give recommendations in meaningful presentations beyond numbers. Collaborate closely with a wide range of international clients, understanding their business needs and challenges. Model and visualize great amounts of commercial data and build tracking solutions to create statistical models of future behavior, market drivers, trends and growth potential. Create insightful reports and interactive dashboards based on digital data sources (including web analytics, Buzz Tracking, CRM, Search).*
+*Apply skills in data mining, quantitative analysis, and the presentation of data, integrating and unifying data from various sources. Develop algorithms for a variety of business problems (e.g. sales predictions, media mix allocation) by applying knowledge in feature engineering, variable selection and modeling. Consult on the selection of data sources and their usage, identify key performance indicators and give recommendations in meaningful presentations beyond numbers. Collaborate closely with a wide range of international clients, understanding their business needs and challenges. Model and visualize great amounts of commercial data and build tracking solutions to create statistical models of future behavior, market drivers, trends and growth potential. Create insightful reports and interactive dashboards based on digital data sources (including web analytics, Buzz Tracking, CRM, Search).*
 
 - 01/01/2017-30/06/2017 **Trainee - Data Analyst**, [GoEuro](https://www.goeuro.com), Berlin, Germany.
 
@@ -67,6 +67,8 @@ My research interests are differential geometry, topology and geometric analysis
 
 - [Applied Machine Learning in Python](https://www.coursera.org/account/accomplishments/certificate/HW68UVKPCS45) (Coursera)
 *Tools:* scikit-learn
+ 
+- [Applied Text Mining in Python]  (Coursera)
 
 - [Machine Learning](https://www.coursera.org/account/accomplishments/certificate/R9HMKKTMYERD)(Coursera)
 *Tools:* matlab
@@ -76,7 +78,7 @@ My research interests are differential geometry, topology and geometric analysis
 - [Bayesian Statistics: From Concept to Data Analysis](https://www.coursera.org/account/accomplishments/certificate/FXSZL5EGNFZS) (Coursera)
 *Tools:* R 
 
-- Bayesian Statistics: Techniques and Models (Coursera)
+- [Bayesian Statistics: Techniques and Models](https://www.coursera.org/account/accomplishments/records/LWE7E9V9CFED) (Coursera)
 *Tools:* R and JAGS 
 
 - [Econometrics: Methods and Applications](https://www.coursera.org/account/accomplishments/certificate/UE4YC74QZ3CA) (Coursera)
