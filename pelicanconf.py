@@ -52,7 +52,7 @@ THEME="themes/pelican-alchemy/alchemy"
 PLUGIN_PATHS=['pelican-plugins','plugins']
 PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal', 'render_math']
 
-STATIC=['notebooks', 'images']
+STATIC=['notebooks', 'images', 'pages']
 
 DELETE_OUTPUT_DIRECTORY = False
 LOAD_CONTENT_CACHE = False

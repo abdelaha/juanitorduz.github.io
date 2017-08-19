@@ -1,7 +1,7 @@
 ---
 Title: Introduction to Bayesian modeling with PyMC3
 Date: 2017-08-13
-Category: Python, Bayes
+Category: Bayes
 Tags: python, jupyter, pymc3
 slug: intro_pymc3
 Authors: Juan Camilo Orduz
