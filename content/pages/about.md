@@ -6,7 +6,7 @@ Title: About
 
 <center><figure>
 	<img alt="MyImage" src="../images/foto.jpeg" align="middle" style="width: 300px;">
-	<figcaption>This picture as taken at the Titisee in the southern Black Forest, Germany.</figcaption>
+	<figcaption>This picture was taken at the Titisee in the southern Black Forest, Germany.</figcaption>
 </figure></center>
 
 ---
