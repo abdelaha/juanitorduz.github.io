@@ -11,11 +11,9 @@ Summary: We describe the explicit construction of the spin-Dirac operator over t
 
 The objective of this post is to explore [MathJax](http://docs.mathjax.org/en/latest/index.html), a JavaScript display engine for LaTeX. Being my first post writen with this tool, I want to present a short but fun example: I will give a description of the explicit computation of the [spin-Dirac](https://en.wikipedia.org/wiki/Dirac_operator) operator (of the unique complex spinor bundle!) on the 2-sphere \\(S^2\\) equipped with the standar round metric. A more detailed treatment can be found in my expository [paper](https://arxiv.org).
 
-
-<center><figure>
-	<img alt="" src="images/sphere.png" align="middle" style="width: 600px;">
-</figure></center>
-
+<center>
+{% img center images/sphere.png 300 300 "Sphere" "Local chart of defined by the polar and azimuthal angle" %}
+</center>
 ---
 
 ## The Levi-Civita connection

@@ -7,6 +7,13 @@ import os
 AUTHOR = 'Juan Camilo Orduz'
 SITENAME = 'Juan Camilo Orduz'
 SITEURL = 'http://juanitorduz.github.io'
+SITEIMAGE = 'images/glue.png width=300 height=100'
+
+SITESUBTITLE = 'PhD Candidate in Mathematics at Humboldt Universität zu Berlin'
+
+
+
+PYGMENTS_STYLE = 'default'
 
 PATH = 'content'
 
@@ -37,6 +44,7 @@ LINKS = (
     #('You can modify those links in your config file', '#'),
     )
 
+
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
@@ -50,7 +58,11 @@ THEME="themes/pelican-alchemy/alchemy"
 #THEME="themes/pelican-elegant"
 
 PLUGIN_PATHS=['pelican-plugins']
-PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal', 'render_math']
+
+PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
+           'liquid_tags.youtube', 'liquid_tags.vimeo',
+           'liquid_tags.include_code', 'liquid_tags.notebook',
+           'liquid_tags.literal', 'render_math']
 
 STATIC=['notebooks', 'images', 'pages']
 
