@@ -11,6 +11,13 @@ Summary: We describe the explicit construction of the spin-Dirac operator over t
 
 The objective of this post is to explore [MathJax](http://docs.mathjax.org/en/latest/index.html), a JavaScript display engine for LaTeX. Being my first post writen with this tool, I want to present a short but fun example: I will give a description of the explicit computation of the [spin-Dirac](https://en.wikipedia.org/wiki/Dirac_operator) operator (of the unique complex spinor bundle!) on the 2-sphere \\(S^2\\) equipped with the standar round metric. A more detailed treatment can be found in my expository [paper](https://arxiv.org).
 
+
+<center><figure>
+	<img alt="" src="images/sphere.png" align="middle" style="width: 600px;">
+</figure></center>
+
+---
+
 ## The Levi-Civita connection
 
 Let us consider a 2-sphere of radius $r>0$,
@@ -34,6 +41,7 @@ where $0<\theta<\pi$ and $0<\phi<2\pi$, the metric can be written as
 g^{TS^2(r)}=r^2d\theta^2+r^2\sin^{2}\theta d\phi^2.
 \end{align*}
 
+
 A straight forward computation shows that for the Levi-Civita connection we have 
 
 \begin{align*}
@@ -42,6 +50,7 @@ A straight forward computation shows that for the Levi-Civita connection we have
 \nabla_{\partial_\theta}\partial_\phi=&\cot\theta\partial_\phi,\\
 \nabla_{\partial_\phi}\partial_\theta=&\cot\theta\partial_\phi.
 \end{align*}
+
 
 Indeed, the Christoffel symbols are
 

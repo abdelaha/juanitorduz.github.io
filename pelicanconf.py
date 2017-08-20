@@ -49,7 +49,7 @@ DEFAULT_PAGINATION = 10
 THEME="themes/pelican-alchemy/alchemy"
 #THEME="themes/pelican-elegant"
 
-PLUGIN_PATHS=['pelican-plugins','plugins']
+PLUGIN_PATHS=['pelican-plugins']
 PLUGINS = ['liquid_tags.notebook', 'liquid_tags.literal', 'render_math']
 
 STATIC=['notebooks', 'images', 'pages']
