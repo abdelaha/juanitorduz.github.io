@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Juan Camilo Orduz - Geometry</title><link href="/" rel="alternate"></link><link href="/feeds/geometry.atom.xml" rel="self"></link><id>/</id><updated>2017-06-29T00:00:00+02:00</updated><entry><title>The Dirac operator on the 2-sphere</title><link href="/dirac_sphere.html" rel="alternate"></link><published>2017-06-29T00:00:00+02:00</published><updated>2017-06-29T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2017-06-29:/dirac_sphere.html</id><summary type="html">&lt;p&gt;We describe the explicit construction of the spin-Dirac operator over the 2-sphere with respect associated to the round metric and its unique spin structure.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The objective of this post is to explore &lt;a href="http://docs.mathjax.org/en/latest/index.html"&gt;MathJax&lt;/a&gt;, a JavaScript display engine for LaTeX. Being my first post writen with this tool, I want to present a short but fun example: I will give a description of the explicit computation of the &lt;a href="https://en.wikipedia.org/wiki/Dirac_operator"&gt;spin-Dirac&lt;/a&gt; operator (of the unique complex spinor bundle!) on the 2-sphere \(S^2\) equipped with the standar round metric. A more detailed treatment can be found in my expository &lt;a href="https://arxiv.org"&gt;paper&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;&lt;figure&gt;
-    &lt;img alt="" src="images/sphere.png" align="middle" style="width: 600px;"&gt;
-&lt;/figure&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;img width="300" title="Sphere" alt="Local chart of defined by the polar and azimuthal angle" src="images/sphere.png" class="center" height="300"&gt;
+&lt;/center&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;The Levi-Civita connection&lt;/h2&gt;
 &lt;p&gt;Let us consider a 2-sphere of radius &lt;span class="math"&gt;\(r&amp;gt;0\)&lt;/span&gt;,&lt;/p&gt;
