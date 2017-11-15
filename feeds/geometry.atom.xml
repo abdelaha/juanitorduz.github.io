@@ -1,5 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Juan Camilo Orduz - Geometry</title><link href="/" rel="alternate"></link><link href="/feeds/geometry.atom.xml" rel="self"></link><id>/</id><updated>2017-06-29T00:00:00+02:00</updated><entry><title>The Dirac operator on the 2-sphere</title><link href="/dirac_sphere.html" rel="alternate"></link><published>2017-06-29T00:00:00+02:00</published><updated>2017-06-29T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2017-06-29:/dirac_sphere.html</id><summary type="html">&lt;p&gt;We describe the explicit construction of the spin-Dirac operator over the 2-sphere with respect associated to the round metric and its unique spin structure.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The objective of this post is to explore &lt;a href="http://docs.mathjax.org/en/latest/index.html"&gt;MathJax&lt;/a&gt;, a JavaScript display engine for LaTeX. Being my first post writen with this tool, I want to present a short but fun example: I will give a description of the explicit computation of the &lt;a href="https://en.wikipedia.org/wiki/Dirac_operator"&gt;spin-Dirac&lt;/a&gt; operator (of the unique complex spinor bundle!) on the 2-sphere \(S^2\) equipped with the standar round metric. A more detailed treatment can be found in my expository &lt;a href="https://arxiv.org"&gt;paper&lt;/a&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Juan Camilo Orduz - Geometry</title><link href="/" rel="alternate"></link><link href="/feeds/geometry.atom.xml" rel="self"></link><id>/</id><updated>2017-11-11T00:00:00+01:00</updated><entry><title>Induced Dirac-Schrödinger operators on semi-free circle quotients</title><link href="/phd.html" rel="alternate"></link><published>2017-11-11T00:00:00+01:00</published><updated>2017-11-11T00:00:00+01:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2017-11-11:/phd.html</id><summary type="html">&lt;p&gt;I present the content of my PhD Thesis in mathematics.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post I want to present the results of my Mathematics PhD thesis which I wrote under the supervision of &lt;a href="https://www2.mathematik.hu-berlin.de/~bruening/"&gt;Prof. Dr. Jochen Brüning&lt;/a&gt; at &lt;a href="https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie"&gt;Humbolt Universität zu Berlin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I gratefully acknowledge the financial support of the &lt;a href="http://www.math-berlin.de"&gt;Berlin Mathematical School&lt;/a&gt; and the research project 
+&lt;a href="http://www.raumzeitmaterie.de"&gt;SFB 647: Space - Time - Matter&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Abstract:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;John Lott has computed an integer-valued signature for the orbit space
+of a compact orientable &lt;span class="math"&gt;\((4k+1)\)&lt;/span&gt; manifold with a semi-free &lt;span class="math"&gt;\(S^1\)&lt;/span&gt;-action,
+which is a homotopy invariant of that space, but he did not construct
+a Dirac type operator which has this signature as its index. In this
+Thesis, we construct such operator on the orbit space, a Thom-Mather
+stratified space with one singular stratum of positive dimension, and
+we show that it is essentially unique and that its index coincides
+with Lott's signature, at least when the stratified space satisfies
+the so called Witt condition. We call this operator the
+&lt;em&gt;induced Dirac-Schrödinger operator&lt;/em&gt;. The strategy of the construction is
+to "push down" an appropriate &lt;span class="math"&gt;\(S^1\)&lt;/span&gt;-invariant first order
+transversally elliptic operator to the quotient space.&lt;/p&gt;
+&lt;p&gt;The Witt condition, a topological condition which in this case depends
+on the codimension of the fixed point set, has various analytic
+consequences.  In particular, when not satisfied, the Hodge-de Rham
+operator on the quotient space does not need to be essentially
+self-adjoint and therefore a choice of boundary conditions is
+required. This choice freedom is not natural in view of the fact that
+Lott's signature is well defined independently of the Witt condition.&lt;/p&gt;
+&lt;p&gt;The Dirac-Schrödinger operator constructed in this Thesis differs
+from the Hodge-de Rham operator by a zero order term which ensures it
+to be essentially self-adjoint. Moreover, this zero order term
+anti-commutes with the chirality involution allowing the whole
+operator to split so that the index can be computed even if the Witt
+condition is not satisfied.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;You can find a online copy of the complete thesis as a &lt;a href="https://arxiv.org/abs/1711.04196"&gt;preprint&lt;/a&gt;
+on thr arXiv. &lt;/p&gt;
+&lt;p&gt;In addition &lt;a href="/documents/defense_orduz.pdf"&gt;here&lt;/a&gt; you can see the slides of the defense. &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="mathematics"></category><category term="geometry"></category></entry><entry><title>The Dirac operator on the 2-sphere</title><link href="/dirac_sphere.html" rel="alternate"></link><published>2017-06-29T00:00:00+02:00</published><updated>2017-06-29T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2017-06-29:/dirac_sphere.html</id><summary type="html">&lt;p&gt;We describe the explicit construction of the spin-Dirac operator over the 2-sphere with respect associated to the round metric and its unique spin structure.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The objective of this post is to explore &lt;a href="http://docs.mathjax.org/en/latest/index.html"&gt;MathJax&lt;/a&gt;, a JavaScript display engine for LaTeX. Being my first post writen with this tool, I want to present a short but fun example: I will give a description of the explicit computation of the &lt;a href="https://en.wikipedia.org/wiki/Dirac_operator"&gt;spin-Dirac&lt;/a&gt; operator (of the unique complex spinor bundle!) on the 2-sphere \(S^2\) equipped with the standar round metric. A more detailed treatment can be found in my expository &lt;a href="https://arxiv.org"&gt;paper&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;img width="300" title="Sphere" alt="Local chart of defined by the polar and azimuthal angle" src="images/sphere.png" class="center" height="300"&gt;
 &lt;/center&gt;&lt;/p&gt;
