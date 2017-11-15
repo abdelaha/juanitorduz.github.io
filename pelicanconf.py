@@ -64,7 +64,7 @@ PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook',
            'liquid_tags.literal', 'render_math']
 
-STATIC=['notebooks', 'images', 'pages']
+STATIC_PATHS = ['notebooks', 'images', 'pages', 'documents']
 
 DELETE_OUTPUT_DIRECTORY = False
 LOAD_CONTENT_CACHE = False
