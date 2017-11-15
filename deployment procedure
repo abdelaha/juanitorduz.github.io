@@ -7,3 +7,5 @@ git push
 ghp-import output -b master
 git push origin master
 
+Info Pelican: http://docs.getpelican.com/en/3.6.3/content.html
+
