@@ -7,6 +7,7 @@ slug: phd
 Authors: Juan Camilo Orduz
 Summary: I present the content of my PhD Thesis in mathematics. 
 ---
+
 In this post I want to present the results of my Mathematics PhD thesis which I wrote under the supervision of [Prof. Dr. Jochen Brüning](https://www2.mathematik.hu-berlin.de/~bruening/) at [Humbolt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie).
 
 I gratefully acknowledge the financial support of the [Berlin Mathematical School](http://www.math-berlin.de) and the research project 
@@ -46,8 +47,24 @@ condition is not satisfied.
 
 ---
 
+<center><figure>
+	<img alt="MyImage" src="images/juan_defense.jpg" align="middle" style="width: 500px;">
+	<figcaption>This picture was taken at the end of my thesis seminat at Humboldt Universität zu Berlin.</figcaption>
+</figure></center>
+
+---
+
 You can find a online copy of the complete thesis as a [preprint](https://arxiv.org/abs/1711.04196)
 on thr arXiv. 
 
 In addition [here]({filename}/documents/defense_orduz.pdf) you can see the slides of the defense. 
+
+---
+
+<center><figure>
+	<img alt="MyImage" src="images/juan_chern.jpg" align="middle" style="width: 400px;">
+	<figcaption>This picture was taken at the Chern Institute of Mathematics in Tianjin (China) where I had the oportunity to present the results of this thesis.
+	Here I am with Chern's proof of the Chern-Gauß-Bonnet Theorem.</figcaption>
+</figure></center>
+
 
