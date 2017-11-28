@@ -9,7 +9,7 @@ SITENAME = 'Juan Camilo Orduz'
 SITEURL = 'http://juanitorduz.github.io'
 #SITEIMAGE = 'images/glue.png width=400 height=130'
 
-SITESUBTITLE = 'PhD Candidate in Mathematics at Humboldt Universität zu Berlin'
+SITESUBTITLE = 'Mathematician & Data Scientist'
 
 
 

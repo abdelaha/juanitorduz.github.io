@@ -2,8 +2,6 @@
 Title: About
 ---
 
-
-
 <center><figure>
 	<img alt="MyImage" src="../images/foto.jpeg" align="middle" style="width: 300px;">
 	<figcaption>This picture was taken at the Titisee in the southern Black Forest, Germany.</figcaption>
@@ -49,7 +47,7 @@ Tools: Jenkins, git, MySQL and python.*
 
 ### Education
 
-- since 07/2014 **PhD candidate in Mathematics**, [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie), Berlin, Germany.
+- 2014-2017 **PhD in Mathematics (Magna Cum Laude)**, [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie), Berlin, Germany.
 
 *Advisor:* [Prof. Jochen Brüning](https://www2.mathematik.hu-berlin.de/~bruening/)
 

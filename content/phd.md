@@ -49,13 +49,13 @@ condition is not satisfied.
 
 <center><figure>
 	<img alt="MyImage" src="images/juan_defense.jpg" align="middle" style="width: 500px;">
-	<figcaption>This picture was taken at the end of my thesis seminat at Humboldt Universität zu Berlin.</figcaption>
+	<figcaption>This picture was taken at the end of my thesis seminar at Humboldt Universität zu Berlin.</figcaption>
 </figure></center>
 
 ---
 
 You can find a online copy of the complete thesis as a [preprint](https://arxiv.org/abs/1711.04196)
-on thr arXiv. 
+on the arXiv. 
 
 In addition [here]({filename}/documents/defense_orduz.pdf) you can see the slides of the defense. 
 
