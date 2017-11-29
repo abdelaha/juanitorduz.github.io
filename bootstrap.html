@@ -11884,7 +11884,7 @@ jQuery(document).ready(function($) {
 <p>This post is not devoted the bootstrap itself but rather about understanding the often encountered statement:</p>
 <p><em>On average, each bootstrap sample makes use of around two-thirds of the observations</em>.</p>
 <p>What does this mean and why it is true?</p>
-<p>Recall that a bootstrap sample of \(n\) observations is just a to randomly choose $n$ observations with repetition.</p>
+<p>Recall that a bootstrap sample of \(n\) observations is just a to randomly choose \(n\) observations with repetition.</p>
 <p><strong>Aim:</strong> Derive the probability that a given observation is part of a bootstrap sample.</p>
 <p>To do this we are going to follow the lines of the Excercise 5.4.2 of the book  <a href="http://www-bcf.usc.edu/~gareth/ISL/">An Introduction to Statistical Learning</a>. We are going to use Phython despite the fact that this reference uses mainly R.</p>
 <h2 id="Solution-of-Excercise-5.4.2">Solution of Excercise 5.4.2<a class="anchor-link" href="#Solution-of-Excercise-5.4.2">&#194;&#182;</a></h2><p>Suppose that we obtain a bootstrap sample from a set of \(n\) observations \(x_1, ..., x_n\).</p>
@@ -11892,8 +11892,8 @@ jQuery(document).ready(function($) {
 <p>Let us denote this probability by \(\pi_j\). As the probability of selecting a particular \(x_j\) from the set \(x_1, ..., x_n\) is \(1/n\), then the desired probability is</p>
 \begin{equation*}
 \pi_j = 1-\frac{1}{n}
-\end{equation*}<p><strong>(b)</strong> What is the probability that the second bootstrap observation is <em>not</em> the $j$-th observation from the original sample?</p>
-<p>Well, it is not hard to see that, as the selections are independent then, this probability is again $\pi_j$.</p>
+\end{equation*}<p><strong>(b)</strong> What is the probability that the second bootstrap observation is <em>not</em> the \(j\)-th observation from the original sample?</p>
+<p>Well, it is not hard to see that, as the selections are independent then, this probability is again \(\pi_j\).</p>
 <p><strong>(c)</strong> Argue that the probability \(p_j(n)\) that the \(j\)-th observation is not in the bootstrap sample is \((1 − 1/n)^n\).</p>
 <p>It is straight forward to see from (a) and (b) that this probability is given by</p>
 \begin{equation*}
@@ -12104,10 +12104,10 @@ p_j(n)=
 
 
 
-<div id="2bc16746-a0d2-4ba0-b169-16e222fc3014"></div>
+<div id="e0a1e2c3-8cf5-4eb6-97bc-1d435e44c31d"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#2bc16746-a0d2-4ba0-b169-16e222fc3014');
+var element = $('#e0a1e2c3-8cf5-4eb6-97bc-1d435e44c31d');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -12929,10 +12929,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-<div id="675a5582-9465-4e50-b4b7-86b0501430ea"></div>
+<div id="72bfce5b-caaa-42ff-b68d-081684fb1b14"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#675a5582-9465-4e50-b4b7-86b0501430ea');
+var element = $('#72bfce5b-caaa-42ff-b68d-081684fb1b14');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -13804,10 +13804,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-<div id="2f649759-3342-4b4a-bd5f-f1b2942208d9"></div>
+<div id="0ba1493e-af7e-43bc-90a4-7f9219a3bc9f"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#2f649759-3342-4b4a-bd5f-f1b2942208d9');
+var element = $('#0ba1493e-af7e-43bc-90a4-7f9219a3bc9f');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -14621,10 +14621,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-<div id="13f91eac-3389-4c81-9e3a-ae1234821942"></div>
+<div id="dbe42e80-aa94-4702-9cb4-937679aae340"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#13f91eac-3389-4c81-9e3a-ae1234821942');
+var element = $('#dbe42e80-aa94-4702-9cb4-937679aae340');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -15600,10 +15600,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-<div id="8c3f4e13-8d87-4a9b-9d41-b834ad4c2c33"></div>
+<div id="31b87bea-05f6-42b7-b049-3c4593e9285d"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#8c3f4e13-8d87-4a9b-9d41-b834ad4c2c33');
+var element = $('#31b87bea-05f6-42b7-b049-3c4593e9285d');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
