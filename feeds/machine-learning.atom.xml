@@ -12,7 +12,7 @@
 &lt;p&gt;&lt;strong&gt;Aim:&lt;/strong&gt; Derive the probability that a given observation is part of a bootstrap sample.&lt;/p&gt;
 &lt;p&gt;To do this we are going to follow the lines of the Excercise 5.4.2 of the book  &lt;a href="http://www-bcf.usc.edu/~gareth/ISL/"&gt;An Introduction to Statistical Learning&lt;/a&gt;. We are going to use Phython despite the fact that this reference uses mainly R.&lt;/p&gt;
 &lt;h2 id="Solution-of-Excercise-5.4.2"&gt;Solution of Excercise 5.4.2&lt;a class="anchor-link" href="#Solution-of-Excercise-5.4.2"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Suppose that we obtain a bootstrap sample from a set of \(n\) observations \(x_1, ..., x_n\).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt; What is the probability that the first bootstrap observation is &lt;em&gt;not&lt;/em&gt; the $j$-th observation from the original sample?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt; What is the probability that the first bootstrap observation is &lt;em&gt;not&lt;/em&gt; the \(j\)-th observation from the original sample?&lt;/p&gt;
 &lt;p&gt;Let us denote this probability by \(\pi_j\). As the probability of selecting a particular \(x_j\) from the set \(x_1, ..., x_n\) is \(1/n\), then the desired probability is&lt;/p&gt;
 \begin{equation*}
 \pi_j = 1-\frac{1}{n}
@@ -228,10 +228,10 @@ p_j(n)=
 
 
 
-&lt;div id="e0a1e2c3-8cf5-4eb6-97bc-1d435e44c31d"&gt;&lt;/div&gt;
+&lt;div id="ee6a45dc-36b2-4e86-a566-2db10dc7c0b0"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#e0a1e2c3-8cf5-4eb6-97bc-1d435e44c31d');
+var element = $('#ee6a45dc-36b2-4e86-a566-2db10dc7c0b0');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -1053,10 +1053,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="72bfce5b-caaa-42ff-b68d-081684fb1b14"&gt;&lt;/div&gt;
+&lt;div id="4f8ac974-dac1-42e7-8a55-9417f8c28676"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#72bfce5b-caaa-42ff-b68d-081684fb1b14');
+var element = $('#4f8ac974-dac1-42e7-8a55-9417f8c28676');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -1928,10 +1928,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="0ba1493e-af7e-43bc-90a4-7f9219a3bc9f"&gt;&lt;/div&gt;
+&lt;div id="c7e9b469-97c8-42d0-bd45-9b0993dbe2cf"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#0ba1493e-af7e-43bc-90a4-7f9219a3bc9f');
+var element = $('#c7e9b469-97c8-42d0-bd45-9b0993dbe2cf');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -2745,10 +2745,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="dbe42e80-aa94-4702-9cb4-937679aae340"&gt;&lt;/div&gt;
+&lt;div id="c1d163a2-7260-4045-bcc0-ca1162cf259d"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#dbe42e80-aa94-4702-9cb4-937679aae340');
+var element = $('#c1d163a2-7260-4045-bcc0-ca1162cf259d');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3724,10 +3724,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="31b87bea-05f6-42b7-b049-3c4593e9285d"&gt;&lt;/div&gt;
+&lt;div id="ad95020b-8a0e-4bbf-b7b5-4c24d6eb0917"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#31b87bea-05f6-42b7-b049-3c4593e9285d');
+var element = $('#ad95020b-8a0e-4bbf-b7b5-4c24d6eb0917');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
