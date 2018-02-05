@@ -9,7 +9,7 @@ Title: About
 
 ---
 
-In October 2017 I received my PhD degree in Mathematics from [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie). I obtained a Master degree (Mathematics) from this same university in 2014. My graduate studies were supported by the Berlin Mathematical School](http://www.math-berlin.de). Here I share my [experience](http://www.math-berlin.de/about-bms/life-at-bms/life-at-bms/juan-from-colombia). Before comming to Berlin I did two bachelor degrees: [Mathematics](https://matematicas.uniandes.edu.co) and [Physics](https://fisica.uniandes.edu.co) at [Universidad de los Andes](https://uniandes.edu.co). 
+In October 2017 I received my PhD degree in Mathematics from [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie). I obtained a Master degree (Mathematics) from this same university in 2014. My graduate studies were supported by the [Berlin Mathematical School](http://www.math-berlin.de). Here I share my [experience](http://www.math-berlin.de/about-bms/life-at-bms/life-at-bms/juan-from-colombia). Before comming to Berlin I did two bachelor degrees: [Mathematics](https://matematicas.uniandes.edu.co) and [Physics](https://fisica.uniandes.edu.co) at [Universidad de los Andes](https://uniandes.edu.co). 
 
 My research interests are differential geometry, topology and geometric analysis, in particular variants of the [Atiyah-Singer Index Theorem](https://en.wikipedia.org/wiki/Atiyah–Singer_index_theorem) for singular spaces. Currently I'm also interested in topics around data analysis, statistics and machine learning. 
 
