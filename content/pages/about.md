@@ -9,7 +9,7 @@ Title: About
 
 ---
 
-I am a math PhD student at [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie) and member of the [Berlin Mathematical School](http://www.math-berlin.de). In this same university I obtained a master degree (Mathematics) in 2014 . Here I share my [experience](http://www.math-berlin.de/about-bms/life-at-bms/life-at-bms/juan-from-colombia). Before comming to Berlin I did two bachelor degrees: [Mathematics](https://matematicas.uniandes.edu.co) and [Physics](https://fisica.uniandes.edu.co) at [Universidad de los Andes](https://uniandes.edu.co). 
+In October 2017 I received my PhD degree in Mathematics from [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie). I obtained a Master degree (Mathematics) from this same university in 2014. My graduate studies were supported by the Berlin Mathematical School](http://www.math-berlin.de). Here I share my [experience](http://www.math-berlin.de/about-bms/life-at-bms/life-at-bms/juan-from-colombia). Before comming to Berlin I did two bachelor degrees: [Mathematics](https://matematicas.uniandes.edu.co) and [Physics](https://fisica.uniandes.edu.co) at [Universidad de los Andes](https://uniandes.edu.co). 
 
 My research interests are differential geometry, topology and geometric analysis, in particular variants of the [Atiyah-Singer Index Theorem](https://en.wikipedia.org/wiki/Atiyah–Singer_index_theorem) for singular spaces. Currently I'm also interested in topics around data analysis, statistics and machine learning. 
 
@@ -39,6 +39,8 @@ Tools: Jenkins, git, MySQL and python.*
 
 ### Volunteering Activities
 
+- 01/2018-Present **Volunteering Data Scientist**[CorrelAid Network](https://correlaid.org/en/network)
+
 - 03/2011-08/2011 **Mathematics Teacher**, [ColombiaCrece](http://www.colombiacrece.org/#educacion-solidaria), Bogotá, Colombia. 
 
 - 06/2007-08/2007 **Camp Counselor**, [Skylake Yosemite Camp](http://www.skylake.com), Wishon, CA 93669, USA.
@@ -49,9 +51,9 @@ Tools: Jenkins, git, MySQL and python.*
 
 - 2014-2017 **PhD in Mathematics (Magna Cum Laude)**, [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie), Berlin, Germany.
 
-*Advisor:* [Prof. Jochen Brüning](https://www2.mathematik.hu-berlin.de/~bruening/)
+	*Advisor:* [Prof. Jochen Brüning](https://www2.mathematik.hu-berlin.de/~bruening/)
 
-*Title of the Thesis:* Induced Dirac-Schrödinger on quotients of semi-free circle actions.
+	*Title of the Thesis:* Induced Dirac-Schrödinger on quotients of semi-free circle actions.
 
 - 2011-2014 **M.Sc. Mathematics**, [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie), Berlin, Germany.
 
