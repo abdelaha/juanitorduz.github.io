@@ -39,7 +39,7 @@ Tools: Jenkins, git, MySQL and python.*
 
 ### Volunteering Activities
 
-- 01/2018-Present **Volunteering Data Scientist**[CorrelAid Network](https://correlaid.org/en/network)
+- 01/2018-Present **Volunteering Data Scientist**, [CorrelAid Network](https://correlaid.org/en/network)
 
 - 03/2011-08/2011 **Mathematics Teacher**, [ColombiaCrece](http://www.colombiacrece.org/#educacion-solidaria), Bogotá, Colombia. 
 
@@ -54,6 +54,8 @@ Tools: Jenkins, git, MySQL and python.*
 	*Advisor:* [Prof. Jochen Brüning](https://www2.mathematik.hu-berlin.de/~bruening/)
 
 	*Title of the Thesis:* Induced Dirac-Schrödinger on quotients of semi-free circle actions.
+
+		We study spectral properties and compute the Fredholm index of certain Dirac-Schrödinger type operator on stratified spaces arising as quotients of semi-free circle actions. We construct this operator by “pushing down" a first order transversally elliptic operator. This construction ensures the induced operator to be essentially self-adjoint. In particular, we give a partial positive answer on the existence of an operator whose index computes the equivariant S1-signature if the Witt condition is satisfied.
 
 - 2011-2014 **M.Sc. Mathematics**, [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie), Berlin, Germany.
 
