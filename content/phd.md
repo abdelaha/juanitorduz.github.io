@@ -59,7 +59,7 @@ on the arXiv. (a second version was updated)
 
 - In addition, [here]({filename}/documents/defense_orduz.pdf) you can see the slides of the defense. 
 
-- The paper version, [The $S^1$-Equivariant signature for semi-free actions as an index formula](https://arxiv.org/abs/1802.04840), is now available on the arXiv
+- The paper version, [The $S^1$-Equivariant signature for semi-free actions as an index formula](https://arxiv.org/abs/1802.04840), is now available on the arXiv.
 
 ---
 
