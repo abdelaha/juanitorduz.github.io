@@ -8,10 +8,6 @@ body {
   background-color: #f5f5f5;
 }
 
-a.anchor-link {
-    text-decoration: none;
-    visibility: hidden;
-}
 
 a {
   color: #333;
