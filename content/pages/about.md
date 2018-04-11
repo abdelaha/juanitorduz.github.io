@@ -17,8 +17,6 @@ I am also interested in education and knowlodge sharing.
 
 ---
 
-## CV
-
 ### Work Experience
 
 - 01/04/2018-Present  **Data Scientist**, [trommsdorff + drüner, innovation + marketing consultants GmbH](https://www.td-berlin.com), Berlin, Germany.
@@ -27,7 +25,7 @@ I am also interested in education and knowlodge sharing.
 􏰂 
 	- Collaborate closely with a wide range of international clients, understanding their business needs and challenges. Consult on the selection of data sources (including web analytics, Buzz Tracking, CRM, Search) and their usage. Identify key performance indicators and give recommendations in meaningful presentations beyond numbers. Create reports and interactive dashboards based on digital data sources, enabling clients to extract insights from multiple data streams that build bridges between companies and customers.
 
-		*Tools:* git, python, pandas,  scikit-learn, R, tidyverse, caret, H2O.
+		*Tools:* git, python, pandas, scikit-learn, R, tidyverse, caret, H2O.
 
 - 01/07/2017-01/04/2018-  **Junior Data Scientist**, [trommsdorff + drüner, innovation + marketing consultants GmbH](https://www.td-berlin.com), Berlin, Germany.
 
@@ -121,14 +119,15 @@ I am also interested in education and knowlodge sharing.
 *Tools:* scikit-learn.
  
 - [Applied Text Mining in Python](https://www.coursera.org/account/accomplishments/verify/5PWPU2PJ77PS)
+*Tools:* nltk.
 
 - [Applied Social Network Analysis in Python](https://www.coursera.org/account/accomplishments/verify/5SGMBJ5VZBQG)
-
+*Tools:* networkX.
 
 #### Statistical Analysis
 
 - [Econometrics: Methods and Applications](https://www.coursera.org/account/accomplishments/certificate/UE4YC74QZ3CA) (Coursera)
-*Tools:* pyton: statsmodels
+*Tools:* pyton: statsmodels (python).
 
 - [Bayesian Statistics: From Concept to Data Analysis](https://www.coursera.org/account/accomplishments/certificate/FXSZL5EGNFZS) (Coursera)
 *Tools:* R. 
