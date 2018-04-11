@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 
 import os
 
-AUTHOR = 'Juan Camilo Orduz'
-SITENAME = 'Juan Camilo Orduz'
+AUTHOR = 'Dr. Juan Camilo Orduz'
+SITENAME = 'Dr. Juan Camilo Orduz'
 SITEURL = 'http://juanitorduz.github.io'
 #SITEIMAGE = 'images/glue.png width=400 height=130'
 

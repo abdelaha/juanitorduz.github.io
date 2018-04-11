@@ -9,7 +9,7 @@ Title: About
 
 ---
 
-In October 2017 I received my PhD degree in Mathematics from [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie). I obtained a Master degree (Mathematics) from this same university in 2014. My graduate studies were supported by the [Berlin Mathematical School](http://www.math-berlin.de). Here I share my [experience](http://www.math-berlin.de/about-bms/life-at-bms/life-at-bms/juan-from-colombia). Before comming to Berlin I did two bachelor degrees: [Mathematics](https://matematicas.uniandes.edu.co) and [Physics](https://fisica.uniandes.edu.co) at [Universidad de los Andes](https://uniandes.edu.co). 
+In October 2017 I received my PhD degree in Mathematics from [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie) under the supervision of [Prof. Jochen Brüning](https://www2.mathematik.hu-berlin.de/~bruening/). I obtained a Master degree (Mathematics) from this same university in 2014. My graduate studies were supported by the [Berlin Mathematical School](http://www.math-berlin.de). Here I share my [experience](http://www.math-berlin.de/about-bms/life-at-bms/life-at-bms/juan-from-colombia). Before comming to Berlin I did two bachelor degrees: [Mathematics](https://matematicas.uniandes.edu.co) and [Physics](https://fisica.uniandes.edu.co) at [Universidad de los Andes](https://uniandes.edu.co). 
 
 My research interests are differential geometry, topology and geometric analysis, in particular variants of the [Atiyah-Singer Index Theorem](https://en.wikipedia.org/wiki/Atiyah–Singer_index_theorem) for singular spaces. Currently I'm also interested in topics around data analysis, statistics and machine learning. 
 
@@ -92,7 +92,7 @@ I am also interested in education and knowlodge sharing.
 
 #### Data Analysis and Machine Learning
 
-- [Machine Learning](https://www.coursera.org/account/accomplishments/certificate/R9HMKKTMYERD) 
+- [Machine Learning](https://www.coursera.org/account/accomplishments/certificate/R9HMKKTMYERD) (Coursera)
 *Tools:* matlab
 
 ##### Deep Learning Specialization (Coursera)
@@ -115,10 +115,10 @@ I am also interested in education and knowlodge sharing.
 *Tools:* scipy, numpy and pandas.
 
 - [Applied Plotting, Charting & Data Representation in Python](https://www.coursera.org/account/accomplishments/certificate/9KXJ898KD9D6) 
-*Tools:* pyplot, matplotlib and seaborn
+*Tools:* pyplot, matplotlib and seaborn.
 
 - [Applied Machine Learning in Python](https://www.coursera.org/account/accomplishments/certificate/HW68UVKPCS45) 
-*Tools:* scikit-learn
+*Tools:* scikit-learn.
  
 - [Applied Text Mining in Python](https://www.coursera.org/account/accomplishments/verify/5PWPU2PJ77PS)
 
@@ -131,10 +131,10 @@ I am also interested in education and knowlodge sharing.
 *Tools:* pyton: statsmodels
 
 - [Bayesian Statistics: From Concept to Data Analysis](https://www.coursera.org/account/accomplishments/certificate/FXSZL5EGNFZS) (Coursera)
-*Tools:* R 
+*Tools:* R. 
 
 - [Bayesian Statistics: Techniques and Models](https://www.coursera.org/account/accomplishments/records/LWE7E9V9CFED) (Coursera)
-*Tools:* R and JAGS 
+*Tools:* R and JAGS. 
 
 
 #### Programming

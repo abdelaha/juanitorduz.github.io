@@ -1,4 +1,4 @@
-Activate Enviorment: juanitorduz.github.io juanitorduz$ source webpage/bin/activate
+Activate Enviorment: juanitorduz$ source website/bin/activate
 
 pelican content -o output -s publishconf.py
 
