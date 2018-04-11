@@ -1,3 +1,5 @@
+Activate Enviorment: juanitorduz.github.io juanitorduz$ source webpage/bin/activate
+
 pelican content -o output -s publishconf.py
 
 git add -A 
@@ -9,3 +11,38 @@ git push origin master
 
 Info Pelican: http://docs.getpelican.com/en/3.6.3/content.html
 Link Blog https://www.dataquest.io/blog/how-to-setup-a-data-science-blog/
+
+To set up Remember: 
+
+- Mathjax issue: https://github.com/jakevdp/jakevdp.github.io-source/blob/master/theme/templates/base.html
+
+Include in base.html
+
+ <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+        <script type="text/javascript">
+        init_mathjax = function() {
+            if (window.MathJax) {
+                // MathJax loaded
+                MathJax.Hub.Config({
+                    tex2jax: {
+                        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    },
+                    displayAlign: 'left', // Change this to 'center' to center equations.
+                    "HTML-CSS": {
+                        styles: {'.MathJax_Display': {"margin": 0}}
+                    }
+                });
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            }
+        }
+        init_mathjax()
+
+- Markdown Problem: https://github.com/alexandrevicenzi/Flex/issues/93
+
+Include in theme.css
+
+a.anchor-link {
+    text-decoration: none;
+    visibility: hidden;
+}

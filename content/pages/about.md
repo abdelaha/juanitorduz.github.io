@@ -17,16 +17,25 @@ I am also interested in education and knowlodge sharing.
 
 ---
 
+## CV
+
 ### Work Experience
 
-- 01/07/2017-Present  **Junior Data Scientist**, [trommsdorff + drüner, innovation + marketing consultants GmbH](https://www.td-berlin.com), Berlin, Germany.
+- 01/04/2018-Present  **Data Scientist**, [trommsdorff + drüner, innovation + marketing consultants GmbH](https://www.td-berlin.com), Berlin, Germany.
 
-*Integrate and unify data from various sources. Apply skills in data mining, quantitative analysis and visualization. Develop algorithms for a variety of business problems (e.g. sales predictions, media mix allocation, future behavior, market drivers, trends and growth potential) by applying knowledge in feature engineering, variable selection and statistical modeling (machine learning). Collaborate closely with a wide range of international clients, understanding their business needs and challenges. Consult on the selection of data sources (including web analytics, Buzz Tracking, CRM, Search) and their usage. Identify key performance indicators and give recommendations in meaningful presentations beyond numbers. Tools: R and python.*
+	- Integrate and unify data from various sources. Apply skills in data mining, quantitative analysis and visualization. Develop algorithms for a variety of business problems (e.g. sales predictions, media mix allocation, future behavior, market drivers, trends and growth potential) by applying knowledge in feature engineering, variable selection, statistical modeling and machine learning.
+􏰂 
+	- Collaborate closely with a wide range of international clients, understanding their business needs and challenges. Consult on the selection of data sources (including web analytics, Buzz Tracking, CRM, Search) and their usage. Identify key performance indicators and give recommendations in meaningful presentations beyond numbers. Create reports and interactive dashboards based on digital data sources, enabling clients to extract insights from multiple data streams that build bridges between companies and customers.
+
+		*Tools:* git, python, pandas,  scikit-learn, R, tidyverse, caret, H2O.
+
+- 01/07/2017-01/04/2018-  **Junior Data Scientist**, [trommsdorff + drüner, innovation + marketing consultants GmbH](https://www.td-berlin.com), Berlin, Germany.
 
 - 01/01/2017-30/06/2017 **Trainee - Data Analyst**, [GoEuro](https://www.goeuro.com), Berlin, Germany.
 
-*Member of the DATA POD working within the Scrum process framework (using JIRA). Integrate provider data from various sources into the search engine. Normalize and geo-reference data from different sources. Automate and define new tools to scale and increase efficiency for the data quality program. 
-Tools: Jenkins, git, MySQL and python.*
+	- Member of the DATA POD working within the Scrum process framework (using JIRA). Integrate provider data from various sources into the search engine. Normalize and geo-reference data from different sources. Automate and define new tools to scale and increase efficiency for the data quality program. 
+
+		*Tools:* Jenkins, git, MySQL, python.
 
 
 - 2014-2015 **Student Representative**, [Berlin Mathematical School](http://www.math-berlin.de), Berlin, Germany. 
@@ -39,7 +48,7 @@ Tools: Jenkins, git, MySQL and python.*
 
 ### Volunteering Activities
 
-- 01/2018-Present **Volunteering Data Scientist**, [CorrelAid Network](https://correlaid.org/en/network)
+- 01/2018-03/2018 **Volunteering Data Scientist**, [CorrelAid Network](https://correlaid.org/en/network), Dashboard Project for [Projekt Seehilfe e.V.](http://www.seehilfe.com/en/home/)
 
 - 03/2011-08/2011 **Mathematics Teacher**, [ColombiaCrece](http://www.colombiacrece.org/#educacion-solidaria), Bogotá, Colombia. 
 
@@ -71,23 +80,50 @@ Tools: Jenkins, git, MySQL and python.*
 
 ---
 
+### Publications & Preprints
+
+- [The $S^1$-Equivariant signature for semi-free actions as an index formula (2018)](https://arxiv.org/abs/1802.04840)
+
+- [Induced Dirac-Schrödinger operators on $S^1$-semi-free quotients (2017)](https://arxiv.org/abs/1711.04196)
+
+---
+
 ### Certificates
 
 #### Data Analysis and Machine Learning
 
-- [Introduction to Data Science in Python](https://www.coursera.org/account/accomplishments/certificate/DNRZYZ9YPVWZ) (Coursera)
-*Tools:* scipy, numpy and pandas.
-
-- [Applied Plotting, Charting & Data Representation in Python](https://www.coursera.org/account/accomplishments/certificate/9KXJ898KD9D6) (Coursera)
-*Tools:* pyplot, matplotlib and seaborn
-
-- [Applied Machine Learning in Python](https://www.coursera.org/account/accomplishments/certificate/HW68UVKPCS45) (Coursera)
-*Tools:* scikit-learn
- 
-- [Machine Learning](https://www.coursera.org/account/accomplishments/certificate/R9HMKKTMYERD) (Coursera)
+- [Machine Learning](https://www.coursera.org/account/accomplishments/certificate/R9HMKKTMYERD) 
 *Tools:* matlab
 
-- Applied Text Mining in Python (Coursera)
+##### Deep Learning Specialization (Coursera)
+
+- [Neural Networks and Deep Learning](https://www.coursera.org/account/accomplishments/verify/GCZ4X2NAFH6H)
+*Tools:* numpy.
+
+- [Improving Deep Neural Networks](https://www.coursera.org/account/accomplishments/verify/D9M7YK49CBQ5)
+*Tools:* numpy, tensorflow.
+
+- [Structuring Machine Learning Projects](https://www.coursera.org/account/accomplishments/verify/PR8BZBW6JPZM)
+
+- Convolutional Neural Networks
+
+- Sequence Models
+
+##### [Applied Data Science with Python Specialization](https://www.coursera.org/account/accomplishments/specialization/certificate/YB8Y4UU8NPHL) (Coursera) 
+
+- [Introduction to Data Science in Python](https://www.coursera.org/account/accomplishments/certificate/DNRZYZ9YPVWZ) 
+*Tools:* scipy, numpy and pandas.
+
+- [Applied Plotting, Charting & Data Representation in Python](https://www.coursera.org/account/accomplishments/certificate/9KXJ898KD9D6) 
+*Tools:* pyplot, matplotlib and seaborn
+
+- [Applied Machine Learning in Python](https://www.coursera.org/account/accomplishments/certificate/HW68UVKPCS45) 
+*Tools:* scikit-learn
+ 
+- [Applied Text Mining in Python](https://www.coursera.org/account/accomplishments/verify/5PWPU2PJ77PS)
+
+- [Applied Social Network Analysis in Python](https://www.coursera.org/account/accomplishments/verify/5SGMBJ5VZBQG)
+
 
 #### Statistical Analysis
 
@@ -103,7 +139,7 @@ Tools: Jenkins, git, MySQL and python.*
 
 #### Programming
 
-##### Functional Programming in Scala Specialization (Coursera)
+##### [Functional Programming in Scala Specialization](https://www.coursera.org/account/accomplishments/specialization/certificate/YSRKZV9XKDKX) (Coursera)
 
 - [Functional Programming Principles in Scala](https://www.coursera.org/account/accomplishments/certificate/D4RRBFQ69MT5)
 
