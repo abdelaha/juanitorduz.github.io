@@ -17,6 +17,10 @@ I am also interested in education and knowlodge sharing.
 
 ---
 
+**Contact:** juanitorduz@gmail.com
+
+---
+
 ### Work Experience
 
 - 01/04/2018-Present  **Data Scientist**, [trommsdorff + drüner, innovation + marketing consultants GmbH](https://www.td-berlin.com), Berlin, Germany.
@@ -38,11 +42,11 @@ I am also interested in education and knowlodge sharing.
 
 - 2014-2015 **Student Representative**, [Berlin Mathematical School](http://www.math-berlin.de), Berlin, Germany. 
 
-*Member of the organization committee of the 3rd−BMS Student Conference.*
+     - Member of the organization committee of the [3rd−BMS Student Conference](https://sites.google.com/site/bmsstudentconference/home).
 
 - 2008-2010 **Teaching Assistant**, [Universidad de los Andes](https://uniandes.edu.co), Bogotá, Colombia. 
 
-*Courses: Linear Algebra, Basic Physics II, Riemannian Geometry.*
+     - *Courses: Linear Algebra, Basic Physics II, Riemannian Geometry.*
 
 ### Volunteering Activities
 
@@ -87,6 +91,12 @@ I am also interested in education and knowlodge sharing.
 ---
 
 ### Certificates
+
+Here are some online courses which I have taken. The purpose is two-folded:
+
+	 - Learn and understand the content of the courses.
+
+	 - Learn and see examples of how to present data science concepts/topics to a general audience. 
 
 #### Data Analysis and Machine Learning
 
