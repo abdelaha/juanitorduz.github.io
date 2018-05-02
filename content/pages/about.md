@@ -94,16 +94,16 @@ I am also interested in education and knowlodge sharing.
 
 Here are some online courses which I have taken. The purpose is two-folded:
 
-	 - Learn and understand the content of the courses.
+ - Learn and understand the content of the courses.
 
-	 - Learn and see examples of how to present data science concepts/topics to a general audience. 
+ - Learn and see examples of how to present data science concepts/topics to a general audience. 
 
 #### Data Analysis and Machine Learning
 
 - [Machine Learning](https://www.coursera.org/account/accomplishments/certificate/R9HMKKTMYERD) (Coursera)
 *Tools:* matlab
 
-##### Deep Learning Specialization (Coursera)
+##### [Deep Learning Specialization](https://www.coursera.org/account/accomplishments/specialization/2BUB9H27CXFQ) (Coursera)
 
 - [Neural Networks and Deep Learning](https://www.coursera.org/account/accomplishments/verify/GCZ4X2NAFH6H)
 *Tools:* numpy.
@@ -113,9 +113,11 @@ Here are some online courses which I have taken. The purpose is two-folded:
 
 - [Structuring Machine Learning Projects](https://www.coursera.org/account/accomplishments/verify/PR8BZBW6JPZM)
 
-- Convolutional Neural Networks
+- [Convolutional Neural Networks](https://www.coursera.org/account/accomplishments/verify/8JE96YG4V4TB)
+*Tools:* numpy, tensorflow, keras.
 
-- Sequence Models
+- [Sequence Models](https://www.coursera.org/account/accomplishments/verify/SZKEPQV6FA68)
+*Tools:* numpy, tensorflow, keras.
 
 ##### [Applied Data Science with Python Specialization](https://www.coursera.org/account/accomplishments/specialization/certificate/YB8Y4UU8NPHL) (Coursera) 
 
