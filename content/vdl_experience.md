@@ -1,6 +1,6 @@
 ---
-Title: PyData Berlin 2018: From Bachelor to PhD: Geometric and Topological Methods for Quantum Field Theory
-Date: 2010-06-24
+Title: From Bachelor to PhD: Geometric and Topological Methods for Quantum Field Theory
+Date: 2018-06-24
 Category: Education
 Tags: mathematics, education
 slug: vdl_experience

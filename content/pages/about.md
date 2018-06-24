@@ -23,7 +23,7 @@ I am also interested in education and knowlodge sharing.
 
 ### Work Experience
 
-- 01/04/2018-Present  **Data Scientist**, [trommsdorff + drüner, innovation + marketing consultants GmbH](https://www.td-berlin.com), Berlin, Germany.
+- 01/04/2018-Present  **Data Scientist**, [TD Reply GmbH](https://www.td-berlin.com), Berlin, Germany.
 
 	- Integrate and unify data from various sources. Apply skills in data mining, quantitative analysis and visualization. Develop algorithms for a variety of business problems (e.g. sales predictions, media mix allocation, future behavior, market drivers, trends and growth potential) by applying knowledge in feature engineering, variable selection, statistical modeling and machine learning.
 􏰂 
@@ -31,7 +31,7 @@ I am also interested in education and knowlodge sharing.
 
 		*Tools:* git, python, pandas, scikit-learn, R, tidyverse, caret, H2O.
 
-- 01/07/2017-01/04/2018-  **Junior Data Scientist**, [trommsdorff + drüner, innovation + marketing consultants GmbH](https://www.td-berlin.com), Berlin, Germany.
+- 01/07/2017-01/04/2018-  **Junior Data Scientist**, [TD Reply GmbH](https://www.td-berlin.com), Berlin, Germany.
 
 - 01/01/2017-30/06/2017 **Trainee - Data Analyst**, [GoEuro](https://www.goeuro.com), Berlin, Germany.
 
@@ -174,7 +174,9 @@ Here are some online courses which I have taken. The purpose is two-folded:
 
 ### Selected Talks and Events
 
-- 08/2017 [Introduction to Bayesian modeling with PyMC3](https://www.meetup.com/Python-Users-Berlin-PUB/events/237520865/), Python Users Berlin (PUB), Germany.
+- 07/2018 [On Laplacian Eigenmaps for Dimensionality Reduction](https://pydata.org/berlin2018/schedule/presentation/33/), PyData Berlin 2018, Berlin, Germany.
+
+- 08/2017 [Introduction to Bayesian modeling with PyMC3](https://www.meetup.com/Python-Users-Berlin-PUB/events/237520865/), Python Users Berlin (PUB), Berlin, Germany.
 
 - 07/2017 [Workshop on Loop Spaces, Supersymmetry and Index Theory](http://www.math.nus.edu.sg/~mathanf/LSI/Loop%20space%20and%20supersymmetry.html), Chern Institute of Mathematics, Tianjin, China.
 
