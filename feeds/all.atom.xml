@@ -228,10 +228,10 @@ p_j(n)=
 
 
 
-&lt;div id="c2d9bc51-af58-4bbf-80f8-57e090107b69"&gt;&lt;/div&gt;
+&lt;div id="8559acac-65f3-4568-955d-b860b00fde72"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#c2d9bc51-af58-4bbf-80f8-57e090107b69');
+var element = $('#8559acac-65f3-4568-955d-b860b00fde72');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -1053,10 +1053,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="72d37825-604c-4a90-b793-710cc9bcb158"&gt;&lt;/div&gt;
+&lt;div id="d5ae3793-7e80-45c7-8167-0f36ee49c92a"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#72d37825-604c-4a90-b793-710cc9bcb158');
+var element = $('#d5ae3793-7e80-45c7-8167-0f36ee49c92a');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -1928,10 +1928,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="7a8efccb-1b28-4f02-aeb1-dd7fbf1e051e"&gt;&lt;/div&gt;
+&lt;div id="75910c12-573f-4275-8801-a5127dd097a0"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#7a8efccb-1b28-4f02-aeb1-dd7fbf1e051e');
+var element = $('#75910c12-573f-4275-8801-a5127dd097a0');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -2745,10 +2745,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="eab57566-6bf6-41ac-b3b2-b2fcf8b9bc1e"&gt;&lt;/div&gt;
+&lt;div id="9a678eda-2383-4780-8f4b-54ea63fc94fb"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#eab57566-6bf6-41ac-b3b2-b2fcf8b9bc1e');
+var element = $('#9a678eda-2383-4780-8f4b-54ea63fc94fb');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3724,10 +3724,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="683f3910-dddf-45fa-a75e-7e9a5d551d84"&gt;&lt;/div&gt;
+&lt;div id="160c55a9-1fee-4d35-8098-c7674be33c48"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#683f3910-dddf-45fa-a75e-7e9a5d551d84');
+var element = $('#160c55a9-1fee-4d35-8098-c7674be33c48');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -18075,4 +18075,4 @@ U_{dist}:= \{ p \in\mathbb{R}^2\: : \: \exists q \in R \quad \text{such that} \q
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="python"></category></entry></feed>
+&lt;/script&gt;</content><category term="python"></category></entry><entry><title>PyData Berlin 2018: On Laplacian Eigenmaps for Dimensionality Reduction</title><link href="/laplacian_eigenmaps_dim_red.html" rel="alternate"></link><published>2010-06-24T00:00:00+02:00</published><updated>2010-06-24T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2010-06-24:/laplacian_eigenmaps_dim_red.html</id><summary type="html">&lt;p&gt;(In preparation) This post contains the slides and material from a talk I gave at PyData Berlin 2018.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In preparation...&lt;/p&gt;</content><category term="mathematics"></category><category term="geometry"></category><category term="visualization"></category></entry><entry><title>PyData Berlin 2018: From Bachelor to PhD: Geometric and Topological Methods for Quantum Field Theory</title><link href="/vdl_experience.html" rel="alternate"></link><published>2010-06-24T00:00:00+02:00</published><updated>2010-06-24T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2010-06-24:/vdl_experience.html</id><summary type="html">&lt;p&gt;(In preparation) In this post I collect some experiences as a participant on a sequence of summer schools on Geometric and Topological Methods for Quantum Field Theory at Villa de Leyva, Colombia.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In preparation...&lt;/p&gt;</content><category term="mathematics"></category><category term="education"></category></entry></feed>
