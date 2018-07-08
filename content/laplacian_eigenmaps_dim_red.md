@@ -5,7 +5,7 @@ Category: Geometry, Visualization
 Tags: mathematics, geometry, visualization
 slug: laplacian_eigenmaps_dim_red
 Authors: Juan Camilo Orduz
-Summary: This post contains the slides and material from a talk I gave at PyData Berlin 2018. I presented the paper *Laplacian Eigenmaps for Dimensionality Reduction and Data Representation* by Belkin and Niyogi.
+Summary: This post contains the slides and material from a talk I gave at PyData Berlin 2018. I presented the paper *Laplacian Eigenmaps for Dimensionality Reduction and Data Representation* by [Mikhail Belkin](http://web.cse.ohio-state.edu/~belkin.8/) and [Partha Niyogi](http://people.cs.uchicago.edu/~niyogi/).
 ---
 
 This summer I had the great oportunity to attend an give a talk at [Pydata Berlin 2018](https://pydata.org/berlin2018/). The topic of my talk was [On Laplacian Eigenmaps for Dimensionality Reduction](https://pydata.org/berlin2018/schedule/presentation/33/). During the *Unsupervised Learning & Visualization* session Dr. Stefan Kühn presented a very interesting and visual talk on [Manifold Learning and Dimensionality Reduction for Data Visualization and Feature Engineering](https://pydata.org/berlin2018/schedule/presentation/55/) and Dr. Evelyn Trautmann gave a nice application of spectral clustering in the context of [Extracting relevant Metrics](https://pydata.org/berlin2018/schedule/presentation/48/). During our talks, spectral methods and the [Graph Laplacian](https://en.wikipedia.org/wiki/Laplacian_matrix) was the biggest intersection. This was an excelent oportunity to enhance the communication channels between pure math and its applications. 
