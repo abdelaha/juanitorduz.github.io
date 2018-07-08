@@ -30,8 +30,6 @@ Suggestions and comments are always welcome!
 
 **Notebook**
 
-(Under Construction!)
-
-{% notebook spectral_embedding.ipynb %}
+{% notebook spectral_embedding_v2.ipynb %}
 
 

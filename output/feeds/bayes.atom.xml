@@ -2812,7 +2812,7 @@ kyRJasj/D/qXKASXyvBZAAAAAElFTkSuQmCC
 &lt;h2 id="3.2-The-model:-Hierarchical-Approach"&gt;3.2 The model: Hierarchical Approach&lt;a class="anchor-link" href="#3.2-The-model:-Hierarchical-Approach"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Hierarchical Model:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;We model the chocolate chip counts by a Poisson distribution with parameter $\lambda$. Motivated by the example above, we choose a gamma prior.&lt;/p&gt;
+&lt;p&gt;We model the chocolate chip counts by a Poisson distribution with parameter \(\lambda\). Motivated by the example above, we choose a gamma prior.&lt;/p&gt;
 \begin{align}
 chips \sim  Poiss(\lambda)
 \quad\quad\quad
@@ -2820,7 +2820,7 @@ chips \sim  Poiss(\lambda)
 \end{align}&lt;ul&gt;
 &lt;li&gt;Parametrization:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;We parametrize the shape and scale of the gamma prior with the mean $\mu$ and variance $\sigma^2$.&lt;/p&gt;
+&lt;p&gt;We parametrize the shape and scale of the gamma prior with the mean \(\mu\) and variance \(\sigma^2\).&lt;/p&gt;
 \begin{align}
 a=\frac{\mu^2}{\sigma^2}
 \quad\quad\quad
@@ -8559,7 +8559,7 @@ mVnJOdGbmZWcE72ZWcn9fwq99FlccJMfAAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="3.5.1-For-a-new-location"&gt;3.5.1 For a new location&lt;a class="anchor-link" href="#3.5.1-For-a-new-location"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Now assume we want to open a new location. First, we want to compute the posterior probability that this new location has $\lambda &amp;gt; 15$.&lt;/p&gt;
+&lt;h3 id="3.5.1-For-a-new-location"&gt;3.5.1 For a new location&lt;a class="anchor-link" href="#3.5.1-For-a-new-location"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Now assume we want to open a new location. First, we want to compute the posterior probability that this new location has \(\lambda &amp;gt; 15\).&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
