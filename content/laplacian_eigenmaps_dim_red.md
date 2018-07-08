@@ -20,10 +20,14 @@ The aim of this talk is to describe a non-linear dimensionality reduction algori
 
 **Slides**
 
+[Here]({filename}/documents/orduz_pydata2018.pdf) you can find the slides of the talk. 
+
+Suggestions and comments are always welcome!
+
 ---
 
 **Notebook**
 
-{% notebook bootstrap.ipynb %}
+{% notebook spectral_embedding.ipynb %}
 
 
