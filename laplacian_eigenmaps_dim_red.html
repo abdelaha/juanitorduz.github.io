@@ -41,7 +41,7 @@
         href="/feeds/all.atom.xml">
   <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
         href="/feeds/geometry-visualization.atom.xml">  
-  <meta name="description" content="This post contains the slides and material from a talk I gave at PyData Berlin 2018.">
+  <meta name="description" content="This post contains the slides and material from a talk I gave at PyData Berlin 2018. I presented the paper Laplacian Eigenmaps for Dimensionality Reduction and Data Representation by Belkin and Niyogi.">
 
 
 </head>
@@ -88,16 +88,18 @@
       </ul>
     </header>
     <div class="content">
-      <p>This summer I had the great oportunity to attend an give a talk at <a href="https://pydata.org/berlin2018/">Pydata Berlin 2018</a>. The topic of my talk was <a href="https://pydata.org/berlin2018/schedule/presentation/33/">On Laplacian Eigenmaps for Dimensionality Reduction</a>. </p>
+      <p>This summer I had the great oportunity to attend an give a talk at <a href="https://pydata.org/berlin2018/">Pydata Berlin 2018</a>. The topic of my talk was <a href="https://pydata.org/berlin2018/schedule/presentation/33/">On Laplacian Eigenmaps for Dimensionality Reduction</a>. During the <em>Unsupervised Learning &amp; Visualization</em> session Dr. Stefan Kühn presented a very interesting and visual talk on <a href="https://pydata.org/berlin2018/schedule/presentation/55/">Manifold Learning and Dimensionality Reduction for Data Visualization and Feature Engineering</a> and Dr. Evelyn Trautmann gave a nice application of spectral clustering in the context of <a href="https://pydata.org/berlin2018/schedule/presentation/48/">Extracting relevant Metrics</a>. During our talks, spectral methods and the <a href="https://en.wikipedia.org/wiki/Laplacian_matrix">Graph Laplacian</a> was the biggest intersection. This was an excelent oportunity to enhance the communication channels between pure math and its applications. </p>
+<p>I want to acknowledge the organizers, volunteers and great speakers which made this conference possible.</p>
 <hr>
 <p><strong>Abstract</strong></p>
-<p>The aim of this talk is to describe a non-linear dimensionality reduction algorithm based on spectral techniques introduced in <a href="http://web.cse.ohio-state.edu/~belkin.8/papers/LEM_NC_03.pdf">BN2003</a>. The goal of non-linear dimensionality reduction algorithms, so called {\em manifold learning algorithms}, is to construct a representation of data on a low dimensional manifold embedded in a high dimensional space. The particular case we are going to present exploits various relations of geometric and spectral methods (discrete and continuous). Spectral methods are sometimes motivated by Marc Kac's question  <em>Can One Hear the Shape of a Drum?</em> which makes reference to the idea of recovering geometrical properties from the eigenvalues (spectrum) of a matrix (linear operator). Concretely, the approach followed in <a href="http://web.cse.ohio-state.edu/~belkin.8/papers/LEM_NC_03.pdf">BN2003</a> has its foundation on the spectral analysis of the graph Laplacian of the adjacency graph constructed from the data. The motivation of the construction relies on the continuous limit analogue, the Laplace-Beltrami operator, in providing an optimal embedding for manifolds. We will also indicate the relation with the associated heat kernel operator. Instead of following a pure formal approach we will present the main geometric and computational ideas of the algorithm. Hence, with basic knowledge of linear algebra (eigenvalues) and differential calculus you will be able to follow the talk. Finally we will show a concrete example in Python using scikit-learn.</p>
+<p>The aim of this talk is to describe a non-linear dimensionality reduction algorithm based on spectral techniques introduced in <a href="http://web.cse.ohio-state.edu/~belkin.8/papers/LEM_NC_03.pdf">BN2003</a>. The goal of non-linear dimensionality reduction algorithms, so called  <em>manifold learning algorithms</em>, is to construct a representation of data on a low dimensional manifold embedded in a high dimensional space. The particular case we are going to present exploits various relations of geometric and spectral methods (discrete and continuous). Spectral methods are sometimes motivated by Marc Kac's question  <em>Can One Hear the Shape of a Drum?</em> which makes reference to the idea of recovering geometrical properties from the eigenvalues (spectrum) of a matrix (linear operator). Concretely, the approach followed in <a href="http://web.cse.ohio-state.edu/~belkin.8/papers/LEM_NC_03.pdf">BN2003</a> has its foundation on the spectral analysis of the <a href="https://en.wikipedia.org/wiki/Laplacian_matrix">Graph Laplacian</a>of the adjacency graph constructed from the data. The motivation of the construction relies on the continuous limit analogue, the <a href="https://en.wikipedia.org/wiki/Laplace–Beltrami_operator">Laplace-Beltrami</a> operator, in providing an optimal embedding for manifolds. We will also indicate the relation with the associated heat kernel operator. Instead of following a pure formal approach we will present the main geometric and computational ideas of the algorithm. Hence, with basic knowledge of linear algebra (eigenvalues) and differential calculus you will be able to follow the talk. Finally we will show a concrete example in Python using <a href="http://scikit-learn.org/stable/modules/generated/sklearn.manifold.SpectralEmbedding.html">scikit-learn</a>.</p>
 <hr>
 <p><strong>Slides</strong></p>
 <p><a href="/documents/orduz_pydata2018.pdf">Here</a> you can find the slides of the talk. </p>
 <p>Suggestions and comments are always welcome!</p>
 <hr>
 <p><strong>Notebook</strong></p>
+<p>(Under Construction!)</p>
 <p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
