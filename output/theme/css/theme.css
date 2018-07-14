@@ -10,17 +10,17 @@ a.anchor-link {
 }
 
 body {
-  background-color: #16A4EA;
+  background-color: #156D00;
 }
 
 
 a {
-  color: #333;
+  color: #ffffff;
 }
 
 a:focus,
 a:hover {
-  color: #0085a1;
+  color: #ffffff;
 }
 
 a.anchor-link {
