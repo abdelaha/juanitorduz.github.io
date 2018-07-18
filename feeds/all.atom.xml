@@ -997,10 +997,10 @@ p_j(n)=
 
 
 
-&lt;div id="89e585bd-e7c8-4ac4-bbe3-91161fca5982"&gt;&lt;/div&gt;
+&lt;div id="d03ead3e-68ba-45c5-b885-0b9d60072e2b"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#89e585bd-e7c8-4ac4-bbe3-91161fca5982');
+var element = $('#d03ead3e-68ba-45c5-b885-0b9d60072e2b');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -1822,10 +1822,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="b8748be8-f058-4d6a-9a56-fd3ba3e28524"&gt;&lt;/div&gt;
+&lt;div id="156ab513-1069-42f7-b9f6-30a7510e8507"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#b8748be8-f058-4d6a-9a56-fd3ba3e28524');
+var element = $('#156ab513-1069-42f7-b9f6-30a7510e8507');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -2697,10 +2697,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="6ad431cd-49fa-447b-bcef-0db8c6fd71e4"&gt;&lt;/div&gt;
+&lt;div id="552b9f32-328b-44a8-ad31-5d2724d003fe"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#6ad431cd-49fa-447b-bcef-0db8c6fd71e4');
+var element = $('#552b9f32-328b-44a8-ad31-5d2724d003fe');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3514,10 +3514,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="59b1a5bd-61d8-46db-aa89-3b02bebc1782"&gt;&lt;/div&gt;
+&lt;div id="a319387e-58ef-4f6b-9f86-3d137a1c8c25"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#59b1a5bd-61d8-46db-aa89-3b02bebc1782');
+var element = $('#a319387e-58ef-4f6b-9f86-3d137a1c8c25');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -4493,10 +4493,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="8f456fd1-7fe8-4b0e-8cb8-072444377b01"&gt;&lt;/div&gt;
+&lt;div id="c448b619-7e46-44ea-b42f-349bca2c477e"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#8f456fd1-7fe8-4b0e-8cb8-072444377b01');
+var element = $('#c448b619-7e46-44ea-b42f-349bca2c477e');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
