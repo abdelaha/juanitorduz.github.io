@@ -69,6 +69,6 @@ STATIC_PATHS = ['notebooks', 'images', 'pages', 'documents', 'pdfs']
 DELETE_OUTPUT_DIRECTORY = False
 LOAD_CONTENT_CACHE = False
 
-
+GOOGLE_ANALYTICS = "UA-122570825-1"
 
 
