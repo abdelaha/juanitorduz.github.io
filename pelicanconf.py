@@ -7,7 +7,7 @@ import os
 AUTHOR = 'Dr. Juan Camilo Orduz'
 SITENAME = 'Dr. Juan Camilo Orduz'
 SITEURL = 'http://juanitorduz.github.io'
-
+#SITEIMAGE = 'images/glue.png width=500 height=220'
 
 SITESUBTITLE = 'Mathematician & Data Scientist'
 
@@ -69,6 +69,6 @@ STATIC_PATHS = ['notebooks', 'images', 'pages', 'documents', 'pdfs']
 DELETE_OUTPUT_DIRECTORY = False
 LOAD_CONTENT_CACHE = False
 
-SITEIMAGE = 'images/glue.png width=500 height=220'
+
 
 
