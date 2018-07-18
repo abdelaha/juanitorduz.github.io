@@ -7,7 +7,7 @@ import os
 AUTHOR = 'Dr. Juan Camilo Orduz'
 SITENAME = 'Dr. Juan Camilo Orduz'
 SITEURL = 'http://juanitorduz.github.io'
-#SITEIMAGE = 'images/glue.png width=400 height=130'
+SITEIMAGE = 'images/glue.png width=400 height=130'
 
 SITESUBTITLE = 'Mathematician & Data Scientist'
 
