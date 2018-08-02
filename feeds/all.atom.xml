@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-08-02T00:00:00+02:00</updated><entry><title>From Bachelor to PhD: Geometric and Topological Methods for Quantum Field Theory</title><link href="/vdl_experience.html" rel="alternate"></link><published>2018-08-02T00:00:00+02:00</published><updated>2018-08-02T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-08-02:/vdl_experience.html</id><summary type="html">&lt;p&gt;(In preparation) In this post I collect some experiences as a participant on a sequence of summer schools on Geometric and Topological Methods for Quantum Field Theory at Villa de Leyva, Colombia.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post I want to write about my experience participating (various ocations) in the &lt;em&gt;Summer School on Geometric, Algebraic and Topological Methods in Quantum field Theory&lt;/em&gt; in Villa de Leyva, Colombia. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-08-02T00:00:00+02:00</updated><entry><title>From Bachelor to PhD: Geometric and Topological Methods for Quantum Field Theory</title><link href="/vdl_experience.html" rel="alternate"></link><published>2018-08-02T00:00:00+02:00</published><updated>2018-08-02T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-08-02:/vdl_experience.html</id><summary type="html">&lt;p&gt;In this post I collect some experiences as a participant on a sequence of summer schools on Geometric and Topological Methods for Quantum Field Theory at Villa de Leyva, Colombia.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post I want to write about my experience participating (various ocations) in the &lt;em&gt;Summer School on Geometric, Algebraic and Topological Methods in Quantum field Theory&lt;/em&gt; in Villa de Leyva, Colombia. &lt;/p&gt;
 &lt;p&gt;The motivation for writing this post came in my last visit to Villa de Leyva in May 2018. &lt;/p&gt;
 &lt;p&gt;As described on the last school official &lt;a href="https://villadeleyvaschool.wordpress.com"&gt;website&lt;/a&gt;,&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;These are series of summer schools in Colombia, which have taken place every other year since July 1999. The topics of these schools lie on the border line between geometry, topology, algebra and quantum field theory, and they offer courses addressed to both physicists and mathematicians with a master’s level in either of the fields.&lt;/em&gt;&lt;/p&gt;
@@ -1104,10 +1104,10 @@ p_j(n)=
 
 
 
-&lt;div id="91bfaa39-a70c-47fd-99e4-6b14f65f60cc"&gt;&lt;/div&gt;
+&lt;div id="bde98ad0-bb84-462a-a2ab-d18d6a053da4"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#91bfaa39-a70c-47fd-99e4-6b14f65f60cc');
+var element = $('#bde98ad0-bb84-462a-a2ab-d18d6a053da4');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -1929,10 +1929,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="8a2320e3-ebff-4c22-8aad-7655e4c002e7"&gt;&lt;/div&gt;
+&lt;div id="73bc4174-6b12-4e4a-87c4-5c04c0e12d5a"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#8a2320e3-ebff-4c22-8aad-7655e4c002e7');
+var element = $('#73bc4174-6b12-4e4a-87c4-5c04c0e12d5a');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -2804,10 +2804,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="3a92f520-92f2-4ec3-8c5e-980147fe38f4"&gt;&lt;/div&gt;
+&lt;div id="9be74bf6-0c5f-483e-8e60-b6f4aa86bd61"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#3a92f520-92f2-4ec3-8c5e-980147fe38f4');
+var element = $('#9be74bf6-0c5f-483e-8e60-b6f4aa86bd61');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3621,10 +3621,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="5df80598-69cc-43fd-86c0-5b2324e205d8"&gt;&lt;/div&gt;
+&lt;div id="54a4dd4a-c14f-4ebd-81db-cbefac381bde"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#5df80598-69cc-43fd-86c0-5b2324e205d8');
+var element = $('#54a4dd4a-c14f-4ebd-81db-cbefac381bde');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -4600,10 +4600,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="882c52d6-7a95-4bb2-9335-fe5ef4f627e4"&gt;&lt;/div&gt;
+&lt;div id="faa14615-4d8c-4c22-8d86-11295bf83667"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#882c52d6-7a95-4bb2-9335-fe5ef4f627e4');
+var element = $('#faa14615-4d8c-4c22-8d86-11295bf83667');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
