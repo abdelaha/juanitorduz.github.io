@@ -19,6 +19,8 @@ As described on the last school official [website](https://villadeleyvaschool.wo
 
 # The Location: Villa de Leyva
 
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyA8X9jqbLBjXxd90a-8woYNoefgl9R7VyI'></script><div style='overflow:hidden;height:364px;width:520px;'><div id='gmap_canvas' style='height:364px;width:520px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='https://www.embedmap.net/'>google widgets</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=be4629b7107ded8e20caad7faa907f7f2a822bed'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(5.636499,-73.52705800000001),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(5.636499,-73.52705800000001)});infowindow = new google.maps.InfoWindow({content:'<strong>Villa de Leyva</strong><br><br> Villa de Leyva<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+
 These summer schools took place at [Villa de Leyva](https://en.wikipedia.org/wiki/Villa_de_Leyva), a beautiful town in Colombia where nature, history and tranquility are always present. Well not always, tranquility is, from time to time, replaced by great festivals and events! People and culture around this area are amazing. I can honestly say that Villa de Leyva is my farorite plece in the world. 
 
 The following are probaly the most known events in Villa de Leyva. 
@@ -62,6 +64,7 @@ The summer school was the result of a massive amount of effort and dedication fr
 
 As an undergrad student at [Universidad de los Andes](https://uniandes.edu.co) I had the privilege to attend three of these schools: 2009, 2011 and 2013. The experiences I had during these three events are quite different, mainly because of my mathematics/physics background, but also because I was at different stages on my way to getting a PhD. 
 
+
 - [Villa de Leyva, 2009](https://matematicas.uniandes.edu.co/summer2009/)
 
 	During my first school I was in my third year of a double major program in physics and mathematics. I had already taken the basic courses: analysis, algebra, quantum and classical mechanics, thermodynamics and electromagnetism. Still, the summer school level was incredibly high. To be honest I think I understood around 10% of what was discussed during those three weeks. I realized how little I knew about these topics and that the journey wasn not going to be short and easy. I must admit I was scared and hesitant about my qualifications and skills. I felt so small when compared with those great scientists. Nevertheless, the ambient of the school was so that those thoughs and doubst would acually boost my desire to learn. I was gladly surprised how patient and friendly the speakers were.  There were three lectures which had a special impact for me:
@@ -77,6 +80,7 @@ As an undergrad student at [Universidad de los Andes](https://uniandes.edu.co) I
 
 	- Exercise Sessions: In order to make us follow and understand the content of the lectures, the speakers would propose some exercises to work on. Then, we would work on them and present the solutions. This was extremely helpful! Not just because it  forced us to fill up some math details, but also because it taught us to work together and colaborate to get results (which is actually the most fun part of doing research, in my opinion). 
 
+
 - [Villa de Leyva, 2011](https://matematicas.uniandes.edu.co/summer2011/)
 	
 	When I attended the school for the second time I had already gotten a Berlin Mathematical School Phase I scholarship to start my graduate studies in Berlin. I had also finished both bachelor degrees, physics and mathematics, and has preparimg myself for a new adventure. I was quite open about my potential research area so that is why I decided to attend the summer school, I wanted to discover about new ideas and mathematics. Attending this school would actually helped my find my favorite area which I would devote the my future 5 years of research: [*Index Theory*](https://en.wikipedia.org/wiki/Atiyah–Singer_index_theorem.) 
@@ -87,6 +91,7 @@ As an undergrad student at [Universidad de los Andes](https://uniandes.edu.co) I
 	-[Noncommutative geometry models in particle physics and cosmology](https://matematicas.uniandes.edu.co/summer2011/topics_lectures.html) by [Matilde Marcolli](http://www.its.caltech.edu/~matilde/). I just wanted to mention Matilde Marcolli course because it was very impressive. She is a very (very!) strong mathematician who is also very (very!) comfortable talking about physics (theory and experiments). It was amazing how she was able to combine these two disicplines (are they really different?) by trying to undertand and model article physics and cosmology. 
 
 	- In this occasion I had the opportunity to give a short talk on the moment map. This intended to complement the course of Maxim Braverman (in particular, the prequantization part). Preparing this talk was a great exercise. In particular, because I was really motivated to do a good presentation since I had the (positive) pressure of having the invited speakers in the audience. You can find the notes of my talk here. 
+
 
 - [Villa de Leyva, 2013](https://villadeleyvaschool.uniandes.edu.co/summer2013/)
 
