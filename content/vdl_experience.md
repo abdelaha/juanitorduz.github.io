@@ -5,7 +5,7 @@ Category: Education
 Tags: mathematics, education
 slug: vdl_experience
 Authors: Juan Camilo Orduz
-Summary: (In preparation) In this post I collect some experiences as a participant on a sequence of summer schools on Geometric and Topological Methods for Quantum Field Theory at Villa de Leyva, Colombia.
+Summary: In this post I collect some experiences as a participant on a sequence of summer schools on Geometric and Topological Methods for Quantum Field Theory at Villa de Leyva, Colombia.
 ---
 
 In this post I want to write about my experience participating (various ocations) in the *Summer School on Geometric, Algebraic and Topological Methods in Quantum field Theory* in Villa de Leyva, Colombia. 
