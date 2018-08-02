@@ -35,6 +35,7 @@ The first one, the [Wind & Kite Festival](http://www.colombia.travel/en/where-to
 
 The second one is also important since it overlaps with the summer school! 
 
+---
 
 # The Venue: Hotel Mesón De Los Virreyes
 
@@ -42,6 +43,7 @@ For the three consecutive times I attended the summer school we stayed at the [H
 
 During my latest visit to Villa de Leyva (May 2018) I had the oportunity to stay there as well. Many good memories came to me. Moreover, three members of the hotel staff still remembered me! 
 
+---
 
 # The Organizers
 
@@ -59,6 +61,7 @@ The summer school was the result of a massive amount of effort and dedication fr
 
 [Alexander Cardona](https://pentagono.uniandes.edu.co/~acardona/) and [Andres Reyes](https://fisica.uniandes.edu.co/personal/profesores-de-planta/andres-fernando-reyes-lega) were my Mathematics and Physics Bachelor thesis advisors respectively. [Sylvie Paycha](http://www.math.uni-potsdam.de/~paycha/paycha/Home.html) was my [BMS Mentor](https://www.math-berlin.de/students/mentoring) during my PhD period at [Humbolt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de).
 
+---
 
 # My Academic Experience 
 
@@ -71,7 +74,7 @@ As an undergrad student at [Universidad de los Andes](https://uniandes.edu.co) I
 
 	- Math & Physics Prerequisites: During the first two days of each summer school there would be *Prerequisite Sessions* on both, physics and mathematics, to to level up young students and also to give the opportunity to mathematiciand to learn about physics and the other way around. These sessions were particularly usefull for me because I was one of those young students. These sessions were quite intense, but very effective. On the one hand side I was able to grasp on some advanced topics and on the other I took notes on definitions and theorems which I did not understand but defined my to-learn-list during the evenings in the library. A concrete example about what I got from those sessions is the definition of [conections](https://en.wikipedia.org/wiki/Connection_(principal_bundle)) and curvature on [principal bundles](https://en.wikipedia.org/wiki/Principal_bundle) and how to construct the corresponding obejcts on associated vector bundles (via a group representation). I also remeber that in one of these sessions Hernan Ocampo gave a very nice lecture introducing [string theory](https://en.wikipedia.org/wiki/String_theory). 
 
-	- (Geometric Aspects of the Standard Model and the Mysteries of Matter)[https://matematicas.uniandes.edu.co/summer2009/index.php?Op=1&TL=8] by [Florian Scheck](http://wwwthep.physik.uni-mainz.de/~scheck/). These lectures were very inspiring. Florian Scheck presented various topics in particle physics combining strong experiential intuition with the language of geometry to try to describe these phenomena. 
+	- [Geometric Aspects of the Standard Model and the Mysteries of Matter](https://matematicas.uniandes.edu.co/summer2009/index.php?Op=1&TL=8) by [Florian Scheck](http://wwwthep.physik.uni-mainz.de/~scheck/). These lectures were very inspiring. Florian Scheck presented various topics in particle physics combining strong experiential intuition with the language of geometry to try to describe these phenomena. 
 	One year after, in the summer of 2010, I was actually invited to visit him at the [Johannes Gutenberg-Universität Mainz](http://www.uni-mainz.de)in order to work on my physics bachelor thesis and explore the posibilities of going to Germany to continue my gratuate studies. As a matter of fact, I also visited Berlin that summer and I was immediatly in love with the city. The decision to move to Berin was definitely inspired by this (my first) visit to Germany. 
 
 	- [Geometric issues in Quantum Field Theory and String Theory](https://matematicas.uniandes.edu.co/summer2009/index.php?Op=1&TL=7) by [Luis J. Boya](https://www.researchgate.net/profile/Luis_Boya). These lectures were gave a rough introduction to mathematical tools around QFT and String Theory. The main topics were basic differential geometry, algebraic topology and applications. Again, my overall understanding of this material was quite low, but the way Luis J. Boya presented these topics really motivated me to go deeper in this direction. The late nights in the provisional library were essentilly to try to catch up with the topics of these lectures. 
@@ -105,6 +108,7 @@ As an undergrad student at [Universidad de los Andes](https://uniandes.edu.co) I
 
 	- In this sumer school I presented Hirzebruch's [Signature Theorem](https://en.wikipedia.org/wiki/Hirzebruch_signature_theorem) and a sketch of the proof using the structure of the oriented cobordism ring \\(\Omega_{SO}\otimes\mathbb{Q}\\). I also commented on the proof via the index theorem using the *signature operator*. This last was a key topic for my master thesis and my future research project during the PhD phase. Without a doubt, preparing this talk was a great exercise for me.
 
+---
 
 # My Non-Academic Experience 
 
@@ -114,6 +118,7 @@ After the afternoon study sessions we would had time to enjoy Villa de Leyva: Fr
 
 During the weekends, many outdoor activities were offered. My favorite, which I did in all my three times I participated in the summer school, was the hike to [Iguaque](https://en.wikipedia.org/wiki/Lake_Iguaque). This hike is a *must* if you ever visit this area! Visiting [Raquira](https://en.wikipedia.org/wiki/Ráquira) or going to [El Infiernito](https://en.wikipedia.org/wiki/El_Infiernito) were other activities offered for the weekends. 
 
+---
 
 # Acknowledgment
 
