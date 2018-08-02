@@ -20,6 +20,12 @@ The aim of this talk is to describe a non-linear dimensionality reduction algori
 
 ---
 
+**Video**
+
+<iframe width="400" height="255" src="https://www.youtube.com/watch?v=U31TIICsHiA" frameborder="0" allowfullscreen> </iframe>
+
+---
+
 **Slides**
 
 [Here]({filename}/documents/orduz_pydata2018.pdf) you can find the slides of the talk. 
