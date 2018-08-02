@@ -22,7 +22,7 @@ The aim of this talk is to describe a non-linear dimensionality reduction algori
 
 **Video**
 
-<iframe width="400" height="255" src="https://www.youtube.com/watch?v=U31TIICsHiA" frameborder="0" allowfullscreen> </iframe>
+<iframe width="900" height="500" src="https://www.youtube.com/embed/U31TIICsHiA?rel=0" frameborder="0" allowfullscreen> </iframe>
 
 ---
 
