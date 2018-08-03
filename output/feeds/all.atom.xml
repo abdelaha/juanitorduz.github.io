@@ -109,7 +109,7 @@ I was lucky enough that upon my arrival to Berlin, I had the opportunity to atte
 &lt;p&gt;The aim of this talk is to describe a non-linear dimensionality reduction algorithm based on spectral techniques introduced in &lt;a href="http://web.cse.ohio-state.edu/~belkin.8/papers/LEM_NC_03.pdf"&gt;BN2003&lt;/a&gt;. The goal of non-linear dimensionality reduction algorithms, so called  &lt;em&gt;manifold learning algorithms&lt;/em&gt;, is to construct a representation of data on a low dimensional manifold embedded in a high dimensional space. The particular case we are going to present exploits various relations of geometric and spectral methods (discrete and continuous). Spectral methods are sometimes motivated by Marc Kac's question  &lt;em&gt;Can One Hear the Shape of a Drum?&lt;/em&gt; which makes reference to the idea of recovering geometrical properties from the eigenvalues (spectrum) of a matrix (linear operator). Concretely, the approach followed in &lt;a href="http://web.cse.ohio-state.edu/~belkin.8/papers/LEM_NC_03.pdf"&gt;BN2003&lt;/a&gt; has its foundation on the spectral analysis of the &lt;a href="https://en.wikipedia.org/wiki/Laplacian_matrix"&gt;Graph Laplacian&lt;/a&gt; of the adjacency graph constructed from the data. The motivation of the construction relies on the continuous limit analogue, the &lt;a href="https://en.wikipedia.org/wiki/Laplace–Beltrami_operator"&gt;Laplace-Beltrami&lt;/a&gt; operator, in providing an optimal embedding for manifolds. We will also indicate the relation with the associated heat kernel operator. Instead of following a pure formal approach we will present the main geometric and computational ideas of the algorithm. Hence, with basic knowledge of linear algebra (eigenvalues) and differential calculus you will be able to follow the talk. Finally we will show a concrete example in Python using &lt;a href="http://scikit-learn.org/stable/modules/generated/sklearn.manifold.SpectralEmbedding.html"&gt;scikit-learn&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Video&lt;/strong&gt;&lt;/p&gt;
-&lt;iframe width="900" height="500" src="https://www.youtube.com/embed/U31TIICsHiA?rel=0" frameborder="0" allowfullscreen&gt; &lt;/iframe&gt;
+&lt;iframe width="500" height="300" src="https://www.youtube.com/embed/U31TIICsHiA?rel=0" frameborder="0" allowfullscreen&gt; &lt;/iframe&gt;
 
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Slides&lt;/strong&gt;&lt;/p&gt;
@@ -1104,10 +1104,10 @@ p_j(n)=
 
 
 
-&lt;div id="bde98ad0-bb84-462a-a2ab-d18d6a053da4"&gt;&lt;/div&gt;
+&lt;div id="f8d25a78-924c-459a-8378-4a6cebdc8e1d"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#bde98ad0-bb84-462a-a2ab-d18d6a053da4');
+var element = $('#f8d25a78-924c-459a-8378-4a6cebdc8e1d');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -1929,10 +1929,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="73bc4174-6b12-4e4a-87c4-5c04c0e12d5a"&gt;&lt;/div&gt;
+&lt;div id="56374630-19ac-45e6-99b5-d70d9f43d98a"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#73bc4174-6b12-4e4a-87c4-5c04c0e12d5a');
+var element = $('#56374630-19ac-45e6-99b5-d70d9f43d98a');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -2804,10 +2804,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="9be74bf6-0c5f-483e-8e60-b6f4aa86bd61"&gt;&lt;/div&gt;
+&lt;div id="b1fc7c5b-0a6b-4b85-a27c-b7a4cf2c1038"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#9be74bf6-0c5f-483e-8e60-b6f4aa86bd61');
+var element = $('#b1fc7c5b-0a6b-4b85-a27c-b7a4cf2c1038');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3621,10 +3621,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="54a4dd4a-c14f-4ebd-81db-cbefac381bde"&gt;&lt;/div&gt;
+&lt;div id="fba37e1e-3ee5-4f49-b03e-c92843646029"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#54a4dd4a-c14f-4ebd-81db-cbefac381bde');
+var element = $('#fba37e1e-3ee5-4f49-b03e-c92843646029');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -4600,10 +4600,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="faa14615-4d8c-4c22-8d86-11295bf83667"&gt;&lt;/div&gt;
+&lt;div id="f73f86cc-75ba-4926-9d2d-d5dad6f9d6a4"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#faa14615-4d8c-4c22-8d86-11295bf83667');
+var element = $('#f73f86cc-75ba-4926-9d2d-d5dad6f9d6a4');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
