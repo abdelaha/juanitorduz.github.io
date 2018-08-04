@@ -13,7 +13,7 @@ In this post I want to write about my experience participating (various occasion
 The motivation for writing this post came in my last visit to Villa de Leyva in May 2018. 
 
 <center><figure>
-	<img alt="MyImage" src="../images/vdl.JPG" align="middle" style="width: 300px;">
+	<img alt="MyImage" src="../images/vdl.JPG" align="middle" style="width: 600px;">
 	<figcaption>This picture was taken in front of Villa de Leyva's churn.</figcaption>
 </figure></center>
 
@@ -117,7 +117,7 @@ During the last day of every summer school we (students, speakers and organizers
 # My Non-Academic Experience 
 
 <center><figure>
-	<img alt="MyImage" src="../images/iguaque.jpg" align="middle" style="width: 300px;">
+	<img alt="MyImage" src="../images/iguaque.jpg" align="middle" style="width: 600px;">
 	<figcaption>I took this picture in my way up to Iguaque.</figcaption>
 </figure></center>
 
