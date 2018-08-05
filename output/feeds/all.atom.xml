@@ -8,11 +8,9 @@
 &lt;p&gt;As described on the last school official &lt;a href="https://villadeleyvaschool.wordpress.com"&gt;website&lt;/a&gt;,&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;These are series of summer schools in Colombia, which have taken place every other year since July 1999. The topics of these schools lie on the border line between geometry, topology, algebra and quantum field theory, and they offer courses addressed to both physicists and mathematicians with a master’s level in either of the fields.&lt;/em&gt;&lt;/p&gt;
 &lt;h1&gt;The Location: Villa de Leyva&lt;/h1&gt;
-&lt;script src='https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyA8X9jqbLBjXxd90a-8woYNoefgl9R7VyI'&gt;&lt;/script&gt;
+&lt;div style="width: 100%"&gt;&lt;iframe width="100%" height="400" src="https://maps.google.com/maps?width=100%&amp;amp;height=400&amp;amp;hl=en&amp;amp;q=Villa%20de%20Leyva+(Villa%20de%20Leyva)&amp;amp;ie=UTF8&amp;amp;t=&amp;amp;z=13&amp;amp;iwloc=B&amp;amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"&gt;&lt;a href="https://www.maps.ie/create-google-map/"&gt;Google Maps iframe generator&lt;/a&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-&lt;div style='overflow:hidden;height:364px;width:520px;'&gt;&lt;div id='gmap_canvas' style='height:364px;width:520px;'&gt;&lt;/div&gt;&lt;style&gt;#gmap_canvas img{max-width:none!important;background:none!important}&lt;/style&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href='https://www.embedmap.net/'&gt;google widgets&lt;/a&gt; &lt;script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=be4629b7107ded8e20caad7faa907f7f2a822bed'&gt;&lt;/script&gt;&lt;script type='text/javascript'&gt;function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(5.636499,-73.52705800000001),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(5.636499,-73.52705800000001)});infowindow = new google.maps.InfoWindow({content:'&lt;strong&gt;Villa de Leyva&lt;/strong&gt;&lt;br&gt;&lt;br&gt; Villa de Leyva&lt;br&gt;'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;These summer schools took place at &lt;a href="https://en.wikipedia.org/wiki/Villa_de_Leyva"&gt;Villa de Leyva&lt;/a&gt;, a beautiful town in Colombia where nature, history and tranquility are always present. Well not always, tranquility is, from time to time, replaced by great festivals and events! People and culture around this area are amazing. I can honestly say that Villa de Leyva is my favorite place in the world. &lt;/p&gt;
 &lt;p&gt;The following are probaly the most known events in Villa de Leyva. &lt;/p&gt;
 &lt;ul&gt;
@@ -1119,10 +1117,10 @@ p_j(n)=
 
 
 
-&lt;div id="c015442c-ac28-41dc-ade1-8c486889cac9"&gt;&lt;/div&gt;
+&lt;div id="6fc4acd6-c132-46cf-a3b6-acb7c288054e"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#c015442c-ac28-41dc-ade1-8c486889cac9');
+var element = $('#6fc4acd6-c132-46cf-a3b6-acb7c288054e');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -1944,10 +1942,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="fb792093-2dab-40d8-8430-68e50de949ad"&gt;&lt;/div&gt;
+&lt;div id="1aa45e71-698f-4f31-ac7d-151e31c01136"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#fb792093-2dab-40d8-8430-68e50de949ad');
+var element = $('#1aa45e71-698f-4f31-ac7d-151e31c01136');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -2819,10 +2817,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="d3aa4284-106f-4ed9-8dd6-0bb13d23966b"&gt;&lt;/div&gt;
+&lt;div id="82c645a6-9bdf-4b02-9bfa-f83007d85e35"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#d3aa4284-106f-4ed9-8dd6-0bb13d23966b');
+var element = $('#82c645a6-9bdf-4b02-9bfa-f83007d85e35');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3636,10 +3634,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="389ce7a7-b7ac-4702-a8be-181a31686674"&gt;&lt;/div&gt;
+&lt;div id="f5fd15fe-17fd-4c9f-8b4b-c2d6d47d9b49"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#389ce7a7-b7ac-4702-a8be-181a31686674');
+var element = $('#f5fd15fe-17fd-4c9f-8b4b-c2d6d47d9b49');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -4615,10 +4613,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="0707924d-6f17-4b55-9d2b-da3278f1fa03"&gt;&lt;/div&gt;
+&lt;div id="bb77c233-20ad-423a-a637-58e7379ec802"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#0707924d-6f17-4b55-9d2b-da3278f1fa03');
+var element = $('#bb77c233-20ad-423a-a637-58e7379ec802');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
