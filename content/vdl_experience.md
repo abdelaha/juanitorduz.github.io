@@ -107,9 +107,9 @@ By the time of this summer school I had already been living in Berlin for 2 year
 
 Two of the courses I enjoyed the most were
 
-- [Lie groupoids and Lie algebroids -- connection theory and Poisson geometry](https://villadeleyvaschool.uniandes.edu.co/summer2013/) by [Kirill Mackenzie](http://kchmackenzie.staff.shef.ac.uk)
+- [Lie groupoids and Lie algebroids -- connection theory and Poisson geometry](https://villadeleyvaschool.uniandes.edu.co/summer2013/) by [Kirill Mackenzie](http://kchmackenzie.staff.shef.ac.uk).
 
-- [\\(C^\*\\)-algebras and Index Theory of Boundary Value Problems](https://villadeleyvaschool.uniandes.edu.co/summer2013/) by [Elmar Schrohe](http://www2.analysis.uni-hannover.de/~schrohe/)
+- [\\(C^\*\\)-algebras and Index Theory of Boundary Value Problems](https://villadeleyvaschool.uniandes.edu.co/summer2013/) by [Elmar Schrohe](http://www2.analysis.uni-hannover.de/~schrohe/).
 
 - In this summer school I presented Hirzebruch's [Signature Theorem](https://en.wikipedia.org/wiki/Hirzebruch_signature_theorem) and a sketch of the proof using the structure of the oriented cobordism ring \\(\Omega_{SO}\otimes\mathbb{Q}\\). I also commented on the proof via the index theorem using the *signature operator*. The latter was a key topic for my master thesis and my future research project during the PhD phase. It goes without saying that, preparing this talk was a great exercise for me. You can find the slides of the talk [here]({filename}/documents/signature_vdl13.pdf).
 
