@@ -29,7 +29,7 @@ As described on the last school official [website](https://villadeleyvaschool.wo
 
 These summer schools took place at [Villa de Leyva](https://en.wikipedia.org/wiki/Villa_de_Leyva), a beautiful town in Colombia where nature, history and tranquility are always present. Well not always, tranquility is, from time to time, replaced by great festivals and events! People and culture around this area are amazing. I can honestly say that Villa de Leyva is my favorite place in the world. 
 
-The following are probably the most known events in Villa de Leyva. 
+Here are probably the best known events in Villa de Leyva:
 
 - [Wind & Kite Festival](http://www.colombia.travel/en/where-to-go/andean/villa-de-leyva/activities/wind-and-kite-festival)
 
