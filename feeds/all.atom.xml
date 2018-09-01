@@ -2849,10 +2849,10 @@ p_j(n)=
 
 
 
-&lt;div id="7e624daf-1a6d-4d98-b021-c171665f9491"&gt;&lt;/div&gt;
+&lt;div id="9e85be95-4f6a-4e69-a8f6-36cf32a4cc70"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#7e624daf-1a6d-4d98-b021-c171665f9491');
+var element = $('#9e85be95-4f6a-4e69-a8f6-36cf32a4cc70');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3674,10 +3674,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="c855c038-a970-4723-9f54-3eef8843071f"&gt;&lt;/div&gt;
+&lt;div id="45e25014-29f0-4954-9d0f-a59a1aa54281"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#c855c038-a970-4723-9f54-3eef8843071f');
+var element = $('#45e25014-29f0-4954-9d0f-a59a1aa54281');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -4549,10 +4549,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="41c3cc7f-de58-4464-b12e-c6c01d3845f6"&gt;&lt;/div&gt;
+&lt;div id="adbcc0dd-376d-44e5-b4b6-fcbd9a04c704"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#41c3cc7f-de58-4464-b12e-c6c01d3845f6');
+var element = $('#adbcc0dd-376d-44e5-b4b6-fcbd9a04c704');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -5366,10 +5366,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="fc19a6e0-dff9-4ddd-aed8-bb33b4ae7f4b"&gt;&lt;/div&gt;
+&lt;div id="2dcedf0c-2f4f-4902-b2b4-cd09b3f3b0de"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#fc19a6e0-dff9-4ddd-aed8-bb33b4ae7f4b');
+var element = $('#2dcedf0c-2f4f-4902-b2b4-cd09b3f3b0de');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -6345,10 +6345,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="a4a5bff2-546d-43b3-b58e-0de85bc92c50"&gt;&lt;/div&gt;
+&lt;div id="7a3b4c83-4eeb-4a1c-af5d-d6f8ed5d05e6"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#a4a5bff2-546d-43b3-b58e-0de85bc92c50');
+var element = $('#7a3b4c83-4eeb-4a1c-af5d-d6f8ed5d05e6');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -7265,7 +7265,7 @@ if (IPython.notebook.kernel != null) {
 &lt;/div&gt;
  
 
-&lt;/p&gt;</content><category term="jupyter"></category><category term="python"></category><category term="machine learning"></category><category term="bootstrap"></category></entry><entry><title>Induced Dirac-Schrödinger operators on semi-free circle quotients</title><link href="/phd.html" rel="alternate"></link><published>2017-11-11T00:00:00+01:00</published><updated>2017-11-11T00:00:00+01:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2017-11-11:/phd.html</id><summary type="html">&lt;p&gt;I present the content of my PhD Thesis in mathematics.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post I want to present the results of my Mathematics PhD thesis which I wrote under the supervision of &lt;a href="https://www2.mathematik.hu-berlin.de/~bruening/"&gt;Prof. Dr. Jochen Brüning&lt;/a&gt; at &lt;a href="https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie"&gt;Humbolt Universität zu Berlin&lt;/a&gt;.&lt;/p&gt;
+&lt;/p&gt;</content><category term="jupyter"></category><category term="python"></category><category term="machine learning"></category><category term="bootstrap"></category></entry><entry><title>Induced Dirac-Schrödinger operators on semi-free circle quotients</title><link href="/phd.html" rel="alternate"></link><published>2017-11-11T00:00:00+01:00</published><updated>2017-11-11T00:00:00+01:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2017-11-11:/phd.html</id><summary type="html">&lt;p&gt;I present the content of my PhD Thesis in mathematics. Update: It has now been accepted for publication in The Journal of Geometric Analysis.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post I want to present the results of my Mathematics PhD thesis which I wrote under the supervision of &lt;a href="https://www2.mathematik.hu-berlin.de/~bruening/"&gt;Prof. Dr. Jochen Brüning&lt;/a&gt; at &lt;a href="https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie"&gt;Humbolt Universität zu Berlin&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I gratefully acknowledge the financial support of the &lt;a href="http://www.math-berlin.de"&gt;Berlin Mathematical School&lt;/a&gt; and the research project 
 &lt;a href="http://www.raumzeitmaterie.de"&gt;SFB 647: Space - Time - Matter&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -7310,7 +7310,7 @@ on the arXiv. (a second version was updated)&lt;/p&gt;
 &lt;p&gt;In addition, &lt;a href="/documents/defense_orduz.pdf"&gt;here&lt;/a&gt; you can see the slides of the defense. &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The paper version, &lt;a href="https://arxiv.org/abs/1802.04840"&gt;The &lt;span class="math"&gt;\(S^1\)&lt;/span&gt;-Equivariant signature for semi-free actions as an index formula&lt;/a&gt;, is now available on the arXiv.&lt;/p&gt;
+&lt;p&gt;The paper version, &lt;a href="https://arxiv.org/abs/1802.04840"&gt;The &lt;span class="math"&gt;\(S^1\)&lt;/span&gt;-Equivariant signature for semi-free actions as an index formula&lt;/a&gt;, is now available on the arXiv. Update: It has now been accepted for publication in &lt;a href="https://link.springer.com/journal/12220"&gt;The Journal of Geometric Analysis&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
