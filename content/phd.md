@@ -5,7 +5,7 @@ Category: Geometry
 Tags: mathematics, geometry
 slug: phd
 Authors: Juan Camilo Orduz
-Summary: I present the content of my PhD Thesis in mathematics. 
+Summary: I present the content of my PhD Thesis in mathematics. Update: It has now been accepted for publication in The Journal of Geometric Analysis.
 ---
 
 In this post I want to present the results of my Mathematics PhD thesis which I wrote under the supervision of [Prof. Dr. Jochen Brüning](https://www2.mathematik.hu-berlin.de/~bruening/) at [Humbolt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie).
@@ -59,7 +59,7 @@ on the arXiv. (a second version was updated)
 
 - In addition, [here]({filename}/documents/defense_orduz.pdf) you can see the slides of the defense. 
 
-- The paper version, [The $S^1$-Equivariant signature for semi-free actions as an index formula](https://arxiv.org/abs/1802.04840), is now available on the arXiv.
+- The paper version, [The $S^1$-Equivariant signature for semi-free actions as an index formula](https://arxiv.org/abs/1802.04840), is now available on the arXiv. Update: It has now been accepted for publication in [The Journal of Geometric Analysis](https://link.springer.com/journal/12220).
 
 ---
 
