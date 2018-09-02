@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-08-11T00:00:00+02:00</updated><entry><title>R Kernel Jupyter Notebook</title><link href="/rkernel.html" rel="alternate"></link><published>2018-08-11T00:00:00+02:00</published><updated>2018-08-11T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-08-11:/rkernel.html</id><summary type="html">&lt;p&gt;We explore the R kernel for Jupyter notebooks through two simple examples.&lt;/p&gt;</summary><content type="html">&lt;p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-09-02T00:00:00+02:00</updated><entry><title>\\(S^1\\)-Equivariant Dirac operators on the Hopf Fibration.</title><link href="/hopf_fibration.html" rel="alternate"></link><published>2018-09-02T00:00:00+02:00</published><updated>2018-09-02T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-02:/hopf_fibration.html</id><summary type="html">&lt;p&gt;In this expository article we discuss the fundamentals of the Hop fibration with particular emphazis on the Dirac-type operators induded, in the sense of Brüning and Heintze, by the Hodge-de Rham and spin-Dirac operator. In addition, we compute the Dirac-Schrödinger type operator introduced in my PhD thesis. (In preparation...)&lt;/p&gt;</summary><content type="html">&lt;p&gt;In preparation ...&lt;/p&gt;</content><category term="mathematics"></category><category term="geometry"></category></entry><entry><title>R Kernel Jupyter Notebook</title><link href="/rkernel.html" rel="alternate"></link><published>2018-08-11T00:00:00+02:00</published><updated>2018-08-11T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-08-11:/rkernel.html</id><summary type="html">&lt;p&gt;We explore the R kernel for Jupyter notebooks through two simple examples.&lt;/p&gt;</summary><content type="html">&lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -2849,10 +2849,10 @@ p_j(n)=
 
 
 
-&lt;div id="9e85be95-4f6a-4e69-a8f6-36cf32a4cc70"&gt;&lt;/div&gt;
+&lt;div id="25e8489f-0063-4440-9a70-d3c7a98fceaa"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#9e85be95-4f6a-4e69-a8f6-36cf32a4cc70');
+var element = $('#25e8489f-0063-4440-9a70-d3c7a98fceaa');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3674,10 +3674,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="45e25014-29f0-4954-9d0f-a59a1aa54281"&gt;&lt;/div&gt;
+&lt;div id="a2c75b54-ccb4-4861-aaeb-945fb78c541e"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#45e25014-29f0-4954-9d0f-a59a1aa54281');
+var element = $('#a2c75b54-ccb4-4861-aaeb-945fb78c541e');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -4549,10 +4549,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="adbcc0dd-376d-44e5-b4b6-fcbd9a04c704"&gt;&lt;/div&gt;
+&lt;div id="1fd84ef9-f732-448f-bfa9-222bed37af88"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#adbcc0dd-376d-44e5-b4b6-fcbd9a04c704');
+var element = $('#1fd84ef9-f732-448f-bfa9-222bed37af88');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -5366,10 +5366,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="2dcedf0c-2f4f-4902-b2b4-cd09b3f3b0de"&gt;&lt;/div&gt;
+&lt;div id="b8bac4ef-ba7b-4595-85a0-5d0cc4a46e57"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#2dcedf0c-2f4f-4902-b2b4-cd09b3f3b0de');
+var element = $('#b8bac4ef-ba7b-4595-85a0-5d0cc4a46e57');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -6345,10 +6345,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="7a3b4c83-4eeb-4a1c-af5d-d6f8ed5d05e6"&gt;&lt;/div&gt;
+&lt;div id="81d61567-9291-41b9-84a2-a405158d3a13"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#7a3b4c83-4eeb-4a1c-af5d-d6f8ed5d05e6');
+var element = $('#81d61567-9291-41b9-84a2-a405158d3a13');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
