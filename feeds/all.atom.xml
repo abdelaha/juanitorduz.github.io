@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-09-02T00:00:00+02:00</updated><entry><title>S^1-Equivariant Dirac operators on the Hopf Fibration.</title><link href="/hopf_fibration.html" rel="alternate"></link><published>2018-09-02T00:00:00+02:00</published><updated>2018-09-02T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-02:/hopf_fibration.html</id><summary type="html">&lt;p&gt;In this expository article we discuss the fundamentals of the Hop fibration with particular emphasis on the Dirac-type operators induded, in the sense of Brüning and Heintze, by the Hodge-de Rham and spin-Dirac operator. In addition, we compute the Dirac-Schrödinger type operator introduced in my PhD thesis.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;(In preparation ...)&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-09-11T00:00:00+02:00</updated><entry><title>R Notebook Test</title><link href="/r_notebooks_test.html" rel="alternate"></link><published>2018-09-11T00:00:00+02:00</published><updated>2018-09-11T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-11:/r_notebooks_test.html</id><summary type="html">&lt;p&gt;R notebook test&lt;/p&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;tidyverse&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="kp"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;mtcars&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mtcars &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
+  ggplot&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+  geom_point&lt;span class="p"&gt;(&lt;/span&gt;mapping &lt;span class="o"&gt;=&lt;/span&gt; aes&lt;span class="p"&gt;(&lt;/span&gt;x &lt;span class="o"&gt;=&lt;/span&gt; mpg&lt;span class="p"&gt;,&lt;/span&gt; y &lt;span class="o"&gt;=&lt;/span&gt; cyl&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="center" src="/images/r_notebook_test/unnamed-chunk-2-1.png"&gt;&lt;/p&gt;</content><category term="r_notebooks"></category><category term="r"></category></entry><entry><title>S^1-Equivariant Dirac operators on the Hopf Fibration.</title><link href="/hopf_fibration.html" rel="alternate"></link><published>2018-09-02T00:00:00+02:00</published><updated>2018-09-02T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-02:/hopf_fibration.html</id><summary type="html">&lt;p&gt;In this expository article we discuss the fundamentals of the Hop fibration with particular emphasis on the Dirac-type operators induded, in the sense of Brüning and Heintze, by the Hodge-de Rham and spin-Dirac operator. In addition, we compute the Dirac-Schrödinger type operator introduced in my PhD thesis.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;(In preparation ...)&lt;/h2&gt;
 &lt;p&gt;In preparation ...&lt;/p&gt;</content><category term="mathematics"></category><category term="geometry"></category></entry><entry><title>R Kernel Jupyter Notebook</title><link href="/rkernel.html" rel="alternate"></link><published>2018-08-11T00:00:00+02:00</published><updated>2018-08-11T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-08-11:/rkernel.html</id><summary type="html">&lt;p&gt;We explore the R kernel for Jupyter notebooks through two simple examples.&lt;/p&gt;</summary><content type="html">&lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
@@ -2632,7 +2654,7 @@ On my arrival to Berlin, I was lucky enough to have the opportunity to attend a 
 &lt;p&gt;What does this mean and why it is true?&lt;/p&gt;
 &lt;p&gt;Recall that a bootstrap sample of \(n\) observations is just a to randomly choose \(n\) observations with repetition.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Aim:&lt;/strong&gt; Derive the probability that a given observation is part of a bootstrap sample.&lt;/p&gt;
-&lt;p&gt;To do this we are going to follow the lines of the Excercise 5.4.2 of the book  &lt;a href="http://www-bcf.usc.edu/~gareth/ISL/"&gt;An Introduction to Statistical Learning&lt;/a&gt;. We are going to use Phython despite the fact that this reference uses mainly R.&lt;/p&gt;
+&lt;p&gt;To do this we are going to follow the lines of the Excercise 5.4.2 of the book  &lt;a href="http://www-bcf.usc.edu/~gareth/ISL/"&gt;An Introduction to Statistical Learning&lt;/a&gt;. We are going to use Python despite the fact that this reference uses mainly R.&lt;/p&gt;
 &lt;h2 id="Solution-of-Excercise-5.4.2"&gt;Solution of Excercise 5.4.2&lt;a class="anchor-link" href="#Solution-of-Excercise-5.4.2"&gt;&amp;#194;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Suppose that we obtain a bootstrap sample from a set of \(n\) observations \(x_1, ..., x_n\).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt; What is the probability that the first bootstrap observation is &lt;em&gt;not&lt;/em&gt; the \(j\)-th observation from the original sample?&lt;/p&gt;
 &lt;p&gt;Let us denote this probability by \(\pi_j\). As the probability of selecting a particular \(x_j\) from the set \(x_1, ..., x_n\) is \(1/n\), then the desired probability is&lt;/p&gt;
@@ -2850,10 +2872,10 @@ p_j(n)=
 
 
 
-&lt;div id="4f31d690-3972-4a73-8d43-be6f759337e0"&gt;&lt;/div&gt;
+&lt;div id="b4ce0347-8a85-4224-9ec3-16f902a990c3"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#4f31d690-3972-4a73-8d43-be6f759337e0');
+var element = $('#b4ce0347-8a85-4224-9ec3-16f902a990c3');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3675,10 +3697,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="a83c1a9d-cb31-496c-88b6-dd4905bbaba3"&gt;&lt;/div&gt;
+&lt;div id="b6c58194-5fc3-4dda-b428-af8f6ff89ed1"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#a83c1a9d-cb31-496c-88b6-dd4905bbaba3');
+var element = $('#b6c58194-5fc3-4dda-b428-af8f6ff89ed1');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -4550,10 +4572,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="d6804ad8-e9a5-435c-83f8-f5a145b82a16"&gt;&lt;/div&gt;
+&lt;div id="61a30792-1c6c-47e9-9f79-150d919c62b2"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#d6804ad8-e9a5-435c-83f8-f5a145b82a16');
+var element = $('#61a30792-1c6c-47e9-9f79-150d919c62b2');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -5367,10 +5389,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="f3ae7b19-6603-4dad-a333-c85e635e85b8"&gt;&lt;/div&gt;
+&lt;div id="4beab163-4b03-497b-812d-701c8b3c63b6"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#f3ae7b19-6603-4dad-a333-c85e635e85b8');
+var element = $('#4beab163-4b03-497b-812d-701c8b3c63b6');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -6346,10 +6368,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="1dcda969-2ac7-484e-a321-1136102382db"&gt;&lt;/div&gt;
+&lt;div id="8c22b3af-d338-412e-a107-e7b0e796cf34"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#1dcda969-2ac7-484e-a321-1136102382db');
+var element = $('#8c22b3af-d338-412e-a107-e7b0e796cf34');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
