@@ -1,0 +1,23 @@
+---
+title: "R Notebook Test"
+---
+
+```{r}
+library(tidyverse)
+
+mtcars %>% head %>% kable
+```
+
+```{r}
+mtcars %>% 
+  ggplot() +
+  geom_point(mapping = aes(x = mpg, y = cyl))
+```
+
+```{r}
+mtcars %>% 
+  ggplot() +
+  theme_light() +
+  geom_point(mapping = aes(x = mpg, y = hp))
+```
+
