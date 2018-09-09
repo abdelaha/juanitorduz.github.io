@@ -1,148 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-09-11T00:00:00+02:00</updated><entry><title>R Notebook Test</title><link href="/r_notebooks_test.html" rel="alternate"></link><published>2018-09-11T00:00:00+02:00</published><updated>2018-09-11T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-11:/r_notebooks_test.html</id><summary type="html">&lt;p&gt;R notebook test&lt;/p&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;tidyverse&lt;span class="p"&gt;)&lt;/span&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-09-09T00:00:00+02:00</updated><entry><title>Circle Fit</title><link href="/circle_fit.html" rel="alternate"></link><published>2018-09-09T00:00:00+02:00</published><updated>2018-09-09T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-09:/circle_fit.html</id><summary type="html">&lt;p&gt;We explore how to include an R notebook into a pelican post. As an example, we describe how to fit a circle onto a cloud of points.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In view of the &lt;a href="https://juanitorduz.github.io/rkernel.html"&gt;R Kernel Jupyter Notebook&lt;/a&gt; post, I wanted to explore how to include an &lt;a href="https://bookdown.org/yihui/rmarkdown/notebook.html"&gt;R Notebook&lt;/a&gt; directly into &lt;a href="https://blog.getpelican.com"&gt;Pelican&lt;/a&gt;. Fortunately, I found a great &lt;a href="http://michaeltoth.me/how-to-write-pelican-blog-posts-using-rmarkdown-knitr-20.html"&gt;post&lt;/a&gt; where an R function is provided to render the R Notebook into Pelican format. Works great! &lt;/p&gt;
+&lt;p&gt;To play around with it, I wrote a simple R notebook which fits a circle into a cloud of points. &lt;/p&gt;
+&lt;h1&gt;Prepare the Notebook&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;tidyverse&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;## -- Attaching packages -------------------------------------------------------------------------------------------- tidyverse 1.2.1 --
+&lt;h1&gt;Generate Circle Data&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Dimension of the space.&lt;/span&gt;
+d &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Number of sample points. &lt;/span&gt;
+N &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;1000&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Radius. &lt;/span&gt;
+R &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;4&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Generate random sample of points (x - axis).&lt;/span&gt;
+points.0 &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;N &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; map&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;.&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt; runif&lt;span class="p"&gt;(&lt;/span&gt;n &lt;span class="o"&gt;=&lt;/span&gt; d &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; min &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="o"&gt;-&lt;/span&gt; R&lt;span class="p"&gt;,&lt;/span&gt; max &lt;span class="o"&gt;=&lt;/span&gt; R&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Generate the corresponding y - coordinates. &lt;/span&gt;
+all.points &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; points.0 &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; map&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;.&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kp"&gt;sign&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;runif&lt;span class="p"&gt;(&lt;/span&gt;n &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; min &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; max &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="kp"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;R&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="kp"&gt;norm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; type &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt; 
+
+&lt;span class="c1"&gt;# Store data in a tibble.&lt;/span&gt;
+all.points.df &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; all.points &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; reduce&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;.&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kp"&gt;rbind&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
+                                as.tibble &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
+                                rename&lt;span class="p"&gt;(&lt;/span&gt;x &lt;span class="o"&gt;=&lt;/span&gt; V1&lt;span class="p"&gt;,&lt;/span&gt; y &lt;span class="o"&gt;=&lt;/span&gt; V2&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Plot the data. &lt;/span&gt;
+all.points.df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; ggplot&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; theme_light&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; geom_point&lt;span class="p"&gt;(&lt;/span&gt;mapping &lt;span class="o"&gt;=&lt;/span&gt; aes&lt;span class="p"&gt;(&lt;/span&gt;x &lt;span class="o"&gt;=&lt;/span&gt; x&lt;span class="p"&gt;,&lt;/span&gt; y &lt;span class="o"&gt;=&lt;/span&gt; y&lt;span class="p"&gt;))&lt;/span&gt; 
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;## &amp;lt;U+221A&amp;gt; ggplot2 3.0.0     &amp;lt;U+221A&amp;gt; purrr   0.2.5
-## &amp;lt;U+221A&amp;gt; tibble  1.4.2     &amp;lt;U+221A&amp;gt; dplyr   0.7.6
-## &amp;lt;U+221A&amp;gt; tidyr   0.8.1     &amp;lt;U+221A&amp;gt; stringr 1.3.1
-## &amp;lt;U+221A&amp;gt; readr   1.1.1     &amp;lt;U+221A&amp;gt; forcats 0.3.0
+&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-191-1.png"&gt;&lt;/p&gt;
+&lt;h1&gt;Add Noise&lt;/h1&gt;
+&lt;p&gt;We add noise from a normal disttribution with mean zero and standard deviation &lt;code&gt;sd&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Set standard deviation.&lt;/span&gt;
+sd &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Add noise.&lt;/span&gt;
+all.samples &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; all.points &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; map&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;.&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt; x &lt;span class="o"&gt;+&lt;/span&gt; rnorm&lt;span class="p"&gt;(&lt;/span&gt;n &lt;span class="o"&gt;=&lt;/span&gt; d&lt;span class="p"&gt;,&lt;/span&gt; mean &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; sd &lt;span class="o"&gt;=&lt;/span&gt; sd&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Store data in a tibble.&lt;/span&gt;
+all.samples.df &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; all.samples &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; reduce&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;.&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kp"&gt;rbind&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt;
+                                  as.tibble &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
+                                  rename&lt;span class="p"&gt;(&lt;/span&gt;x &lt;span class="o"&gt;=&lt;/span&gt; V1&lt;span class="p"&gt;,&lt;/span&gt; y &lt;span class="o"&gt;=&lt;/span&gt; V2&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Plot the data.&lt;/span&gt;
+all.samples.df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; ggplot&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; theme_light&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; geom_point&lt;span class="p"&gt;(&lt;/span&gt;mapping &lt;span class="o"&gt;=&lt;/span&gt; aes&lt;span class="p"&gt;(&lt;/span&gt;x &lt;span class="o"&gt;=&lt;/span&gt; x&lt;span class="p"&gt;,&lt;/span&gt; y &lt;span class="o"&gt;=&lt;/span&gt; y&lt;span class="p"&gt;))&lt;/span&gt; 
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;## -- Conflicts ----------------------------------------------------------------------------------------------- tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
+&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-192-1.png"&gt;&lt;/p&gt;
+&lt;h1&gt;Define Optimization Function&lt;/h1&gt;
+&lt;p&gt;In order to find the best fitting circle, we need to define what "best" means. We aim to minimize the RMSE. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Define function to optimize. &lt;/span&gt;
+ComputeRMSE &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;all.samples&lt;span class="p"&gt;,&lt;/span&gt; r&lt;span class="p"&gt;,&lt;/span&gt; N&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+  all.samples &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; map_dbl&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;.&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;r &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="kp"&gt;norm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; type &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; &lt;span class="kp"&gt;mean&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mtcars &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; head &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; kable
+&lt;p&gt;Let us visualize the shape of the cost function. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;rmse.df &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;from &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; to &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; by &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
+              map&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;.&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;r&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;r&lt;span class="p"&gt;,&lt;/span&gt; ComputeRMSE&lt;span class="p"&gt;(&lt;/span&gt;all.samples &lt;span class="o"&gt;=&lt;/span&gt; all.samples&lt;span class="p"&gt;,&lt;/span&gt; r &lt;span class="o"&gt;=&lt;/span&gt; r&lt;span class="p"&gt;,&lt;/span&gt; N &lt;span class="o"&gt;=&lt;/span&gt; N &lt;span class="p"&gt;)))&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
+              reduce&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;.&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kp"&gt;rbind&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
+              as.tibble &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
+              rename&lt;span class="p"&gt;(&lt;/span&gt;r &lt;span class="o"&gt;=&lt;/span&gt; V1&lt;span class="p"&gt;,&lt;/span&gt; RMSE &lt;span class="o"&gt;=&lt;/span&gt; V2&lt;span class="p"&gt;)&lt;/span&gt;
+
+rmse.df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; ggplot&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; theme_light&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; geom_line&lt;span class="p"&gt;(&lt;/span&gt;mapping &lt;span class="o"&gt;=&lt;/span&gt; aes&lt;span class="p"&gt;(&lt;/span&gt;x &lt;span class="o"&gt;=&lt;/span&gt; r&lt;span class="p"&gt;,&lt;/span&gt; y &lt;span class="o"&gt;=&lt;/span&gt; RMSE&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align="left"&gt;&lt;/th&gt;
-&lt;th align="right"&gt;mpg&lt;/th&gt;
-&lt;th align="right"&gt;cyl&lt;/th&gt;
-&lt;th align="right"&gt;disp&lt;/th&gt;
-&lt;th align="right"&gt;hp&lt;/th&gt;
-&lt;th align="right"&gt;drat&lt;/th&gt;
-&lt;th align="right"&gt;wt&lt;/th&gt;
-&lt;th align="right"&gt;qsec&lt;/th&gt;
-&lt;th align="right"&gt;vs&lt;/th&gt;
-&lt;th align="right"&gt;am&lt;/th&gt;
-&lt;th align="right"&gt;gear&lt;/th&gt;
-&lt;th align="right"&gt;carb&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;Mazda RX4&lt;/td&gt;
-&lt;td align="right"&gt;21.0&lt;/td&gt;
-&lt;td align="right"&gt;6&lt;/td&gt;
-&lt;td align="right"&gt;160&lt;/td&gt;
-&lt;td align="right"&gt;110&lt;/td&gt;
-&lt;td align="right"&gt;3.90&lt;/td&gt;
-&lt;td align="right"&gt;2.620&lt;/td&gt;
-&lt;td align="right"&gt;16.46&lt;/td&gt;
-&lt;td align="right"&gt;0&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;td align="right"&gt;4&lt;/td&gt;
-&lt;td align="right"&gt;4&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;Mazda RX4 Wag&lt;/td&gt;
-&lt;td align="right"&gt;21.0&lt;/td&gt;
-&lt;td align="right"&gt;6&lt;/td&gt;
-&lt;td align="right"&gt;160&lt;/td&gt;
-&lt;td align="right"&gt;110&lt;/td&gt;
-&lt;td align="right"&gt;3.90&lt;/td&gt;
-&lt;td align="right"&gt;2.875&lt;/td&gt;
-&lt;td align="right"&gt;17.02&lt;/td&gt;
-&lt;td align="right"&gt;0&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;td align="right"&gt;4&lt;/td&gt;
-&lt;td align="right"&gt;4&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;Datsun 710&lt;/td&gt;
-&lt;td align="right"&gt;22.8&lt;/td&gt;
-&lt;td align="right"&gt;4&lt;/td&gt;
-&lt;td align="right"&gt;108&lt;/td&gt;
-&lt;td align="right"&gt;93&lt;/td&gt;
-&lt;td align="right"&gt;3.85&lt;/td&gt;
-&lt;td align="right"&gt;2.320&lt;/td&gt;
-&lt;td align="right"&gt;18.61&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;td align="right"&gt;4&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;Hornet 4 Drive&lt;/td&gt;
-&lt;td align="right"&gt;21.4&lt;/td&gt;
-&lt;td align="right"&gt;6&lt;/td&gt;
-&lt;td align="right"&gt;258&lt;/td&gt;
-&lt;td align="right"&gt;110&lt;/td&gt;
-&lt;td align="right"&gt;3.08&lt;/td&gt;
-&lt;td align="right"&gt;3.215&lt;/td&gt;
-&lt;td align="right"&gt;19.44&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;td align="right"&gt;0&lt;/td&gt;
-&lt;td align="right"&gt;3&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;Hornet Sportabout&lt;/td&gt;
-&lt;td align="right"&gt;18.7&lt;/td&gt;
-&lt;td align="right"&gt;8&lt;/td&gt;
-&lt;td align="right"&gt;360&lt;/td&gt;
-&lt;td align="right"&gt;175&lt;/td&gt;
-&lt;td align="right"&gt;3.15&lt;/td&gt;
-&lt;td align="right"&gt;3.440&lt;/td&gt;
-&lt;td align="right"&gt;17.02&lt;/td&gt;
-&lt;td align="right"&gt;0&lt;/td&gt;
-&lt;td align="right"&gt;0&lt;/td&gt;
-&lt;td align="right"&gt;3&lt;/td&gt;
-&lt;td align="right"&gt;2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;Valiant&lt;/td&gt;
-&lt;td align="right"&gt;18.1&lt;/td&gt;
-&lt;td align="right"&gt;6&lt;/td&gt;
-&lt;td align="right"&gt;225&lt;/td&gt;
-&lt;td align="right"&gt;105&lt;/td&gt;
-&lt;td align="right"&gt;2.76&lt;/td&gt;
-&lt;td align="right"&gt;3.460&lt;/td&gt;
-&lt;td align="right"&gt;20.22&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;td align="right"&gt;0&lt;/td&gt;
-&lt;td align="right"&gt;3&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mtcars &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
-  ggplot&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
-  geom_point&lt;span class="p"&gt;(&lt;/span&gt;mapping &lt;span class="o"&gt;=&lt;/span&gt; aes&lt;span class="p"&gt;(&lt;/span&gt;x &lt;span class="o"&gt;=&lt;/span&gt; mpg&lt;span class="p"&gt;,&lt;/span&gt; y &lt;span class="o"&gt;=&lt;/span&gt; cyl&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-194-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;We aim to find the minimum. &lt;/p&gt;
+&lt;h1&gt;Run Optimization&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;opt.obj &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; optimize&lt;span class="p"&gt;(&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;r&lt;span class="p"&gt;)&lt;/span&gt; ComputeRMSE&lt;span class="p"&gt;(&lt;/span&gt;all.samples &lt;span class="o"&gt;=&lt;/span&gt; all.samples&lt;span class="p"&gt;,&lt;/span&gt; r &lt;span class="o"&gt;=&lt;/span&gt; r&lt;span class="p"&gt;,&lt;/span&gt; N &lt;span class="o"&gt;=&lt;/span&gt; N&lt;span class="p"&gt;),&lt;/span&gt; interval &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+r.hat &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; opt.obj&lt;span class="o"&gt;$&lt;/span&gt;minimum
+
+r.hat
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/images/r_notebook_test/unnamed-chunk-2-1.png"&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mtcars &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
-  ggplot&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
-  theme_light&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
-  geom_point&lt;span class="p"&gt;(&lt;/span&gt;mapping &lt;span class="o"&gt;=&lt;/span&gt; aes&lt;span class="p"&gt;(&lt;/span&gt;x &lt;span class="o"&gt;=&lt;/span&gt; mpg&lt;span class="p"&gt;,&lt;/span&gt; y &lt;span class="o"&gt;=&lt;/span&gt; hp&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;## [1] 4.023234
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/images/r_notebook_test/unnamed-chunk-3-1.png"&gt;&lt;/p&gt;</content><category term="r_notebooks"></category><category term="r"></category></entry><entry><title>S^1-Equivariant Dirac operators on the Hopf Fibration.</title><link href="/hopf_fibration.html" rel="alternate"></link><published>2018-09-02T00:00:00+02:00</published><updated>2018-09-02T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-02:/hopf_fibration.html</id><summary type="html">&lt;p&gt;In this expository article we discuss the fundamentals of the Hop fibration with particular emphasis on the Dirac-type operators induded, in the sense of Brüning and Heintze, by the Hodge-de Rham and spin-Dirac operator. In addition, we compute the Dirac-Schrödinger type operator introduced in my PhD thesis.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;(In preparation ...)&lt;/h2&gt;
+&lt;h1&gt;Visualize Results&lt;/h1&gt;
+&lt;p&gt;We project each sample point onto the best circle fit. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;all.samples &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; map&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;.&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt; r.hat&lt;span class="o"&gt;*&lt;/span&gt;x &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="kp"&gt;norm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; type &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
+                reduce&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;.&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kp"&gt;rbind&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
+                as.tibble &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
+                rename&lt;span class="p"&gt;(&lt;/span&gt;x1 &lt;span class="o"&gt;=&lt;/span&gt; V1&lt;span class="p"&gt;,&lt;/span&gt; y1 &lt;span class="o"&gt;=&lt;/span&gt;V2&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
+                &lt;span class="kp"&gt;cbind&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;all.samples.df&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
+                ggplot&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
+                theme_light&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
+                geom_point&lt;span class="p"&gt;(&lt;/span&gt;mapping &lt;span class="o"&gt;=&lt;/span&gt; aes&lt;span class="p"&gt;(&lt;/span&gt;x &lt;span class="o"&gt;=&lt;/span&gt; x&lt;span class="p"&gt;,&lt;/span&gt; y &lt;span class="o"&gt;=&lt;/span&gt; y&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                geom_point&lt;span class="p"&gt;(&lt;/span&gt;mapping &lt;span class="o"&gt;=&lt;/span&gt; aes&lt;span class="p"&gt;(&lt;/span&gt;x &lt;span class="o"&gt;=&lt;/span&gt; x1&lt;span class="p"&gt;,&lt;/span&gt; y &lt;span class="o"&gt;=&lt;/span&gt; y1&lt;span class="p"&gt;),&lt;/span&gt; color &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;red&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-196-1.png"&gt;&lt;/p&gt;
+&lt;h1&gt;Analytical Solution&lt;/h1&gt;
+&lt;p&gt;By taking the derivative of the cost function with respect to &lt;code&gt;r&lt;/code&gt; we can easily get the value of &lt;code&gt;r.hat&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;r.hat &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; all.samples &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; map_dbl&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;.&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kp"&gt;norm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; type &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; &lt;span class="kp"&gt;mean&lt;/span&gt;
+
+r.hat
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;## [1] 4.023234
+&lt;/pre&gt;&lt;/div&gt;</content><category term="r_notebook"></category><category term="r"></category><category term="geometry"></category></entry><entry><title>S^1-Equivariant Dirac operators on the Hopf Fibration.</title><link href="/hopf_fibration.html" rel="alternate"></link><published>2018-09-02T00:00:00+02:00</published><updated>2018-09-02T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-02:/hopf_fibration.html</id><summary type="html">&lt;p&gt;In this expository article we discuss the fundamentals of the Hop fibration with particular emphasis on the Dirac-type operators induded, in the sense of Brüning and Heintze, by the Hodge-de Rham and spin-Dirac operator. In addition, we compute the Dirac-Schrödinger type operator introduced in my PhD thesis.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;(In preparation ...)&lt;/h2&gt;
 &lt;p&gt;In preparation ...&lt;/p&gt;</content><category term="mathematics"></category><category term="geometry"></category></entry><entry><title>R Kernel Jupyter Notebook</title><link href="/rkernel.html" rel="alternate"></link><published>2018-08-11T00:00:00+02:00</published><updated>2018-08-11T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-08-11:/rkernel.html</id><summary type="html">&lt;p&gt;We explore the R kernel for Jupyter notebooks through two simple examples.&lt;/p&gt;</summary><content type="html">&lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
@@ -2993,10 +2964,10 @@ p_j(n)=
 
 
 
-&lt;div id="c89d640b-cce0-42da-afa8-edeb5e995286"&gt;&lt;/div&gt;
+&lt;div id="5ab8065a-140b-489f-a125-069aab3f885d"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#c89d640b-cce0-42da-afa8-edeb5e995286');
+var element = $('#5ab8065a-140b-489f-a125-069aab3f885d');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3818,10 +3789,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="42b5c465-63be-4ad6-a1b0-1c741278951a"&gt;&lt;/div&gt;
+&lt;div id="09a4e97f-b900-4f99-bd53-29c6215ca7a1"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#42b5c465-63be-4ad6-a1b0-1c741278951a');
+var element = $('#09a4e97f-b900-4f99-bd53-29c6215ca7a1');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -4693,10 +4664,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="e7e43ff0-3494-44cf-a203-d0159a9576e2"&gt;&lt;/div&gt;
+&lt;div id="a0938d38-2b13-455a-886d-0cb541834c68"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#e7e43ff0-3494-44cf-a203-d0159a9576e2');
+var element = $('#a0938d38-2b13-455a-886d-0cb541834c68');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -5510,10 +5481,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="8aac9cbf-3ea8-45dd-961d-2e6105aa3bf9"&gt;&lt;/div&gt;
+&lt;div id="14a4f196-a547-45c7-b320-6c0ab02634f8"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#8aac9cbf-3ea8-45dd-961d-2e6105aa3bf9');
+var element = $('#14a4f196-a547-45c7-b320-6c0ab02634f8');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -6489,10 +6460,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="24bf07d3-ceb4-4bba-9c5e-a01d51879feb"&gt;&lt;/div&gt;
+&lt;div id="5df1e89e-2c4e-4049-a4f7-b8e0c366fcc6"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#24bf07d3-ceb4-4bba-9c5e-a01d51879feb');
+var element = $('#5df1e89e-2c4e-4049-a4f7-b8e0c366fcc6');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
