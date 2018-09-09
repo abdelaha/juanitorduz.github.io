@@ -32,7 +32,7 @@ all.points.df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; ggplot&lt;span class
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-191-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-2-1.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Add Noise&lt;/h1&gt;
 &lt;p&gt;We add noise from a normal disttribution with mean zero and standard deviation &lt;code&gt;sd&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Set standard deviation.&lt;/span&gt;
@@ -51,7 +51,7 @@ all.samples.df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; ggplot&lt;span clas
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-192-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-3-1.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Define Optimization Function&lt;/h1&gt;
 &lt;p&gt;In order to find the best fitting circle, we need to define what "best" means. We aim to minimize the RMSE. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Define function to optimize. &lt;/span&gt;
@@ -74,7 +74,7 @@ rmse.df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; ggplot&lt;span class="p"&g
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-194-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-5-1.png"&gt;&lt;/p&gt;
 &lt;p&gt;We aim to find the minimum. &lt;/p&gt;
 &lt;h1&gt;Run Optimization&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;opt.obj &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; optimize&lt;span class="p"&gt;(&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;r&lt;span class="p"&gt;)&lt;/span&gt; ComputeRMSE&lt;span class="p"&gt;(&lt;/span&gt;all.samples &lt;span class="o"&gt;=&lt;/span&gt; all.samples&lt;span class="p"&gt;,&lt;/span&gt; r &lt;span class="o"&gt;=&lt;/span&gt; r&lt;span class="p"&gt;,&lt;/span&gt; N &lt;span class="o"&gt;=&lt;/span&gt; N&lt;span class="p"&gt;),&lt;/span&gt; interval &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -85,7 +85,7 @@ r.hat
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;## [1] 4.023234
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;## [1] 4.065098
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -103,7 +103,7 @@ r.hat
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-196-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-7-1.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Analytical Solution&lt;/h1&gt;
 &lt;p&gt;By taking the derivative of the cost function with respect to &lt;code&gt;r&lt;/code&gt; we can easily get the value of &lt;code&gt;r.hat&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;r.hat &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; all.samples &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; map_dbl&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;.&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kp"&gt;norm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; type &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; &lt;span class="kp"&gt;mean&lt;/span&gt;
@@ -112,7 +112,7 @@ r.hat
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;## [1] 4.023234
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;## [1] 4.065098
 &lt;/pre&gt;&lt;/div&gt;</content><category term="r_notebook"></category><category term="r"></category><category term="geometry"></category></entry><entry><title>R Kernel Jupyter Notebook</title><link href="/rkernel.html" rel="alternate"></link><published>2018-08-11T00:00:00+02:00</published><updated>2018-08-11T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-08-11:/rkernel.html</id><summary type="html">&lt;p&gt;We explore the R kernel for Jupyter notebooks through two simple examples.&lt;/p&gt;</summary><content type="html">&lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
