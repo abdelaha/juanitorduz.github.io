@@ -136,7 +136,7 @@ all.points.df <span class="o">%&gt;%</span> ggplot<span class="p">()</span> <spa
 </pre></div>
 
 
-<p><img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-2-1.png"></p>
+<p><img alt="center" src="/images/r_circle_fit/unnamed-chunk-2-1.png"></p>
 <h1>Add Noise</h1>
 <p>We add noise from a normal disttribution with mean zero and standard deviation <code>sd</code>.</p>
 <div class="highlight"><pre><span></span><span class="c1"># Set standard deviation.</span>
@@ -155,7 +155,7 @@ all.samples.df <span class="o">%&gt;%</span> ggplot<span class="p">()</span> <sp
 </pre></div>
 
 
-<p><img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-3-1.png"></p>
+<p><img alt="center" src="/images/r_circle_fit/unnamed-chunk-3-1.png"></p>
 <h1>Define Optimization Function</h1>
 <p>In order to find the best fitting circle, we need to define what "best" means. We aim to minimize the RMSE. </p>
 <div class="highlight"><pre><span></span><span class="c1"># Define function to optimize. </span>
@@ -178,7 +178,7 @@ rmse.df <span class="o">%&gt;%</span> ggplot<span class="p">()</span> <span clas
 </pre></div>
 
 
-<p><img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-5-1.png"></p>
+<p><img alt="center" src="/images/r_circle_fit/unnamed-chunk-5-1.png"></p>
 <p>We aim to find the minimum. </p>
 <h1>Run Optimization</h1>
 <div class="highlight"><pre><span></span>opt.obj <span class="o">&lt;-</span> optimize<span class="p">(</span>f <span class="o">=</span><span class="kr">function</span><span class="p">(</span>r<span class="p">)</span> ComputeRMSE<span class="p">(</span>all.samples <span class="o">=</span> all.samples<span class="p">,</span> r <span class="o">=</span> r<span class="p">,</span> N <span class="o">=</span> N<span class="p">),</span> interval <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span>
@@ -207,7 +207,7 @@ r.hat
 </pre></div>
 
 
-<p><img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-7-1.png"></p>
+<p><img alt="center" src="/images/r_circle_fit/unnamed-chunk-7-1.png"></p>
 <h1>Analytical Solution</h1>
 <p>By taking the derivative of the cost function with respect to <code>r</code> we can easily get the value of <code>r.hat</code>.</p>
 <div class="highlight"><pre><span></span>r.hat <span class="o">&lt;-</span> all.samples <span class="o">%&gt;%</span> map_dbl<span class="p">(</span><span class="m">.</span>f <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kp">norm</span><span class="p">(</span>x<span class="p">,</span> type <span class="o">=</span> <span class="s">&#39;2&#39;</span><span class="p">))</span> <span class="o">%&gt;%</span> <span class="kp">mean</span>

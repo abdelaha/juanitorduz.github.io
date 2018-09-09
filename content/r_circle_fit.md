@@ -47,7 +47,7 @@ all.points.df <- all.points %>% reduce(.f = function(x, y) rbind(x, y)) %>%
 all.points.df %>% ggplot() + theme_light() + geom_point(mapping = aes(x = x, y = y)) 
 ```
 
-![center](/content/images/r_circle_fit/unnamed-chunk-2-1.png)
+![center](/images/r_circle_fit/unnamed-chunk-2-1.png)
 
 # Add Noise 
 
@@ -70,7 +70,7 @@ all.samples.df <- all.samples %>% reduce(.f = function(x, y) rbind(x, y)) %>%
 all.samples.df %>% ggplot() + theme_light() + geom_point(mapping = aes(x = x, y = y)) 
 ```
 
-![center](/content/images/r_circle_fit/unnamed-chunk-3-1.png)
+![center](/images/r_circle_fit/unnamed-chunk-3-1.png)
 
 # Define Optimization Function
 
@@ -99,7 +99,7 @@ rmse.df <- seq(from = 0.5, to = 10, by = 0.1) %>%
 rmse.df %>% ggplot() + theme_light() + geom_line(mapping = aes(x = r, y = RMSE))
 ```
 
-![center](/content/images/r_circle_fit/unnamed-chunk-5-1.png)
+![center](/images/r_circle_fit/unnamed-chunk-5-1.png)
 
 We aim to find the minimum. 
 
@@ -135,7 +135,7 @@ all.samples %>% map(.f = function(x) r.hat*x /norm(x, type = '2')) %>%
                 geom_point(mapping = aes(x = x1, y = y1), color = 'red') 
 ```
 
-![center](/content/images/r_circle_fit/unnamed-chunk-7-1.png)
+![center](/images/r_circle_fit/unnamed-chunk-7-1.png)
 
 # Analytical Solution 
 

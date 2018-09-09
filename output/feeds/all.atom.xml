@@ -33,7 +33,7 @@ all.points.df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; ggplot&lt;span class
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-2-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="center" src="/images/r_circle_fit/unnamed-chunk-2-1.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Add Noise&lt;/h1&gt;
 &lt;p&gt;We add noise from a normal disttribution with mean zero and standard deviation &lt;code&gt;sd&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Set standard deviation.&lt;/span&gt;
@@ -52,7 +52,7 @@ all.samples.df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; ggplot&lt;span clas
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-3-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="center" src="/images/r_circle_fit/unnamed-chunk-3-1.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Define Optimization Function&lt;/h1&gt;
 &lt;p&gt;In order to find the best fitting circle, we need to define what "best" means. We aim to minimize the RMSE. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Define function to optimize. &lt;/span&gt;
@@ -75,7 +75,7 @@ rmse.df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; ggplot&lt;span class="p"&g
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-5-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="center" src="/images/r_circle_fit/unnamed-chunk-5-1.png"&gt;&lt;/p&gt;
 &lt;p&gt;We aim to find the minimum. &lt;/p&gt;
 &lt;h1&gt;Run Optimization&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;opt.obj &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; optimize&lt;span class="p"&gt;(&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;r&lt;span class="p"&gt;)&lt;/span&gt; ComputeRMSE&lt;span class="p"&gt;(&lt;/span&gt;all.samples &lt;span class="o"&gt;=&lt;/span&gt; all.samples&lt;span class="p"&gt;,&lt;/span&gt; r &lt;span class="o"&gt;=&lt;/span&gt; r&lt;span class="p"&gt;,&lt;/span&gt; N &lt;span class="o"&gt;=&lt;/span&gt; N&lt;span class="p"&gt;),&lt;/span&gt; interval &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -104,7 +104,7 @@ r.hat
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-7-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="center" src="/images/r_circle_fit/unnamed-chunk-7-1.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Analytical Solution&lt;/h1&gt;
 &lt;p&gt;By taking the derivative of the cost function with respect to &lt;code&gt;r&lt;/code&gt; we can easily get the value of &lt;code&gt;r.hat&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;r.hat &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; all.samples &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; map_dbl&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;.&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kp"&gt;norm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; type &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; &lt;span class="kp"&gt;mean&lt;/span&gt;
@@ -2964,10 +2964,10 @@ p_j(n)=
 
 
 
-&lt;div id="f73cce89-a4a9-4eaa-84e9-c978225c63d9"&gt;&lt;/div&gt;
+&lt;div id="e7f964bf-07ef-4fa7-9b2d-5111d3bbbcf9"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#f73cce89-a4a9-4eaa-84e9-c978225c63d9');
+var element = $('#e7f964bf-07ef-4fa7-9b2d-5111d3bbbcf9');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3789,10 +3789,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="3c00c8b8-aa44-455d-8e85-aec0f63cc61a"&gt;&lt;/div&gt;
+&lt;div id="9304f669-c7bc-40b0-8656-b8a83486a187"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#3c00c8b8-aa44-455d-8e85-aec0f63cc61a');
+var element = $('#9304f669-c7bc-40b0-8656-b8a83486a187');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -4664,10 +4664,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="427f5bd6-15c9-47bc-b614-1e5a8d50ca79"&gt;&lt;/div&gt;
+&lt;div id="9cedd0b4-6bf4-4e41-92aa-d7098c7fc1da"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#427f5bd6-15c9-47bc-b614-1e5a8d50ca79');
+var element = $('#9cedd0b4-6bf4-4e41-92aa-d7098c7fc1da');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -5481,10 +5481,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="2f9e2f9d-de26-41d7-b7db-8000eb17f0d9"&gt;&lt;/div&gt;
+&lt;div id="d0e29001-e84b-4316-8fc0-9b3fd4add658"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#2f9e2f9d-de26-41d7-b7db-8000eb17f0d9');
+var element = $('#d0e29001-e84b-4316-8fc0-9b3fd4add658');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -6460,10 +6460,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="c2a6c70d-2dae-4e25-be22-6979c6db3cf8"&gt;&lt;/div&gt;
+&lt;div id="6f0956b4-81d4-45bd-8bf5-f9352445680f"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#c2a6c70d-2dae-4e25-be22-6979c6db3cf8');
+var element = $('#6f0956b4-81d4-45bd-8bf5-f9352445680f');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 

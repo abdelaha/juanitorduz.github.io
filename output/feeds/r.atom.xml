@@ -32,7 +32,7 @@ all.points.df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; ggplot&lt;span class
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-2-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="center" src="/images/r_circle_fit/unnamed-chunk-2-1.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Add Noise&lt;/h1&gt;
 &lt;p&gt;We add noise from a normal disttribution with mean zero and standard deviation &lt;code&gt;sd&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Set standard deviation.&lt;/span&gt;
@@ -51,7 +51,7 @@ all.samples.df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; ggplot&lt;span clas
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-3-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="center" src="/images/r_circle_fit/unnamed-chunk-3-1.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Define Optimization Function&lt;/h1&gt;
 &lt;p&gt;In order to find the best fitting circle, we need to define what "best" means. We aim to minimize the RMSE. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Define function to optimize. &lt;/span&gt;
@@ -74,7 +74,7 @@ rmse.df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; ggplot&lt;span class="p"&g
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-5-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="center" src="/images/r_circle_fit/unnamed-chunk-5-1.png"&gt;&lt;/p&gt;
 &lt;p&gt;We aim to find the minimum. &lt;/p&gt;
 &lt;h1&gt;Run Optimization&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;opt.obj &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; optimize&lt;span class="p"&gt;(&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;r&lt;span class="p"&gt;)&lt;/span&gt; ComputeRMSE&lt;span class="p"&gt;(&lt;/span&gt;all.samples &lt;span class="o"&gt;=&lt;/span&gt; all.samples&lt;span class="p"&gt;,&lt;/span&gt; r &lt;span class="o"&gt;=&lt;/span&gt; r&lt;span class="p"&gt;,&lt;/span&gt; N &lt;span class="o"&gt;=&lt;/span&gt; N&lt;span class="p"&gt;),&lt;/span&gt; interval &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -103,7 +103,7 @@ r.hat
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-7-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="center" src="/images/r_circle_fit/unnamed-chunk-7-1.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Analytical Solution&lt;/h1&gt;
 &lt;p&gt;By taking the derivative of the cost function with respect to &lt;code&gt;r&lt;/code&gt; we can easily get the value of &lt;code&gt;r.hat&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;r.hat &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; all.samples &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; map_dbl&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;.&lt;/span&gt;f &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kp"&gt;norm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; type &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; &lt;span class="kp"&gt;mean&lt;/span&gt;
