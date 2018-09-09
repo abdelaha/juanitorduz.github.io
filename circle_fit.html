@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+          <script type="text/javascript">
+          init_mathjax = function() {
+              if (window.MathJax) {
+                  // MathJax loaded
+                  MathJax.Hub.Config({
+                      tex2jax: {
+                          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                          displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                      },
+                      displayAlign: 'left', // Change this to 'center' to center equations.
+                      "HTML-CSS": {
+                          styles: {'.MathJax_Display': {"margin": 0}}
+                      }
+                  });
+                  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+              }
+          }
+          init_mathjax();
+          </script>
+
+  <title>  Circle Fit | Dr. Juan Camilo Orduz
+</title>
+  <link rel="canonical" href="/circle_fit.html">
+
+
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="/feeds/r.atom.xml">  
+  <meta name="description" content="We explore how to include an R notebook into a pelican post. As an example, we describe how to fit a circle onto a cloud of points.">
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o);
+      a.async = 1;
+      a.src = g;
+      m = s.getElementsByTagName(o)[0];
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-122570825-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <h1 class="title"><a href="/">Dr. Juan Camilo Orduz</a></h1>
+      <p class="text-muted">Mathematician & Data Scientist</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://www.linkedin.com/in/juanitorduz" target="_blank">LinkedIn</a></li>
+          <li class="list-inline-item"><a href="https://github.com/juanitorduz" target="_blank">GitHub</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="/pages/about-me.html">About Me</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Circle Fit
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-09-09T00:00:00+02:00">
+          <i class="fa fa-clock-o"></i>
+          Sun 09 September 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="/category/r.html">R</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="/author/juan-camilo-orduz.html">Juan Camilo Orduz</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="/tag/r_notebook.html">#r_notebook</a>,               <a href="/tag/r.html">#r</a>,               <a href="/tag/geometry.html">#geometry</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>In view of the <a href="https://juanitorduz.github.io/rkernel.html">R Kernel Jupyter Notebook</a> post, I wanted to explore how to include an <a href="https://bookdown.org/yihui/rmarkdown/notebook.html">R Notebook</a> directly into <a href="https://blog.getpelican.com">Pelican</a>. Fortunately, I found a great <a href="http://michaeltoth.me/how-to-write-pelican-blog-posts-using-rmarkdown-knitr-20.html">post</a> where an R function is provided to render the R Notebook into Pelican format. Works great! </p>
+<p>To play around with it, I wrote a simple R notebook which fits a circle into a cloud of points. </p>
+<h1>Prepare the Notebook</h1>
+<div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span>tidyverse<span class="p">)</span>
+</pre></div>
+
+
+<h1>Generate Circle Data</h1>
+<div class="highlight"><pre><span></span><span class="c1"># Dimension of the space.</span>
+d <span class="o">&lt;-</span> <span class="m">2</span>
+
+<span class="c1"># Number of sample points. </span>
+N <span class="o">&lt;-</span> <span class="m">1000</span>
+
+<span class="c1"># Radius. </span>
+R <span class="o">&lt;-</span> <span class="m">4</span>
+
+<span class="c1"># Generate random sample of points (x - axis).</span>
+points.0 <span class="o">&lt;-</span> <span class="m">1</span><span class="o">:</span>N <span class="o">%&gt;%</span> map<span class="p">(</span><span class="m">.</span>f <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> runif<span class="p">(</span>n <span class="o">=</span> d <span class="o">-</span> <span class="m">1</span><span class="p">,</span> min <span class="o">=</span>  <span class="o">-</span> R<span class="p">,</span> max <span class="o">=</span> R<span class="p">))</span>
+
+<span class="c1"># Generate the corresponding y - coordinates. </span>
+all.points <span class="o">&lt;-</span> points.0 <span class="o">%&gt;%</span> map<span class="p">(</span><span class="m">.</span>f <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kt">c</span><span class="p">(</span>x<span class="p">,</span> <span class="kp">sign</span><span class="p">(</span>runif<span class="p">(</span>n <span class="o">=</span> <span class="m">1</span><span class="p">,</span> min <span class="o">=</span> <span class="o">-</span> <span class="m">1</span><span class="p">,</span> max <span class="o">=</span> <span class="m">1</span><span class="p">))</span><span class="o">*</span><span class="kp">sqrt</span><span class="p">(</span>R<span class="o">^</span><span class="m">2</span> <span class="o">-</span> <span class="kp">norm</span><span class="p">(</span>x<span class="p">,</span> type <span class="o">=</span> <span class="s">&#39;2&#39;</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="p">)))</span> 
+
+<span class="c1"># Store data in a tibble.</span>
+all.points.df <span class="o">&lt;-</span> all.points <span class="o">%&gt;%</span> reduce<span class="p">(</span><span class="m">.</span>f <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">)</span> <span class="kp">rbind</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">))</span> <span class="o">%&gt;%</span> 
+                                as.tibble <span class="o">%&gt;%</span> 
+                                rename<span class="p">(</span>x <span class="o">=</span> V1<span class="p">,</span> y <span class="o">=</span> V2<span class="p">)</span>
+
+<span class="c1"># Plot the data. </span>
+all.points.df <span class="o">%&gt;%</span> ggplot<span class="p">()</span> <span class="o">+</span> theme_light<span class="p">()</span> <span class="o">+</span> geom_point<span class="p">(</span>mapping <span class="o">=</span> aes<span class="p">(</span>x <span class="o">=</span> x<span class="p">,</span> y <span class="o">=</span> y<span class="p">))</span> 
+</pre></div>
+
+
+<p><img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-191-1.png"></p>
+<h1>Add Noise</h1>
+<p>We add noise from a normal disttribution with mean zero and standard deviation <code>sd</code>.</p>
+<div class="highlight"><pre><span></span><span class="c1"># Set standard deviation.</span>
+sd <span class="o">&lt;-</span> <span class="m">0.5</span>
+
+<span class="c1"># Add noise.</span>
+all.samples <span class="o">&lt;-</span> all.points <span class="o">%&gt;%</span> map<span class="p">(</span><span class="m">.</span>f <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> x <span class="o">+</span> rnorm<span class="p">(</span>n <span class="o">=</span> d<span class="p">,</span> mean <span class="o">=</span> <span class="m">0</span><span class="p">,</span> sd <span class="o">=</span> sd<span class="p">))</span>
+
+<span class="c1"># Store data in a tibble.</span>
+all.samples.df <span class="o">&lt;-</span> all.samples <span class="o">%&gt;%</span> reduce<span class="p">(</span><span class="m">.</span>f <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">)</span> <span class="kp">rbind</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">))</span> <span class="o">%&gt;%</span>
+                                  as.tibble <span class="o">%&gt;%</span> 
+                                  rename<span class="p">(</span>x <span class="o">=</span> V1<span class="p">,</span> y <span class="o">=</span> V2<span class="p">)</span>
+
+<span class="c1"># Plot the data.</span>
+all.samples.df <span class="o">%&gt;%</span> ggplot<span class="p">()</span> <span class="o">+</span> theme_light<span class="p">()</span> <span class="o">+</span> geom_point<span class="p">(</span>mapping <span class="o">=</span> aes<span class="p">(</span>x <span class="o">=</span> x<span class="p">,</span> y <span class="o">=</span> y<span class="p">))</span> 
+</pre></div>
+
+
+<p><img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-192-1.png"></p>
+<h1>Define Optimization Function</h1>
+<p>In order to find the best fitting circle, we need to define what "best" means. We aim to minimize the RMSE. </p>
+<div class="highlight"><pre><span></span><span class="c1"># Define function to optimize. </span>
+ComputeRMSE <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>all.samples<span class="p">,</span> r<span class="p">,</span> N<span class="p">)</span> <span class="p">{</span>
+
+  all.samples <span class="o">%&gt;%</span> map_dbl<span class="p">(</span><span class="m">.</span>f <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="p">(</span>r <span class="o">-</span> <span class="kp">norm</span><span class="p">(</span>x<span class="p">,</span> type <span class="o">=</span> <span class="s">&#39;2&#39;</span><span class="p">))</span><span class="o">^</span><span class="m">2</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="kp">mean</span>
+
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Let us visualize the shape of the cost function. </p>
+<div class="highlight"><pre><span></span>rmse.df <span class="o">&lt;-</span> <span class="kp">seq</span><span class="p">(</span>from <span class="o">=</span> <span class="m">0.5</span><span class="p">,</span> to <span class="o">=</span> <span class="m">10</span><span class="p">,</span> by <span class="o">=</span> <span class="m">0.1</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+              map<span class="p">(</span><span class="m">.</span>f <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>r<span class="p">)</span> <span class="kt">c</span><span class="p">(</span>r<span class="p">,</span> ComputeRMSE<span class="p">(</span>all.samples <span class="o">=</span> all.samples<span class="p">,</span> r <span class="o">=</span> r<span class="p">,</span> N <span class="o">=</span> N <span class="p">)))</span> <span class="o">%&gt;%</span> 
+              reduce<span class="p">(</span><span class="m">.</span>f <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">)</span> <span class="kp">rbind</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">))</span> <span class="o">%&gt;%</span> 
+              as.tibble <span class="o">%&gt;%</span> 
+              rename<span class="p">(</span>r <span class="o">=</span> V1<span class="p">,</span> RMSE <span class="o">=</span> V2<span class="p">)</span>
+
+rmse.df <span class="o">%&gt;%</span> ggplot<span class="p">()</span> <span class="o">+</span> theme_light<span class="p">()</span> <span class="o">+</span> geom_line<span class="p">(</span>mapping <span class="o">=</span> aes<span class="p">(</span>x <span class="o">=</span> r<span class="p">,</span> y <span class="o">=</span> RMSE<span class="p">))</span>
+</pre></div>
+
+
+<p><img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-194-1.png"></p>
+<p>We aim to find the minimum. </p>
+<h1>Run Optimization</h1>
+<div class="highlight"><pre><span></span>opt.obj <span class="o">&lt;-</span> optimize<span class="p">(</span>f <span class="o">=</span><span class="kr">function</span><span class="p">(</span>r<span class="p">)</span> ComputeRMSE<span class="p">(</span>all.samples <span class="o">=</span> all.samples<span class="p">,</span> r <span class="o">=</span> r<span class="p">,</span> N <span class="o">=</span> N<span class="p">),</span> interval <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span>
+
+r.hat <span class="o">&lt;-</span> opt.obj<span class="o">$</span>minimum
+
+r.hat
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>## [1] 4.023234
+</pre></div>
+
+
+<h1>Visualize Results</h1>
+<p>We project each sample point onto the best circle fit. </p>
+<div class="highlight"><pre><span></span>all.samples <span class="o">%&gt;%</span> map<span class="p">(</span><span class="m">.</span>f <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> r.hat<span class="o">*</span>x <span class="o">/</span><span class="kp">norm</span><span class="p">(</span>x<span class="p">,</span> type <span class="o">=</span> <span class="s">&#39;2&#39;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+                reduce<span class="p">(</span><span class="m">.</span>f <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">)</span> <span class="kp">rbind</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">))</span> <span class="o">%&gt;%</span> 
+                as.tibble <span class="o">%&gt;%</span> 
+                rename<span class="p">(</span>x1 <span class="o">=</span> V1<span class="p">,</span> y1 <span class="o">=</span>V2<span class="p">)</span> <span class="o">%&gt;%</span> 
+                <span class="kp">cbind</span><span class="p">(</span>all.samples.df<span class="p">)</span> <span class="o">%&gt;%</span> 
+                ggplot<span class="p">()</span> <span class="o">+</span> 
+                theme_light<span class="p">()</span> <span class="o">+</span> 
+                geom_point<span class="p">(</span>mapping <span class="o">=</span> aes<span class="p">(</span>x <span class="o">=</span> x<span class="p">,</span> y <span class="o">=</span> y<span class="p">))</span> <span class="o">+</span>
+                geom_point<span class="p">(</span>mapping <span class="o">=</span> aes<span class="p">(</span>x <span class="o">=</span> x1<span class="p">,</span> y <span class="o">=</span> y1<span class="p">),</span> color <span class="o">=</span> <span class="s">&#39;red&#39;</span><span class="p">)</span> 
+</pre></div>
+
+
+<p><img alt="center" src="/content/images/r_circle_fit/unnamed-chunk-196-1.png"></p>
+<h1>Analytical Solution</h1>
+<p>By taking the derivative of the cost function with respect to <code>r</code> we can easily get the value of <code>r.hat</code>.</p>
+<div class="highlight"><pre><span></span>r.hat <span class="o">&lt;-</span> all.samples <span class="o">%&gt;%</span> map_dbl<span class="p">(</span><span class="m">.</span>f <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kp">norm</span><span class="p">(</span>x<span class="p">,</span> type <span class="o">=</span> <span class="s">&#39;2&#39;</span><span class="p">))</span> <span class="o">%&gt;%</span> <span class="kp">mean</span>
+
+r.hat
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>## [1] 4.023234
+</pre></div>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
