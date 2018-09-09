@@ -8,9 +8,9 @@ Authors: Juan Camilo Orduz
 Summary: We explore how to include an R notebook into a pelican post. As an example, we describe how to fit a circle onto a cloud of points. 
 ---
 
-In view of the [R Kernel Jupyter Notebook](https://juanitorduz.github.io/rkernel.html) post, I wanted to explore how to include an [R Notebook](https://bookdown.org/yihui/rmarkdown/notebook.html) directly into [Pelican](https://blog.getpelican.com). Fortunately, I found a great [post](http://michaeltoth.me/how-to-write-pelican-blog-posts-using-rmarkdown-knitr-20.html) where an R function is provided to render the R Notebook into Pelican format. Works great! 
+In view of the [R Kernel Jupyter Notebook](https://juanitorduz.github.io/rkernel.html) post, I wanted to explore how to include an [R Notebook](https://bookdown.org/yihui/rmarkdown/notebook.html) directly into [Pelican](https://blog.getpelican.com). Fortunately, I found a great [post](http://michaeltoth.me/how-to-write-pelican-blog-posts-using-rmarkdown-knitr-20.html) where an R function is provided in order to render R Notebooks into Pelican format. Works great! 
 
-To play around with it, I wrote a simple R notebook which fits a circle into a cloud of points. 
+To play around with it, I wrote a simple R notebook which fits a circle to a cloud of points. 
 
 # Prepare the Notebook
 
@@ -115,7 +115,7 @@ r.hat
 ```
 
 ```
-## [1] 4.065098
+## [1] 4.05987
 ```
 
 # Visualize Results 
@@ -149,6 +149,6 @@ r.hat
 ```
 
 ```
-## [1] 4.065098
+## [1] 4.05987
 ```
 
