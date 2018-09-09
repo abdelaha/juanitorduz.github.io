@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-09-10T00:00:00+02:00</updated><entry><title>S^1-Equivariant Dirac operators on the Hopf Fibration.</title><link href="/hopf_fibration.html" rel="alternate"></link><published>2018-09-10T00:00:00+02:00</published><updated>2018-09-10T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-10:/hopf_fibration.html</id><summary type="html">&lt;p&gt;In this expository article we discuss the fundamentals of the Hop fibration with particular emphasis on the Dirac-type operators induded, in the sense of Brüning and Heintze, by the Hodge-de Rham and spin-Dirac operator. In addition, we compute the Dirac-Schrödinger type operator introduced in my PhD thesis.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;(In preparation ...)&lt;/h2&gt;
-&lt;p&gt;In preparation ...&lt;/p&gt;</content><category term="mathematics"></category><category term="geometry"></category></entry><entry><title>Circle Fit</title><link href="/circle_fit.html" rel="alternate"></link><published>2018-09-09T00:00:00+02:00</published><updated>2018-09-09T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-09:/circle_fit.html</id><summary type="html">&lt;p&gt;We explore how to include an R notebook into a pelican post. As an example, we describe how to fit a circle onto a cloud of points.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In view of the &lt;a href="https://juanitorduz.github.io/rkernel.html"&gt;R Kernel Jupyter Notebook&lt;/a&gt; post, I wanted to explore how to include an &lt;a href="https://bookdown.org/yihui/rmarkdown/notebook.html"&gt;R Notebook&lt;/a&gt; directly into &lt;a href="https://blog.getpelican.com"&gt;Pelican&lt;/a&gt;. Fortunately, I found a great &lt;a href="http://michaeltoth.me/how-to-write-pelican-blog-posts-using-rmarkdown-knitr-20.html"&gt;post&lt;/a&gt; where an R function is provided in order to render R Notebooks into Pelican format. Works great! &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-09-11T00:00:00+02:00</updated><entry><title>S^1-Equivariant Dirac operators on the Hopf Fibration.</title><link href="/hopf_fibration.html" rel="alternate"></link><published>2018-09-11T00:00:00+02:00</published><updated>2018-09-11T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-11:/hopf_fibration.html</id><summary type="html">&lt;p&gt;In this expository article I discuss the definition and basic propierties of the Hop fibration, with particular emphasis on Dirac-type operators induced, in the sense of Brüning and Heintze, by the Hodge-de Rham and spin-Dirac operators. In addition, we compute the Dirac-Schrödinger type operator introduced in my PhD thesis. (In preparation ...)&lt;/p&gt;</summary><content type="html">&lt;p&gt;In preparation ...&lt;/p&gt;</content><category term="mathematics"></category><category term="geometry"></category></entry><entry><title>Circle Fit</title><link href="/circle_fit.html" rel="alternate"></link><published>2018-09-09T00:00:00+02:00</published><updated>2018-09-09T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-09:/circle_fit.html</id><summary type="html">&lt;p&gt;We explore how to include an R notebook into a pelican post. As an example, we describe how to fit a circle onto a cloud of points.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In view of the &lt;a href="https://juanitorduz.github.io/rkernel.html"&gt;R Kernel Jupyter Notebook&lt;/a&gt; post, I wanted to explore how to include an &lt;a href="https://bookdown.org/yihui/rmarkdown/notebook.html"&gt;R Notebook&lt;/a&gt; directly into &lt;a href="https://blog.getpelican.com"&gt;Pelican&lt;/a&gt;. Fortunately, I found a great &lt;a href="http://michaeltoth.me/how-to-write-pelican-blog-posts-using-rmarkdown-knitr-20.html"&gt;post&lt;/a&gt; where an R function is provided in order to render R Notebooks into Pelican format. Works great! &lt;/p&gt;
 &lt;p&gt;To play around with it, I wrote a simple R notebook which fits a circle to a cloud of points. &lt;/p&gt;
 &lt;h1&gt;Prepare the Notebook&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;tidyverse&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2964,10 +2963,10 @@ p_j(n)=
 
 
 
-&lt;div id="a256fec0-ec72-4f4c-b290-09e2597f1b32"&gt;&lt;/div&gt;
+&lt;div id="12aa21ce-e1f1-4e33-9cff-a0bde74bd6bc"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#a256fec0-ec72-4f4c-b290-09e2597f1b32');
+var element = $('#12aa21ce-e1f1-4e33-9cff-a0bde74bd6bc');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3789,10 +3788,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="716bb229-7c4b-47f5-9e83-2760cd519a52"&gt;&lt;/div&gt;
+&lt;div id="b663ed7c-b9ff-43b3-b149-bf7b43fde1b0"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#716bb229-7c4b-47f5-9e83-2760cd519a52');
+var element = $('#b663ed7c-b9ff-43b3-b149-bf7b43fde1b0');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -4664,10 +4663,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="1fd91f06-cdaa-499e-9c8b-43547f2be693"&gt;&lt;/div&gt;
+&lt;div id="4ab7c5df-2641-40ad-a939-1baab72ba965"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#1fd91f06-cdaa-499e-9c8b-43547f2be693');
+var element = $('#4ab7c5df-2641-40ad-a939-1baab72ba965');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -5481,10 +5480,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="7f00e794-8cf7-423a-871e-b1b53736ffc6"&gt;&lt;/div&gt;
+&lt;div id="c0e27f19-5536-4091-a440-7c341c5f8f78"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#7f00e794-8cf7-423a-871e-b1b53736ffc6');
+var element = $('#c0e27f19-5536-4091-a440-7c341c5f8f78');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -6460,10 +6459,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="af94ae2b-8769-4eab-afe8-25cd2af14943"&gt;&lt;/div&gt;
+&lt;div id="27c041a1-e54c-4661-bcee-4ae2327fe89c"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#af94ae2b-8769-4eab-afe8-25cd2af14943');
+var element = $('#27c041a1-e54c-4661-bcee-4ae2327fe89c');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
