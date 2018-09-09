@@ -14,11 +14,13 @@ To play around with it, I wrote a simple R notebook which fits a circle into a c
 
 # Prepare the Notebook
 
+
 ```r
 library(tidyverse)
 ```
 
 # Generate Circle Data
+
 
 ```r
 # Dimension of the space.
@@ -45,11 +47,12 @@ all.points.df <- all.points %>% reduce(.f = function(x, y) rbind(x, y)) %>%
 all.points.df %>% ggplot() + theme_light() + geom_point(mapping = aes(x = x, y = y)) 
 ```
 
-![center](/content/images/r_circle_fit/unnamed-chunk-191-1.png)
+![center](/content/images/r_circle_fit/unnamed-chunk-2-1.png)
 
 # Add Noise 
 
 We add noise from a normal disttribution with mean zero and standard deviation `sd`.
+
 
 ```r
 # Set standard deviation.
@@ -67,11 +70,12 @@ all.samples.df <- all.samples %>% reduce(.f = function(x, y) rbind(x, y)) %>%
 all.samples.df %>% ggplot() + theme_light() + geom_point(mapping = aes(x = x, y = y)) 
 ```
 
-![center](/content/images/r_circle_fit/unnamed-chunk-192-1.png)
+![center](/content/images/r_circle_fit/unnamed-chunk-3-1.png)
 
 # Define Optimization Function
 
 In order to find the best fitting circle, we need to define what "best" means. We aim to minimize the RMSE. 
+
 
 ```r
 # Define function to optimize. 
@@ -84,6 +88,7 @@ ComputeRMSE <- function(all.samples, r, N) {
 
 Let us visualize the shape of the cost function. 
 
+
 ```r
 rmse.df <- seq(from = 0.5, to = 10, by = 0.1) %>% 
               map(.f = function(r) c(r, ComputeRMSE(all.samples = all.samples, r = r, N = N ))) %>% 
@@ -94,11 +99,12 @@ rmse.df <- seq(from = 0.5, to = 10, by = 0.1) %>%
 rmse.df %>% ggplot() + theme_light() + geom_line(mapping = aes(x = r, y = RMSE))
 ```
 
-![center](/content/images/r_circle_fit/unnamed-chunk-194-1.png)
+![center](/content/images/r_circle_fit/unnamed-chunk-5-1.png)
 
 We aim to find the minimum. 
 
 # Run Optimization
+
 
 ```r
 opt.obj <- optimize(f =function(r) ComputeRMSE(all.samples = all.samples, r = r, N = N), interval = 1:10)
@@ -109,12 +115,13 @@ r.hat
 ```
 
 ```
-## [1] 4.023234
+## [1] 4.065098
 ```
 
 # Visualize Results 
 
 We project each sample point onto the best circle fit. 
+
 
 ```r
 all.samples %>% map(.f = function(x) r.hat*x /norm(x, type = '2')) %>% 
@@ -128,11 +135,12 @@ all.samples %>% map(.f = function(x) r.hat*x /norm(x, type = '2')) %>%
                 geom_point(mapping = aes(x = x1, y = y1), color = 'red') 
 ```
 
-![center](/content/images/r_circle_fit/unnamed-chunk-196-1.png)
+![center](/content/images/r_circle_fit/unnamed-chunk-7-1.png)
 
 # Analytical Solution 
 
 By taking the derivative of the cost function with respect to `r` we can easily get the value of `r.hat`.
+
 
 ```r
 r.hat <- all.samples %>% map_dbl(.f = function(x) norm(x, type = '2')) %>% mean
@@ -141,6 +149,6 @@ r.hat
 ```
 
 ```
-## [1] 4.023234
+## [1] 4.065098
 ```
 
