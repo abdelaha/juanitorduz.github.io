@@ -26,10 +26,14 @@ I am also interested in education and knowlodge sharing.
 - 01/04/2018-Present  **Data Scientist**, [TD Reply GmbH](https://www.td-berlin.com), Berlin, Germany.
 
 	- Integrate and unify data from various sources. Apply skills in data mining, quantitative analysis and visualization. Develop algorithms for a variety of business problems (e.g. sales predictions, media mix allocation, future behavior, market drivers, trends and growth potential) by applying knowledge in feature engineering, variable selection, statistical modeling and machine learning.
+
+	- Text mining: text data pre-processing and vectorization, n-gram analysis, topic modeling, text network analysis. 
 􏰂 
 	- Collaborate closely with a wide range of international clients, understanding their business needs and challenges. Consult on the selection of data sources (including web analytics, Buzz Tracking, CRM, Search) and their usage. Identify key performance indicators and give recommendations in meaningful presentations beyond numbers. Create reports and interactive dashboards based on digital data sources, enabling clients to extract insights from multiple data streams that build bridges between companies and customers.
 
-		*Tools:* git, python, pandas, scikit-learn, R, tidyverse, caret, H2O.
+	- Member of the [ProBonoProData Team](https://probono.td-berlin.com): Dedicated data and marketing experts sharing knowledge with  NGOs. 
+
+		*Tools:* git, python, pandas, scikit-learn, nltk, gensim, R, tidyverse, tidytext, caret, H2O, ggplot, plotly.
 
 - 01/07/2017-01/04/2018-  **Junior Data Scientist**, [TD Reply GmbH](https://www.td-berlin.com), Berlin, Germany.
 
@@ -84,9 +88,9 @@ I am also interested in education and knowlodge sharing.
 
 ### Publications & Preprints
 
-- [The $S^1$-Equivariant signature for semi-free actions as an index formula (2018)](https://arxiv.org/abs/1802.04840)
+- [The $S^1$-Equivariant signature for semi-free actions as an index formula, J Geom Anal (2018)](https://doi.org/10.1007/s12220-018-0088-1)
 
-- [Induced Dirac-Schrödinger operators on $S^1$-semi-free quotients (2017)](https://arxiv.org/abs/1711.04196)
+- [Induced Dirac-Schrödinger operators on $S^1$-semi-free quotients, ArXiv (2017)](https://arxiv.org/abs/1711.04196)
 
 ---
 

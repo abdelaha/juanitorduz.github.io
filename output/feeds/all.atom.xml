@@ -2963,10 +2963,10 @@ p_j(n)=
 
 
 
-&lt;div id="12aa21ce-e1f1-4e33-9cff-a0bde74bd6bc"&gt;&lt;/div&gt;
+&lt;div id="e88c3de9-23d8-4da4-a4cc-f3d04c6dfdd5"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#12aa21ce-e1f1-4e33-9cff-a0bde74bd6bc');
+var element = $('#e88c3de9-23d8-4da4-a4cc-f3d04c6dfdd5');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3788,10 +3788,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="b663ed7c-b9ff-43b3-b149-bf7b43fde1b0"&gt;&lt;/div&gt;
+&lt;div id="cbd4123e-60a0-4abd-aa80-960201c1ed19"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#b663ed7c-b9ff-43b3-b149-bf7b43fde1b0');
+var element = $('#cbd4123e-60a0-4abd-aa80-960201c1ed19');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -4663,10 +4663,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="4ab7c5df-2641-40ad-a939-1baab72ba965"&gt;&lt;/div&gt;
+&lt;div id="db2492e0-fec1-4d04-9d0d-eb985c442719"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#4ab7c5df-2641-40ad-a939-1baab72ba965');
+var element = $('#db2492e0-fec1-4d04-9d0d-eb985c442719');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -5480,10 +5480,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="c0e27f19-5536-4091-a440-7c341c5f8f78"&gt;&lt;/div&gt;
+&lt;div id="1981f1da-71d5-4926-ad21-cdcd720fdfed"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#c0e27f19-5536-4091-a440-7c341c5f8f78');
+var element = $('#1981f1da-71d5-4926-ad21-cdcd720fdfed');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -6459,10 +6459,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="27c041a1-e54c-4661-bcee-4ae2327fe89c"&gt;&lt;/div&gt;
+&lt;div id="29842087-9665-4659-82a8-37c8f1023378"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#27c041a1-e54c-4661-bcee-4ae2327fe89c');
+var element = $('#29842087-9665-4659-82a8-37c8f1023378');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -7379,7 +7379,7 @@ if (IPython.notebook.kernel != null) {
 &lt;/div&gt;
  
 
-&lt;/p&gt;</content><category term="jupyter"></category><category term="python"></category><category term="machine learning"></category><category term="bootstrap"></category></entry><entry><title>Induced Dirac-Schrödinger operators on semi-free circle quotients</title><link href="/phd.html" rel="alternate"></link><published>2017-11-11T00:00:00+01:00</published><updated>2017-11-11T00:00:00+01:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2017-11-11:/phd.html</id><summary type="html">&lt;p&gt;I present the content of my PhD Thesis in mathematics. Update: It has now been accepted for publication in The Journal of Geometric Analysis.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post I want to present the results of my Mathematics PhD thesis which I wrote under the supervision of &lt;a href="https://www2.mathematik.hu-berlin.de/~bruening/"&gt;Prof. Dr. Jochen Brüning&lt;/a&gt; at &lt;a href="https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie"&gt;Humbolt Universität zu Berlin&lt;/a&gt;.&lt;/p&gt;
+&lt;/p&gt;</content><category term="jupyter"></category><category term="python"></category><category term="machine learning"></category><category term="bootstrap"></category></entry><entry><title>Induced Dirac-Schrödinger operators on semi-free circle quotients</title><link href="/phd.html" rel="alternate"></link><published>2017-11-11T00:00:00+01:00</published><updated>2017-11-11T00:00:00+01:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2017-11-11:/phd.html</id><summary type="html">&lt;p&gt;I present the content of my PhD Thesis in mathematics. Update: It has now been published in The Journal of Geometric Analysis.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post I want to present the results of my Mathematics PhD thesis which I wrote under the supervision of &lt;a href="https://www2.mathematik.hu-berlin.de/~bruening/"&gt;Prof. Dr. Jochen Brüning&lt;/a&gt; at &lt;a href="https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie"&gt;Humbolt Universität zu Berlin&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I gratefully acknowledge the financial support of the &lt;a href="http://www.math-berlin.de"&gt;Berlin Mathematical School&lt;/a&gt; and the research project 
 &lt;a href="http://www.raumzeitmaterie.de"&gt;SFB 647: Space - Time - Matter&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -7418,13 +7418,13 @@ condition is not satisfied.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;You can find a online copy of the complete thesis as a &lt;a href="https://arxiv.org/abs/1711.04196"&gt;preprint&lt;/a&gt;
-on the arXiv. (a second version was updated)&lt;/p&gt;
+on the arXiv (a second version was updated).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;In addition, &lt;a href="/documents/defense_orduz.pdf"&gt;here&lt;/a&gt; you can see the slides of the defense. &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The paper version, &lt;a href="https://arxiv.org/abs/1802.04840"&gt;The &lt;span class="math"&gt;\(S^1\)&lt;/span&gt;-Equivariant signature for semi-free actions as an index formula&lt;/a&gt;, is now available on the arXiv. Update: It has now been accepted for publication in &lt;a href="https://link.springer.com/journal/12220"&gt;The Journal of Geometric Analysis&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The paper version, &lt;a href="https://doi.org/10.1007/s12220-018-0088-1"&gt;The &lt;span class="math"&gt;\(S^1\)&lt;/span&gt;-Equivariant signature for semi-free actions as an index formula&lt;/a&gt; has been published in &lt;a href="https://link.springer.com/journal/12220"&gt;The Journal of Geometric Analysis&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
