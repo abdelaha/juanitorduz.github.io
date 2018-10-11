@@ -11,7 +11,7 @@ Title: About Me
 
 In October 2017 I received my PhD degree in Mathematics from [Humboldt Universität zu Berlin](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/geometrische-analysis-und-spektraltheorie) under the supervision of [Prof. Jochen Brüning](https://www2.mathematik.hu-berlin.de/~bruening/). I obtained a Master degree (Mathematics) from this same university in 2014. My graduate studies were supported by the [Berlin Mathematical School](http://www.math-berlin.de). Here I share my [experience](http://www.math-berlin.de/about-bms/life-at-bms/life-at-bms/juan-from-colombia). Before comming to Berlin I did two bachelor degrees: [Mathematics](https://matematicas.uniandes.edu.co) and [Physics](https://fisica.uniandes.edu.co) at [Universidad de los Andes](https://uniandes.edu.co). 
 
-My research interests are differential geometry, topology and geometric analysis, in particular variants of the [Atiyah-Singer Index Theorem](https://en.wikipedia.org/wiki/Atiyah–Singer_index_theorem) for singular spaces. Currently I'm also interested in topics around data analysis, statistics and machine learning. 
+My research interests are differential geometry, topology and geometric analysis, in particular variants of the [Atiyah-Singer Index Theorem](https://en.wikipedia.org/wiki/Atiyah–Singer_index_theorem) for singular spaces. Currently I'm also interested in topics around data analysis, statistics and machine learning.
 
 I am also interested in education and knowlodge sharing.
 
@@ -27,7 +27,7 @@ I am also interested in education and knowlodge sharing.
 
 	- Integrate and unify data from various sources. Apply skills in data mining, quantitative analysis and visualization. Develop algorithms for a variety of business problems (e.g. sales predictions, media mix allocation, future behavior, market drivers, trends and growth potential) by applying knowledge in feature engineering, variable selection, statistical modeling and machine learning.
 
-	- Text mining: text data pre-processing and vectorization, n-gram analysis, topic modeling, text network analysis. 
+	- Text mining: text data pre-processing and vectorization, n-gram analysis, topic modeling, text network analysis.
 􏰂 
 	- Collaborate closely with a wide range of international clients, understanding their business needs and challenges. Consult on the selection of data sources (including web analytics, Buzz Tracking, CRM, Search) and their usage. Identify key performance indicators and give recommendations in meaningful presentations beyond numbers. Create reports and interactive dashboards based on digital data sources, enabling clients to extract insights from multiple data streams that build bridges between companies and customers.
 

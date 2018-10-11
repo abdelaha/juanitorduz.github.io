@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+          <script type="text/javascript">
+          init_mathjax = function() {
+              if (window.MathJax) {
+                  // MathJax loaded
+                  MathJax.Hub.Config({
+                      tex2jax: {
+                          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                          displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                      },
+                      displayAlign: 'left', // Change this to 'center' to center equations.
+                      "HTML-CSS": {
+                          styles: {'.MathJax_Display': {"margin": 0}}
+                      }
+                  });
+                  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+              }
+          }
+          init_mathjax();
+          </script>
+
+  <title>  Intro Plumber | Dr. Juan Camilo Orduz
+</title>
+  <link rel="canonical" href="/intro_plumber.html">
+
+
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="/feeds/r.atom.xml">  
+  <meta name="description" content="In this post we present a simple example of how to expose a prediction model to a web API using the Plumber package.">
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o);
+      a.async = 1;
+      a.src = g;
+      m = s.getElementsByTagName(o)[0];
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-122570825-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <h1 class="title"><a href="/">Dr. Juan Camilo Orduz</a></h1>
+      <p class="text-muted">Mathematician & Data Scientist</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://www.linkedin.com/in/juanitorduz" target="_blank">LinkedIn</a></li>
+          <li class="list-inline-item"><a href="https://github.com/juanitorduz" target="_blank">GitHub</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="/pages/about-me.html">About Me</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Intro Plumber
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-10-12T00:00:00+02:00">
+          <i class="fa fa-clock-o"></i>
+          Fri 12 October 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="/category/r.html">R</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="/author/juan-camilo-orduz.html">Juan Camilo Orduz</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="/tag/r.html">#r</a>,               <a href="/tag/api.html">#api</a>,               <a href="/tag/machine-learning.html">#machine learning</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>In this post we explore the basics of the <a href="https://www.rplumber.io">Plumber</a> package. Our aim is to ilustrate how to fit a \(L^2\)-regularized linear model and expose it to a web API so that we can request predictions. </p>
+<h2>Prepare Notebook</h2>
+<p>Let us load the necessary libraries. </p>
+<div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span>caret<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>httr<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>magrittr<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>plumber<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>tidyverse<span class="p">)</span>
+</pre></div>
+
+
+<h2>Load Data</h2>
+<p>As a toy example we consider the <code>mtcars</code> data set. </p>
+<div class="highlight"><pre><span></span>df <span class="o">&lt;-</span> mtcars <span class="o">%&gt;%</span> as_tibble<span class="p">()</span>
+
+df <span class="o">%&gt;%</span> <span class="kp">head</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>## # A tibble: 6 x 11
+##     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1  21       6   160   110  3.9   2.62  16.5     0     1     4     4
+## 2  21       6   160   110  3.9   2.88  17.0     0     1     4     4
+## 3  22.8     4   108    93  3.85  2.32  18.6     1     1     4     1
+## 4  21.4     6   258   110  3.08  3.22  19.4     1     0     3     1
+## 5  18.7     8   360   175  3.15  3.44  17.0     0     0     3     2
+## 6  18.1     6   225   105  2.76  3.46  20.2     1     0     3     1
+</pre></div>
+
+
+<p>We want to fit a simple linear model to predict the variable <code>mpg</code>. </p>
+<p><em>Warning:</em> We are not interested to find the "best model". Better feature engineering and hyperparameter tunig is not developed here because it is not the main purpose. </p>
+<h2>Correlation Plot</h2>
+<p>For variable selection we consider a correlation plot. </p>
+<div class="highlight"><pre><span></span>df <span class="o">%&gt;%</span> cor <span class="o">%&gt;%</span> corrplot<span class="o">::</span>corrplot<span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="center" src="/content/images/intro_plumber_nb/unnamed-chunk-3-1.png"></p>
+<p>From the visualization we see that the variables <code>wt</code>, <code>qsec</code> and <code>am</code> could be good predictors.</p>
+<h2>Define and Train Model</h2>
+<p>We are going to use the <a href="https://topepo.github.io/caret/index.html">Caret</a> package.</p>
+<h3>Split Data</h3>
+<div class="highlight"><pre><span></span><span class="kp">set.seed</span><span class="p">(</span>seed <span class="o">=</span> <span class="m">0</span><span class="p">)</span>
+
+<span class="c1"># Define observation matrix. </span>
+X <span class="o">&lt;-</span> df <span class="o">%&gt;%</span> select<span class="p">(</span>wt<span class="p">,</span> qsec<span class="p">,</span> am<span class="p">)</span>
+<span class="c1"># Define target vector.</span>
+y <span class="o">&lt;-</span> df <span class="o">%&gt;%</span> pull<span class="p">(</span>mpg<span class="p">)</span>
+
+<span class="c1"># Define a partition of the data. </span>
+partition <span class="o">&lt;-</span> createDataPartition<span class="p">(</span>y <span class="o">=</span> y<span class="p">,</span> p <span class="o">=</span> <span class="m">0.75</span><span class="p">,</span> <span class="kt">list</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> 
+
+<span class="c1"># Split the data into a training and test set. </span>
+df.train <span class="o">&lt;-</span> df<span class="p">[</span>partition<span class="p">,</span> <span class="p">]</span>
+df.test <span class="o">&lt;-</span> df<span class="p">[</span><span class="o">-</span> partition<span class="p">,</span> <span class="p">]</span>
+
+X.train <span class="o">&lt;-</span> df.train <span class="o">%&gt;%</span> select<span class="p">(</span>wt<span class="p">,</span> qsec<span class="p">,</span> am<span class="p">)</span>
+y.train <span class="o">&lt;-</span> df.train <span class="o">%&gt;%</span> pull<span class="p">(</span>mpg<span class="p">)</span>
+
+X.test <span class="o">&lt;-</span> df.test <span class="o">%&gt;%</span> select<span class="p">(</span>wt<span class="p">,</span> qsec<span class="p">,</span> am<span class="p">)</span>
+y.test <span class="o">&lt;-</span> df.test <span class="o">%&gt;%</span> pull<span class="p">(</span>mpg<span class="p">)</span>
+</pre></div>
+
+
+<h3>Data Pre-Processing</h3>
+<p>As we want to use a linear model, we neet to scale the variables. </p>
+<div class="highlight"><pre><span></span><span class="c1"># Define scaler object. </span>
+scaler.obj <span class="o">&lt;-</span> preProcess<span class="p">(</span>x <span class="o">=</span> X.train<span class="p">,</span> method <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;center&#39;</span><span class="p">,</span> <span class="s">&#39;scale&#39;</span><span class="p">))</span>
+
+<span class="c1"># Transform the data. </span>
+X.train.scaled <span class="o">&lt;-</span> predict<span class="p">(</span>object <span class="o">=</span> scaler.obj<span class="p">,</span> newdata <span class="o">=</span> X.train<span class="p">)</span>
+X.test.scaled <span class="o">&lt;-</span> predict<span class="p">(</span>object <span class="o">=</span> scaler.obj<span class="p">,</span> newdata <span class="o">=</span> X.test<span class="p">)</span>
+</pre></div>
+
+
+<h3>Train Model</h3>
+<p>We fit \(L^2\)-regularization linear model using a 3-fold cross-validation to tune the regularization hyperparameter. </p>
+<div class="highlight"><pre><span></span>model.obj <span class="o">&lt;-</span>  train<span class="p">(</span>x <span class="o">=</span> X.train.scaled<span class="p">,</span>
+                    y <span class="o">=</span> y.train<span class="p">,</span>
+                    method <span class="o">=</span> <span class="s">&#39;ridge&#39;</span><span class="p">,</span>
+                    trControl <span class="o">=</span> trainControl<span class="p">(</span>method <span class="o">=</span> <span class="s">&#39;cv&#39;</span><span class="p">,</span> number <span class="o">=</span> <span class="m">3</span><span class="p">),</span> 
+                    metric <span class="o">=</span> <span class="s">&#39;RMSE&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<h3>Model Evaluation</h3>
+<p>Let us evaluate the model perforance. </p>
+<p>On the training set:</p>
+<div class="highlight"><pre><span></span>model.obj<span class="o">$</span>results <span class="o">%&gt;%</span> select<span class="p">(</span>RMSE<span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>##       RMSE
+## 1 2.613844
+## 2 2.613700
+## 3 2.554912
+</pre></div>
+
+
+<p>On the test set:</p>
+<div class="highlight"><pre><span></span>y.pred <span class="o">&lt;-</span> predict<span class="p">(</span>model.obj<span class="p">,</span> newdata <span class="o">=</span> X.test.scaled<span class="p">)</span>
+
+RMSE<span class="p">(</span>pred <span class="o">=</span> y.pred<span class="p">,</span> obs <span class="o">=</span> y.test<span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>## [1] 2.664047
+</pre></div>
+
+
+<p>The model seems to be stable. </p>
+<h3>Visualization</h3>
+<div class="highlight"><pre><span></span>tibble<span class="p">(</span>y_test <span class="o">=</span> y.test<span class="p">,</span> y_pred <span class="o">=</span> y.pred<span class="p">)</span> <span class="o">%&gt;%</span> 
+  ggplot<span class="p">()</span> <span class="o">+</span> 
+  theme_light<span class="p">()</span> <span class="o">+</span> 
+  geom_point<span class="p">(</span>mapping <span class="o">=</span> aes<span class="p">(</span>x <span class="o">=</span> y_test<span class="p">,</span> y <span class="o">=</span> y_pred<span class="p">))</span> <span class="o">+</span> 
+  geom_smooth<span class="p">(</span>mapping <span class="o">=</span> aes<span class="p">(</span>x <span class="o">=</span> y_test<span class="p">,</span> y <span class="o">=</span> y_pred<span class="p">,</span> colour <span class="o">=</span> <span class="s">&#39;y_pred ~ y_test&#39;</span><span class="p">),</span> method <span class="o">=</span> <span class="s">&#39;lm&#39;</span><span class="p">,</span> formula <span class="o">=</span> y <span class="o">~</span> x<span class="p">)</span> <span class="o">+</span> 
+  geom_abline<span class="p">(</span>mapping <span class="o">=</span> aes<span class="p">(</span>slope <span class="o">=</span> <span class="m">1</span><span class="p">,</span> intercept <span class="o">=</span> <span class="m">0</span><span class="p">,</span> colour <span class="o">=</span> <span class="s">&#39;y_pred = y_test&#39;</span><span class="p">),</span> show.legend <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">+</span>
+  ggtitle<span class="p">(</span>label <span class="o">=</span> <span class="s">&#39;Model Evaluation&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="center" src="/content/images/intro_plumber_nb/unnamed-chunk-9-1.png"></p>
+<h2>Save Model</h2>
+<h3>Data Pipeline</h3>
+<p>We define a function which transforms and predicts for new incoming data. </p>
+<div class="highlight"><pre><span></span>GetNewPredictions <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>model<span class="p">,</span> transformer<span class="p">,</span> newdata<span class="p">){</span>
+
+  newdata.transformed <span class="o">&lt;-</span> predict<span class="p">(</span>object <span class="o">=</span> transformer<span class="p">,</span> newdata <span class="o">=</span> newdata<span class="p">)</span>
+
+  new.predictions <span class="o">&lt;-</span> predict<span class="p">(</span>object <span class="o">=</span> model<span class="p">,</span> newdata <span class="o">=</span> newdata.transformed<span class="p">)</span>
+
+  <span class="kr">return</span><span class="p">(</span>new.predictions<span class="p">)</span>
+
+<span class="p">}</span>
+</pre></div>
+
+
+<h3>Save Output Object</h3>
+<div class="highlight"><pre><span></span><span class="c1"># Define Output object.</span>
+model.list <span class="o">&lt;-</span> <span class="kt">vector</span><span class="p">(</span>mode <span class="o">=</span> <span class="s">&#39;list&#39;</span><span class="p">)</span>
+<span class="c1"># Save scaler object.</span>
+model.list<span class="o">$</span>scaler.obj <span class="o">&lt;-</span> scaler.obj
+<span class="c1"># Save fitted model.</span>
+model.list<span class="o">$</span>model.obj <span class="o">&lt;-</span> model.obj
+<span class="c1"># Save transformation function. </span>
+model.list<span class="o">$</span>GetNewPredictions <span class="o">&lt;-</span> GetNewPredictions
+
+<span class="kp">saveRDS</span><span class="p">(</span>object <span class="o">=</span> model.list<span class="p">,</span> file <span class="o">=</span> <span class="s">&#39;model_list.rds&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<h2>Write Plumber Script</h2>
+<p>This is the basic structure of a Plumber script. </p>
+<div class="highlight"><pre><span></span><span class="c1"># plumber.R</span>
+
+<span class="c1"># Read model data.</span>
+model.list <span class="o">&lt;-</span> <span class="kp">readRDS</span><span class="p">(</span>file <span class="o">=</span> <span class="s">&#39;model_list.rds&#39;</span><span class="p">)</span>
+
+<span class="c1">#* @param wt</span>
+<span class="c1">#* @param qsec</span>
+<span class="c1">#* @param am</span>
+<span class="c1">#* @get /predict</span>
+CalculatePrediction <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>wt<span class="p">,</span> qsec<span class="p">,</span> am<span class="p">){</span>
+
+  wt <span class="o">%&lt;&gt;%</span> <span class="kp">as.numeric</span>
+  qsec <span class="o">%&lt;&gt;%</span> <span class="kp">as.numeric</span>
+  am <span class="o">%&lt;&gt;%</span> <span class="kp">as.numeric</span>
+
+  X.new <span class="o">&lt;-</span> tibble<span class="p">(</span>wt <span class="o">=</span> wt<span class="p">,</span> qsec <span class="o">=</span> qsec<span class="p">,</span> am <span class="o">=</span> am<span class="p">)</span>
+
+  y.pred <span class="o">&lt;-</span> GetNewPredictions<span class="p">(</span>model <span class="o">=</span> model.obj<span class="p">,</span> transformer <span class="o">=</span> scaler.obj<span class="p">,</span> newdata <span class="o">=</span> X.new<span class="p">)</span>
+
+  <span class="kr">return</span><span class="p">(</span>y.pred<span class="p">)</span>
+
+<span class="p">}</span>
+</pre></div>
+
+
+<h2>Expose to API</h2>
+<p>To expose the model and get predictions we run:</p>
+<div class="highlight"><pre><span></span><span class="kp">setwd</span><span class="p">(</span>dir <span class="o">=</span> here<span class="o">::</span>here<span class="p">())</span>
+
+r <span class="o">&lt;-</span> plumb<span class="p">(</span>file <span class="o">=</span> <span class="s">&#39;plumber.R&#39;</span><span class="p">)</span>
+
+r<span class="o">$</span>run<span class="p">(</span>port <span class="o">=</span> <span class="m">8000</span><span class="p">)</span>
+</pre></div>
+
+
+<p>We can use a <code>GET</code> request to obtain predictions. </p>
+<div class="highlight"><pre><span></span>GET<span class="p">(</span>url <span class="o">=</span> <span class="s">&#39;http://localhost:8000/predict?am=1&amp;qsec=16.46&amp;wt=2.62&#39;</span><span class="p">)</span> <span class="o">%&gt;%</span> content
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>## [1] 22.4974
+</pre></div>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
