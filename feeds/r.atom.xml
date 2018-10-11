@@ -38,7 +38,7 @@ df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; &lt;span class="kp"&gt;head&lt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/content/images/intro_plumber_nb/unnamed-chunk-3-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="center" src="/images/intro_plumber_nb/unnamed-chunk-3-1.png"&gt;&lt;/p&gt;
 &lt;p&gt;From the visualization we see that the variables &lt;code&gt;wt&lt;/code&gt;, &lt;code&gt;qsec&lt;/code&gt; and &lt;code&gt;am&lt;/code&gt; could be good predictors.&lt;/p&gt;
 &lt;h2&gt;Define and Train Model&lt;/h2&gt;
 &lt;p&gt;We are going to use the &lt;a href="https://topepo.github.io/caret/index.html"&gt;Caret&lt;/a&gt; package.&lt;/p&gt;
@@ -123,7 +123,7 @@ RMSE&lt;span class="p"&gt;(&lt;/span&gt;pred &lt;span class="o"&gt;=&lt;/span&gt
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="center" src="/content/images/intro_plumber_nb/unnamed-chunk-9-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="center" src="/images/intro_plumber_nb/unnamed-chunk-9-1.png"&gt;&lt;/p&gt;
 &lt;h2&gt;Save Model&lt;/h2&gt;
 &lt;h3&gt;Data Pipeline&lt;/h3&gt;
 &lt;p&gt;We define a function which transforms and predicts for new incoming data. &lt;/p&gt;
