@@ -1,5 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-09-11T00:00:00+02:00</updated><entry><title>S^1-Equivariant Dirac operators on the Hopf Fibration.</title><link href="/hopf_fibration.html" rel="alternate"></link><published>2018-09-11T00:00:00+02:00</published><updated>2018-09-11T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-11:/hopf_fibration.html</id><summary type="html">&lt;p&gt;In this expository article I discuss the definition and basic propierties of the Hop fibration, with particular emphasis on Dirac-type operators induced, in the sense of Brüning and Heintze, by the Hodge-de Rham and spin-Dirac operators. In addition, we compute the Dirac-Schrödinger type operator introduced in my PhD thesis. (In preparation ...)&lt;/p&gt;</summary><content type="html">&lt;p&gt;In preparation ...&lt;/p&gt;</content><category term="mathematics"></category><category term="geometry"></category></entry><entry><title>Circle Fit</title><link href="/circle_fit.html" rel="alternate"></link><published>2018-09-09T00:00:00+02:00</published><updated>2018-09-09T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-09:/circle_fit.html</id><summary type="html">&lt;p&gt;We explore how to include an R notebook into a pelican post. As an example, we describe how to fit a circle onto a cloud of points.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In view of the &lt;a href="https://juanitorduz.github.io/rkernel.html"&gt;R Kernel Jupyter Notebook&lt;/a&gt; post, I wanted to explore how to include an &lt;a href="https://bookdown.org/yihui/rmarkdown/notebook.html"&gt;R Notebook&lt;/a&gt; directly into &lt;a href="https://blog.getpelican.com"&gt;Pelican&lt;/a&gt;. Fortunately, I found a great &lt;a href="http://michaeltoth.me/how-to-write-pelican-blog-posts-using-rmarkdown-knitr-20.html"&gt;post&lt;/a&gt; where an R function is provided in order to render R Notebooks into Pelican format. Works great! &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-10-12T00:00:00+02:00</updated><entry><title>Intro Plumber</title><link href="/intro_plumber.html" rel="alternate"></link><published>2018-10-12T00:00:00+02:00</published><updated>2018-10-12T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-10-12:/intro_plumber.html</id><summary type="html">&lt;p&gt;In this post we present a simple example of how to expose a prediction model to a web API using the Plumber package.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post we explore the basics of the &lt;a href="https://www.rplumber.io"&gt;Plumber&lt;/a&gt; package. Our aim is to ilustrate how to fit a \(L^2\)-regularized linear model and expose it to a web API so that we can request predictions. &lt;/p&gt;
+&lt;h2&gt;Prepare Notebook&lt;/h2&gt;
+&lt;p&gt;Let us load the necessary libraries. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;caret&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;httr&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;magrittr&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;plumber&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;tidyverse&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Load Data&lt;/h2&gt;
+&lt;p&gt;As a toy example we consider the &lt;code&gt;mtcars&lt;/code&gt; data set. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;df &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; mtcars &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; as_tibble&lt;span class="p"&gt;()&lt;/span&gt;
+
+df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; &lt;span class="kp"&gt;head&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;## # A tibble: 6 x 11
+##     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
+##   &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1  21       6   160   110  3.9   2.62  16.5     0     1     4     4
+## 2  21       6   160   110  3.9   2.88  17.0     0     1     4     4
+## 3  22.8     4   108    93  3.85  2.32  18.6     1     1     4     1
+## 4  21.4     6   258   110  3.08  3.22  19.4     1     0     3     1
+## 5  18.7     8   360   175  3.15  3.44  17.0     0     0     3     2
+## 6  18.1     6   225   105  2.76  3.46  20.2     1     0     3     1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We want to fit a simple linear model to predict the variable &lt;code&gt;mpg&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Warning:&lt;/em&gt; We are not interested to find the "best model". Better feature engineering and hyperparameter tunig is not developed here because it is not the main purpose. &lt;/p&gt;
+&lt;h2&gt;Correlation Plot&lt;/h2&gt;
+&lt;p&gt;For variable selection we consider a correlation plot. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; cor &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; corrplot&lt;span class="o"&gt;::&lt;/span&gt;corrplot&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="center" src="/content/images/intro_plumber_nb/unnamed-chunk-3-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;From the visualization we see that the variables &lt;code&gt;wt&lt;/code&gt;, &lt;code&gt;qsec&lt;/code&gt; and &lt;code&gt;am&lt;/code&gt; could be good predictors.&lt;/p&gt;
+&lt;h2&gt;Define and Train Model&lt;/h2&gt;
+&lt;p&gt;We are going to use the &lt;a href="https://topepo.github.io/caret/index.html"&gt;Caret&lt;/a&gt; package.&lt;/p&gt;
+&lt;h3&gt;Split Data&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;set.seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;seed &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Define observation matrix. &lt;/span&gt;
+X &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; select&lt;span class="p"&gt;(&lt;/span&gt;wt&lt;span class="p"&gt;,&lt;/span&gt; qsec&lt;span class="p"&gt;,&lt;/span&gt; am&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# Define target vector.&lt;/span&gt;
+y &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; df &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; pull&lt;span class="p"&gt;(&lt;/span&gt;mpg&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Define a partition of the data. &lt;/span&gt;
+partition &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; createDataPartition&lt;span class="p"&gt;(&lt;/span&gt;y &lt;span class="o"&gt;=&lt;/span&gt; y&lt;span class="p"&gt;,&lt;/span&gt; p &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0.75&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;FALSE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+
+&lt;span class="c1"&gt;# Split the data into a training and test set. &lt;/span&gt;
+df.train &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; df&lt;span class="p"&gt;[&lt;/span&gt;partition&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+df.test &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; df&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt; partition&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+
+X.train &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; df.train &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; select&lt;span class="p"&gt;(&lt;/span&gt;wt&lt;span class="p"&gt;,&lt;/span&gt; qsec&lt;span class="p"&gt;,&lt;/span&gt; am&lt;span class="p"&gt;)&lt;/span&gt;
+y.train &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; df.train &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; pull&lt;span class="p"&gt;(&lt;/span&gt;mpg&lt;span class="p"&gt;)&lt;/span&gt;
+
+X.test &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; df.test &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; select&lt;span class="p"&gt;(&lt;/span&gt;wt&lt;span class="p"&gt;,&lt;/span&gt; qsec&lt;span class="p"&gt;,&lt;/span&gt; am&lt;span class="p"&gt;)&lt;/span&gt;
+y.test &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; df.test &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; pull&lt;span class="p"&gt;(&lt;/span&gt;mpg&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Data Pre-Processing&lt;/h3&gt;
+&lt;p&gt;As we want to use a linear model, we neet to scale the variables. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Define scaler object. &lt;/span&gt;
+scaler.obj &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; preProcess&lt;span class="p"&gt;(&lt;/span&gt;x &lt;span class="o"&gt;=&lt;/span&gt; X.train&lt;span class="p"&gt;,&lt;/span&gt; method &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;center&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;scale&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Transform the data. &lt;/span&gt;
+X.train.scaled &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; predict&lt;span class="p"&gt;(&lt;/span&gt;object &lt;span class="o"&gt;=&lt;/span&gt; scaler.obj&lt;span class="p"&gt;,&lt;/span&gt; newdata &lt;span class="o"&gt;=&lt;/span&gt; X.train&lt;span class="p"&gt;)&lt;/span&gt;
+X.test.scaled &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; predict&lt;span class="p"&gt;(&lt;/span&gt;object &lt;span class="o"&gt;=&lt;/span&gt; scaler.obj&lt;span class="p"&gt;,&lt;/span&gt; newdata &lt;span class="o"&gt;=&lt;/span&gt; X.test&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Train Model&lt;/h3&gt;
+&lt;p&gt;We fit \(L^2\)-regularization linear model using a 3-fold cross-validation to tune the regularization hyperparameter. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;model.obj &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;  train&lt;span class="p"&gt;(&lt;/span&gt;x &lt;span class="o"&gt;=&lt;/span&gt; X.train.scaled&lt;span class="p"&gt;,&lt;/span&gt;
+                    y &lt;span class="o"&gt;=&lt;/span&gt; y.train&lt;span class="p"&gt;,&lt;/span&gt;
+                    method &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;ridge&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    trControl &lt;span class="o"&gt;=&lt;/span&gt; trainControl&lt;span class="p"&gt;(&lt;/span&gt;method &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;cv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; number &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; 
+                    metric &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;RMSE&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Model Evaluation&lt;/h3&gt;
+&lt;p&gt;Let us evaluate the model perforance. &lt;/p&gt;
+&lt;p&gt;On the training set:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;model.obj&lt;span class="o"&gt;$&lt;/span&gt;results &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; select&lt;span class="p"&gt;(&lt;/span&gt;RMSE&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;##       RMSE
+## 1 2.613844
+## 2 2.613700
+## 3 2.554912
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;On the test set:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;y.pred &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; predict&lt;span class="p"&gt;(&lt;/span&gt;model.obj&lt;span class="p"&gt;,&lt;/span&gt; newdata &lt;span class="o"&gt;=&lt;/span&gt; X.test.scaled&lt;span class="p"&gt;)&lt;/span&gt;
+
+RMSE&lt;span class="p"&gt;(&lt;/span&gt;pred &lt;span class="o"&gt;=&lt;/span&gt; y.pred&lt;span class="p"&gt;,&lt;/span&gt; obs &lt;span class="o"&gt;=&lt;/span&gt; y.test&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;## [1] 2.664047
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The model seems to be stable. &lt;/p&gt;
+&lt;h3&gt;Visualization&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;tibble&lt;span class="p"&gt;(&lt;/span&gt;y_test &lt;span class="o"&gt;=&lt;/span&gt; y.test&lt;span class="p"&gt;,&lt;/span&gt; y_pred &lt;span class="o"&gt;=&lt;/span&gt; y.pred&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
+  ggplot&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
+  theme_light&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
+  geom_point&lt;span class="p"&gt;(&lt;/span&gt;mapping &lt;span class="o"&gt;=&lt;/span&gt; aes&lt;span class="p"&gt;(&lt;/span&gt;x &lt;span class="o"&gt;=&lt;/span&gt; y_test&lt;span class="p"&gt;,&lt;/span&gt; y &lt;span class="o"&gt;=&lt;/span&gt; y_pred&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
+  geom_smooth&lt;span class="p"&gt;(&lt;/span&gt;mapping &lt;span class="o"&gt;=&lt;/span&gt; aes&lt;span class="p"&gt;(&lt;/span&gt;x &lt;span class="o"&gt;=&lt;/span&gt; y_test&lt;span class="p"&gt;,&lt;/span&gt; y &lt;span class="o"&gt;=&lt;/span&gt; y_pred&lt;span class="p"&gt;,&lt;/span&gt; colour &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;y_pred ~ y_test&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; method &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;lm&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; formula &lt;span class="o"&gt;=&lt;/span&gt; y &lt;span class="o"&gt;~&lt;/span&gt; x&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
+  geom_abline&lt;span class="p"&gt;(&lt;/span&gt;mapping &lt;span class="o"&gt;=&lt;/span&gt; aes&lt;span class="p"&gt;(&lt;/span&gt;slope &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; intercept &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; colour &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;y_pred = y_test&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; show.legend &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;TRUE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+  ggtitle&lt;span class="p"&gt;(&lt;/span&gt;label &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Model Evaluation&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="center" src="/content/images/intro_plumber_nb/unnamed-chunk-9-1.png"&gt;&lt;/p&gt;
+&lt;h2&gt;Save Model&lt;/h2&gt;
+&lt;h3&gt;Data Pipeline&lt;/h3&gt;
+&lt;p&gt;We define a function which transforms and predicts for new incoming data. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;GetNewPredictions &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;model&lt;span class="p"&gt;,&lt;/span&gt; transformer&lt;span class="p"&gt;,&lt;/span&gt; newdata&lt;span class="p"&gt;){&lt;/span&gt;
+
+  newdata.transformed &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; predict&lt;span class="p"&gt;(&lt;/span&gt;object &lt;span class="o"&gt;=&lt;/span&gt; transformer&lt;span class="p"&gt;,&lt;/span&gt; newdata &lt;span class="o"&gt;=&lt;/span&gt; newdata&lt;span class="p"&gt;)&lt;/span&gt;
+
+  new.predictions &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; predict&lt;span class="p"&gt;(&lt;/span&gt;object &lt;span class="o"&gt;=&lt;/span&gt; model&lt;span class="p"&gt;,&lt;/span&gt; newdata &lt;span class="o"&gt;=&lt;/span&gt; newdata.transformed&lt;span class="p"&gt;)&lt;/span&gt;
+
+  &lt;span class="kr"&gt;return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;new.predictions&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Save Output Object&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Define Output object.&lt;/span&gt;
+model.list &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;vector&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;mode &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;list&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# Save scaler object.&lt;/span&gt;
+model.list&lt;span class="o"&gt;$&lt;/span&gt;scaler.obj &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; scaler.obj
+&lt;span class="c1"&gt;# Save fitted model.&lt;/span&gt;
+model.list&lt;span class="o"&gt;$&lt;/span&gt;model.obj &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; model.obj
+&lt;span class="c1"&gt;# Save transformation function. &lt;/span&gt;
+model.list&lt;span class="o"&gt;$&lt;/span&gt;GetNewPredictions &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; GetNewPredictions
+
+&lt;span class="kp"&gt;saveRDS&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;object &lt;span class="o"&gt;=&lt;/span&gt; model.list&lt;span class="p"&gt;,&lt;/span&gt; file &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;model_list.rds&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Write Plumber Script&lt;/h2&gt;
+&lt;p&gt;This is the basic structure of a Plumber script. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# plumber.R&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Read model data.&lt;/span&gt;
+model.list &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;readRDS&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;file &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;model_list.rds&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;#* @param wt&lt;/span&gt;
+&lt;span class="c1"&gt;#* @param qsec&lt;/span&gt;
+&lt;span class="c1"&gt;#* @param am&lt;/span&gt;
+&lt;span class="c1"&gt;#* @get /predict&lt;/span&gt;
+CalculatePrediction &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;wt&lt;span class="p"&gt;,&lt;/span&gt; qsec&lt;span class="p"&gt;,&lt;/span&gt; am&lt;span class="p"&gt;){&lt;/span&gt;
+
+  wt &lt;span class="o"&gt;%&amp;lt;&amp;gt;%&lt;/span&gt; &lt;span class="kp"&gt;as.numeric&lt;/span&gt;
+  qsec &lt;span class="o"&gt;%&amp;lt;&amp;gt;%&lt;/span&gt; &lt;span class="kp"&gt;as.numeric&lt;/span&gt;
+  am &lt;span class="o"&gt;%&amp;lt;&amp;gt;%&lt;/span&gt; &lt;span class="kp"&gt;as.numeric&lt;/span&gt;
+
+  X.new &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; tibble&lt;span class="p"&gt;(&lt;/span&gt;wt &lt;span class="o"&gt;=&lt;/span&gt; wt&lt;span class="p"&gt;,&lt;/span&gt; qsec &lt;span class="o"&gt;=&lt;/span&gt; qsec&lt;span class="p"&gt;,&lt;/span&gt; am &lt;span class="o"&gt;=&lt;/span&gt; am&lt;span class="p"&gt;)&lt;/span&gt;
+
+  y.pred &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; GetNewPredictions&lt;span class="p"&gt;(&lt;/span&gt;model &lt;span class="o"&gt;=&lt;/span&gt; model.obj&lt;span class="p"&gt;,&lt;/span&gt; transformer &lt;span class="o"&gt;=&lt;/span&gt; scaler.obj&lt;span class="p"&gt;,&lt;/span&gt; newdata &lt;span class="o"&gt;=&lt;/span&gt; X.new&lt;span class="p"&gt;)&lt;/span&gt;
+
+  &lt;span class="kr"&gt;return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;y.pred&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Expose to API&lt;/h2&gt;
+&lt;p&gt;To expose the model and get predictions we run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;setwd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;dir &lt;span class="o"&gt;=&lt;/span&gt; here&lt;span class="o"&gt;::&lt;/span&gt;here&lt;span class="p"&gt;())&lt;/span&gt;
+
+r &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; plumb&lt;span class="p"&gt;(&lt;/span&gt;file &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;plumber.R&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+r&lt;span class="o"&gt;$&lt;/span&gt;run&lt;span class="p"&gt;(&lt;/span&gt;port &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;8000&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We can use a &lt;code&gt;GET&lt;/code&gt; request to obtain predictions. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;GET&lt;span class="p"&gt;(&lt;/span&gt;url &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://localhost:8000/predict?am=1&amp;amp;qsec=16.46&amp;amp;wt=2.62&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; content
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;## [1] 22.4974
+&lt;/pre&gt;&lt;/div&gt;</content><category term="r"></category><category term="api"></category><category term="machine learning"></category></entry><entry><title>S^1-Equivariant Dirac operators on the Hopf Fibration.</title><link href="/hopf_fibration.html" rel="alternate"></link><published>2018-09-11T00:00:00+02:00</published><updated>2018-09-11T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-11:/hopf_fibration.html</id><summary type="html">&lt;p&gt;In this expository article I discuss the definition and basic propierties of the Hop fibration, with particular emphasis on Dirac-type operators induced, in the sense of Brüning and Heintze, by the Hodge-de Rham and spin-Dirac operators. In addition, we compute the Dirac-Schrödinger type operator introduced in my PhD thesis. (In preparation ...)&lt;/p&gt;</summary><content type="html">&lt;p&gt;In preparation ...&lt;/p&gt;</content><category term="mathematics"></category><category term="geometry"></category></entry><entry><title>Circle Fit</title><link href="/circle_fit.html" rel="alternate"></link><published>2018-09-09T00:00:00+02:00</published><updated>2018-09-09T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-09-09:/circle_fit.html</id><summary type="html">&lt;p&gt;We explore how to include an R notebook into a pelican post. As an example, we describe how to fit a circle onto a cloud of points.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In view of the &lt;a href="https://juanitorduz.github.io/rkernel.html"&gt;R Kernel Jupyter Notebook&lt;/a&gt; post, I wanted to explore how to include an &lt;a href="https://bookdown.org/yihui/rmarkdown/notebook.html"&gt;R Notebook&lt;/a&gt; directly into &lt;a href="https://blog.getpelican.com"&gt;Pelican&lt;/a&gt;. Fortunately, I found a great &lt;a href="http://michaeltoth.me/how-to-write-pelican-blog-posts-using-rmarkdown-knitr-20.html"&gt;post&lt;/a&gt; where an R function is provided in order to render R Notebooks into Pelican format. Works great! &lt;/p&gt;
 &lt;p&gt;To play around with it, I wrote a simple R notebook which fits a circle to a cloud of points. &lt;/p&gt;
 &lt;h1&gt;Prepare the Notebook&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;tidyverse&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1960,7 +2157,7 @@ On my arrival to Berlin, I was lucky enough to have the opportunity to attend a 
 &lt;hr&gt;
 &lt;h1&gt;Acknowledgment&lt;/h1&gt;
 &lt;p&gt;The main motivation for writing this post is to acknowledge the effort of everyone that made these fantastic summer schools possible. In particular I would like to thank the organizing committee for investing so much time, energy and love into bringing top level research to Colombia. These events were a great motivation for me to get a PhD abroad, and I am sure that there are many cases similar to mine. &lt;/p&gt;
-&lt;p&gt;I hope these efforts, and in particular these series of summer school can continue for many years. &lt;/p&gt;</content><category term="mathematics"></category><category term="education"></category></entry><entry><title>PyData Berlin 2018: On Laplacian Eigenmaps for Dimensionality Reduction</title><link href="/laplacian_eigenmaps_dim_red.html" rel="alternate"></link><published>2018-07-08T00:00:00+02:00</published><updated>2018-07-08T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-07-08:/laplacian_eigenmaps_dim_red.html</id><summary type="html">&lt;p&gt;This post contains the slides and material from a talk I gave at PyData Berlin 2018. I presented the paper &lt;em&gt;Laplacian Eigenmaps for Dimensionality Reduction and Data Representation&lt;/em&gt; by &lt;a href="http://web.cse.ohio-state.edu/~belkin.8/"&gt;Mikhail Belkin&lt;/a&gt; and &lt;a href="http://people.cs.uchicago.edu/~niyogi/"&gt;Partha Niyogi&lt;/a&gt;.&lt;/p&gt;</summary><content type="html">&lt;p&gt;This summer I had the great oportunity to attend an give a talk at &lt;a href="https://pydata.org/berlin2018/"&gt;Pydata Berlin 2018&lt;/a&gt;. The topic of my talk was &lt;a href="https://pydata.org/berlin2018/schedule/presentation/33/"&gt;On Laplacian Eigenmaps for Dimensionality Reduction&lt;/a&gt;. During the &lt;em&gt;Unsupervised Learning &amp;amp; Visualization&lt;/em&gt; session Dr. Stefan Kühn presented a very interesting and visual talk on &lt;a href="https://pydata.org/berlin2018/schedule/presentation/55/"&gt;Manifold Learning and Dimensionality Reduction for Data Visualization and Feature Engineering&lt;/a&gt; and Dr. Evelyn Trautmann gave a nice application of spectral clustering in the context of &lt;a href="https://pydata.org/berlin2018/schedule/presentation/48/"&gt;Extracting relevant Metrics&lt;/a&gt;. During our talks, spectral methods and the &lt;a href="https://en.wikipedia.org/wiki/Laplacian_matrix"&gt;Graph Laplacian&lt;/a&gt; was the biggest intersection. This was an excelent oportunity to enhance the communication channels between pure math and its applications. &lt;/p&gt;
+&lt;p&gt;I hope these efforts, and in particular these series of summer school can continue for many years. &lt;/p&gt;</content><category term="mathematics"></category><category term="education"></category></entry><entry><title>PyData Berlin 2018: On Laplacian Eigenmaps for Dimensionality Reduction</title><link href="/laplacian_eigenmaps_dim_red.html" rel="alternate"></link><published>2018-07-08T00:00:00+02:00</published><updated>2018-07-08T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-07-08:/laplacian_eigenmaps_dim_red.html</id><summary type="html">&lt;p&gt;This post contains the slides and material from a talk I gave at PyData Berlin 2018. I presented the paper &lt;em&gt;Laplacian Eigenmaps for Dimensionality Reduction and Data Representation&lt;/em&gt; by &lt;a href="http://web.cse.ohio-state.edu/~belkin.8/"&gt;Mikhail Belkin&lt;/a&gt; and &lt;a href="http://people.cs.uchicago.edu/~niyogi/"&gt;Partha Niyogi&lt;/a&gt;.&lt;/p&gt;</summary><content type="html">&lt;p&gt;This summer I had the great oportunity to attend an give a talk at &lt;a href="https://pydata.org/berlin2018/"&gt;Pydata Berlin 2018&lt;/a&gt;. The topic of my talk was &lt;a href="https://pydata.org/berlin2018/schedule/presentation/33/"&gt;On Laplacian Eigenmaps for Dimensionality Reduction&lt;/a&gt;. During the &lt;em&gt;Unsupervised Learning &amp;amp; Visualization&lt;/em&gt; session Dr. Stefan Kühn presented a very interesting and visual talk on &lt;a href="https://pydata.org/berlin2018/schedule/presentation/55/"&gt;Manifold Learning and Dimensionality Reduction for Data Visualization and Feature Engineering&lt;/a&gt; and Dr. Evelyn Trautmann gave a nice application of spectral clustering (&lt;a href="http://www.kyb.mpg.de/fileadmin/user_upload/files/publications/attachments/Luxburg07_tutorial_4488%5b0%5d.pdf"&gt;here&lt;/a&gt; are some nice notes around this subject) in the context of &lt;a href="https://pydata.org/berlin2018/schedule/presentation/48/"&gt;Extracting relevant Metrics&lt;/a&gt;. During our talks, spectral methods and the &lt;a href="https://en.wikipedia.org/wiki/Laplacian_matrix"&gt;Graph Laplacian&lt;/a&gt; was the biggest intersection. This was an excelent oportunity to enhance the communication channels between pure math and its applications. &lt;/p&gt;
 &lt;p&gt;I want to acknowledge the organizers, volunteers and great speakers which made this conference possible.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
@@ -2963,10 +3160,10 @@ p_j(n)=
 
 
 
-&lt;div id="6118e8e6-d731-49f7-b1db-88ac75158029"&gt;&lt;/div&gt;
+&lt;div id="83b44b26-61ba-42a9-b30a-0cb74bec8cbf"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#6118e8e6-d731-49f7-b1db-88ac75158029');
+var element = $('#83b44b26-61ba-42a9-b30a-0cb74bec8cbf');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3788,10 +3985,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="a4893871-228c-48df-8537-08a16a3126ea"&gt;&lt;/div&gt;
+&lt;div id="dec0feea-3067-4d2a-ac52-78e81624c815"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#a4893871-228c-48df-8537-08a16a3126ea');
+var element = $('#dec0feea-3067-4d2a-ac52-78e81624c815');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -4663,10 +4860,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="63dfa3d7-3a52-4724-b6c7-c6ac46a78f38"&gt;&lt;/div&gt;
+&lt;div id="9d6d7e18-fe3d-4ce4-a917-814a98e8e15d"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#63dfa3d7-3a52-4724-b6c7-c6ac46a78f38');
+var element = $('#9d6d7e18-fe3d-4ce4-a917-814a98e8e15d');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -5480,10 +5677,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="34e9d47d-d8c5-4f36-bb61-53439e5a269f"&gt;&lt;/div&gt;
+&lt;div id="93d71064-3830-494b-a9b9-c66d8756c66b"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#34e9d47d-d8c5-4f36-bb61-53439e5a269f');
+var element = $('#93d71064-3830-494b-a9b9-c66d8756c66b');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -6459,10 +6656,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="c47916af-9092-454b-acec-ec2bfa263601"&gt;&lt;/div&gt;
+&lt;div id="db4bdf07-57ea-4fcd-b146-5869506f073c"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#c47916af-9092-454b-acec-ec2bfa263601');
+var element = $('#db4bdf07-57ea-4fcd-b146-5869506f073c');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
