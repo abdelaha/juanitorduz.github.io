@@ -59,7 +59,7 @@ For variable selection we consider a correlation plot.
 df %>% cor %>% corrplot::corrplot()
 ```
 
-![center](/content/images/intro_plumber_nb/unnamed-chunk-3-1.png)
+![center](/images/intro_plumber_nb/unnamed-chunk-3-1.png)
 
 From the visualization we see that the variables `wt`, `qsec` and `am` could be good predictors.
 
@@ -166,7 +166,7 @@ tibble(y_test = y.test, y_pred = y.pred) %>%
   ggtitle(label = 'Model Evaluation')
 ```
 
-![center](/content/images/intro_plumber_nb/unnamed-chunk-9-1.png)
+![center](/images/intro_plumber_nb/unnamed-chunk-9-1.png)
 
 ## Save Model
 

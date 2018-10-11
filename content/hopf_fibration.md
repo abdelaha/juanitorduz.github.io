@@ -1,6 +1,6 @@
 ---
 Title: S^1-Equivariant Dirac operators on the Hopf Fibration.
-Date: 2018-09-11
+Date: 2018-10-12
 Category: Geometry
 Tags: mathematics, geometry
 slug: hopf_fibration
