@@ -27,7 +27,7 @@
           init_mathjax();
           </script>
 
-  <title>  Intro Plumber | Dr. Juan Camilo Orduz
+  <title>  Introduction to R Plumber: Expose a Caret model to a web API. | Dr. Juan Camilo Orduz
 </title>
   <link rel="canonical" href="/intro_plumber.html">
 
@@ -80,7 +80,7 @@
 
   <div class="main">
     <div class="container">
-      <h1>  Intro Plumber
+      <h1>  Introduction to R Plumber: Expose a Caret model to a web API.
 </h1>
       <hr>
   <article class="article">
@@ -215,7 +215,7 @@ RMSE<span class="p">(</span>pred <span class="o">=</span> y.pred<span class="p">
 </pre></div>
 
 
-<p>The model seems to be stable. </p>
+<p>The model seems to be stable and there is no strong evidence of overfitting. </p>
 <h3>Visualization</h3>
 <div class="highlight"><pre><span></span>tibble<span class="p">(</span>y_test <span class="o">=</span> y.test<span class="p">,</span> y_pred <span class="o">=</span> y.pred<span class="p">)</span> <span class="o">%&gt;%</span> 
   ggplot<span class="p">()</span> <span class="o">+</span> 
@@ -276,10 +276,11 @@ CalculatePrediction <span class="o">&lt;-</span> <span class="kr">function</span
 
   X.new <span class="o">&lt;-</span> tibble<span class="p">(</span>wt <span class="o">=</span> wt<span class="p">,</span> qsec <span class="o">=</span> qsec<span class="p">,</span> am <span class="o">=</span> am<span class="p">)</span>
 
-  y.pred <span class="o">&lt;-</span> GetNewPredictions<span class="p">(</span>model <span class="o">=</span> model.obj<span class="p">,</span> transformer <span class="o">=</span> scaler.obj<span class="p">,</span> newdata <span class="o">=</span> X.new<span class="p">)</span>
+  y.pred <span class="o">&lt;-</span> model.list<span class="o">$</span>GetNewPredictions<span class="p">(</span>model <span class="o">=</span> model.list<span class="o">$</span>model.obj<span class="p">,</span> 
+                                         transformer <span class="o">=</span> model.list<span class="o">$</span>scaler.obj<span class="p">,</span> 
+                                         newdata <span class="o">=</span> X.new<span class="p">)</span>
 
   <span class="kr">return</span><span class="p">(</span>y.pred<span class="p">)</span>
-
 <span class="p">}</span>
 </pre></div>
 
