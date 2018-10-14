@@ -1,5 +1,5 @@
 ---
-Title: Intro Plumber
+Title: Introduction to R Plumber: Expose a Caret model to a web API.
 Date: 2018-10-12
 Category: R
 Tags: r, api, machine learning
@@ -151,7 +151,7 @@ RMSE(pred = y.pred, obs = y.test)
 ## [1] 2.664047
 ```
 
-The model seems to be stable. 
+The model seems to be stable and there is no strong evidence of overfitting. 
 
 ### Visualization
 
@@ -226,10 +226,11 @@ CalculatePrediction <- function(wt, qsec, am){
   
   X.new <- tibble(wt = wt, qsec = qsec, am = am)
   
-  y.pred <- GetNewPredictions(model = model.obj, transformer = scaler.obj, newdata = X.new)
+  y.pred <- model.list$GetNewPredictions(model = model.list$model.obj, 
+                                         transformer = model.list$scaler.obj, 
+                                         newdata = X.new)
   
   return(y.pred)
-  
 }
 ```
 

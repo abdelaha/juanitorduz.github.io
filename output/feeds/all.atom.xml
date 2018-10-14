@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-10-12T00:00:00+02:00</updated><entry><title>S^1-Equivariant Dirac operators on the Hopf Fibration.</title><link href="/hopf_fibration.html" rel="alternate"></link><published>2018-10-12T00:00:00+02:00</published><updated>2018-10-12T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-10-12:/hopf_fibration.html</id><summary type="html">&lt;p&gt;In this expository article I discuss the definition and basic propierties of the Hop fibration, with particular emphasis on Dirac-type operators induced, in the sense of Brüning and Heintze, by the Hodge-de Rham and spin-Dirac operators. In addition, we compute the Dirac-Schrödinger type operator introduced in my PhD thesis. (In preparation ...)&lt;/p&gt;</summary><content type="html">&lt;p&gt;In preparation ...&lt;/p&gt;</content><category term="mathematics"></category><category term="geometry"></category></entry><entry><title>Intro Plumber</title><link href="/intro_plumber.html" rel="alternate"></link><published>2018-10-12T00:00:00+02:00</published><updated>2018-10-12T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-10-12:/intro_plumber.html</id><summary type="html">&lt;p&gt;In this post we present a simple example of how to expose a prediction model to a web API using the Plumber package.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post we explore the basics of the &lt;a href="https://www.rplumber.io"&gt;Plumber&lt;/a&gt; package. Our aim is to ilustrate how to fit a \(L^2\)-regularized linear model and expose it to a web API so that we can request predictions. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-10-12T00:00:00+02:00</updated><entry><title>S^1-Equivariant Dirac operators on the Hopf Fibration.</title><link href="/hopf_fibration.html" rel="alternate"></link><published>2018-10-12T00:00:00+02:00</published><updated>2018-10-12T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-10-12:/hopf_fibration.html</id><summary type="html">&lt;p&gt;In this expository article I discuss the definition and basic propierties of the Hop fibration, with particular emphasis on Dirac-type operators induced, in the sense of Brüning and Heintze, by the Hodge-de Rham and spin-Dirac operators. In addition, we compute the Dirac-Schrödinger type operator introduced in my PhD thesis. (In preparation ...)&lt;/p&gt;</summary><content type="html">&lt;p&gt;In preparation ...&lt;/p&gt;</content><category term="mathematics"></category><category term="geometry"></category></entry><entry><title>Introduction to R Plumber: Expose a Caret model to a web API.</title><link href="/intro_plumber.html" rel="alternate"></link><published>2018-10-12T00:00:00+02:00</published><updated>2018-10-12T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-10-12:/intro_plumber.html</id><summary type="html">&lt;p&gt;In this post we present a simple example of how to expose a prediction model to a web API using the Plumber package.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post we explore the basics of the &lt;a href="https://www.rplumber.io"&gt;Plumber&lt;/a&gt; package. Our aim is to ilustrate how to fit a \(L^2\)-regularized linear model and expose it to a web API so that we can request predictions. &lt;/p&gt;
 &lt;h2&gt;Prepare Notebook&lt;/h2&gt;
 &lt;p&gt;Let us load the necessary libraries. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;caret&lt;span class="p"&gt;)&lt;/span&gt;
@@ -111,7 +111,7 @@ RMSE&lt;span class="p"&gt;(&lt;/span&gt;pred &lt;span class="o"&gt;=&lt;/span&gt
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;The model seems to be stable. &lt;/p&gt;
+&lt;p&gt;The model seems to be stable and there is no strong evidence of overfitting. &lt;/p&gt;
 &lt;h3&gt;Visualization&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;tibble&lt;span class="p"&gt;(&lt;/span&gt;y_test &lt;span class="o"&gt;=&lt;/span&gt; y.test&lt;span class="p"&gt;,&lt;/span&gt; y_pred &lt;span class="o"&gt;=&lt;/span&gt; y.pred&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;%&lt;/span&gt; 
   ggplot&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
@@ -172,10 +172,11 @@ CalculatePrediction &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class=
 
   X.new &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; tibble&lt;span class="p"&gt;(&lt;/span&gt;wt &lt;span class="o"&gt;=&lt;/span&gt; wt&lt;span class="p"&gt;,&lt;/span&gt; qsec &lt;span class="o"&gt;=&lt;/span&gt; qsec&lt;span class="p"&gt;,&lt;/span&gt; am &lt;span class="o"&gt;=&lt;/span&gt; am&lt;span class="p"&gt;)&lt;/span&gt;
 
-  y.pred &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; GetNewPredictions&lt;span class="p"&gt;(&lt;/span&gt;model &lt;span class="o"&gt;=&lt;/span&gt; model.obj&lt;span class="p"&gt;,&lt;/span&gt; transformer &lt;span class="o"&gt;=&lt;/span&gt; scaler.obj&lt;span class="p"&gt;,&lt;/span&gt; newdata &lt;span class="o"&gt;=&lt;/span&gt; X.new&lt;span class="p"&gt;)&lt;/span&gt;
+  y.pred &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; model.list&lt;span class="o"&gt;$&lt;/span&gt;GetNewPredictions&lt;span class="p"&gt;(&lt;/span&gt;model &lt;span class="o"&gt;=&lt;/span&gt; model.list&lt;span class="o"&gt;$&lt;/span&gt;model.obj&lt;span class="p"&gt;,&lt;/span&gt; 
+                                         transformer &lt;span class="o"&gt;=&lt;/span&gt; model.list&lt;span class="o"&gt;$&lt;/span&gt;scaler.obj&lt;span class="p"&gt;,&lt;/span&gt; 
+                                         newdata &lt;span class="o"&gt;=&lt;/span&gt; X.new&lt;span class="p"&gt;)&lt;/span&gt;
 
   &lt;span class="kr"&gt;return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;y.pred&lt;span class="p"&gt;)&lt;/span&gt;
-
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -3160,10 +3161,10 @@ p_j(n)=
 
 
 
-&lt;div id="9d2c6909-93fa-42db-932d-18c8ca52bd3f"&gt;&lt;/div&gt;
+&lt;div id="8639072d-476a-4958-a7f0-0696017dac4b"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#9d2c6909-93fa-42db-932d-18c8ca52bd3f');
+var element = $('#8639072d-476a-4958-a7f0-0696017dac4b');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3985,10 +3986,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="cc59cd60-fb65-4d41-af28-76287bb1a045"&gt;&lt;/div&gt;
+&lt;div id="ccde4238-16da-4c84-9a8a-b7e3a5a3ca14"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#cc59cd60-fb65-4d41-af28-76287bb1a045');
+var element = $('#ccde4238-16da-4c84-9a8a-b7e3a5a3ca14');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -4860,10 +4861,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="b78fc802-12cd-4cc5-a034-2f08ee5ed60f"&gt;&lt;/div&gt;
+&lt;div id="b02038a3-39af-423c-8941-231c33925d6d"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#b78fc802-12cd-4cc5-a034-2f08ee5ed60f');
+var element = $('#b02038a3-39af-423c-8941-231c33925d6d');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -5677,10 +5678,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="abda689c-eebd-47d1-89b5-e54ea8d78f8d"&gt;&lt;/div&gt;
+&lt;div id="d352af8f-abe6-4f5f-b06f-c7626a0aacac"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#abda689c-eebd-47d1-89b5-e54ea8d78f8d');
+var element = $('#d352af8f-abe6-4f5f-b06f-c7626a0aacac');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -6656,10 +6657,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="64cbe6eb-0d4c-4c16-a8cb-ff65f01179e8"&gt;&lt;/div&gt;
+&lt;div id="d4b07d60-bf93-4784-8078-ef026a6d7cd9"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#64cbe6eb-0d4c-4c16-a8cb-ff65f01179e8');
+var element = $('#d4b07d60-bf93-4784-8078-ef026a6d7cd9');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
