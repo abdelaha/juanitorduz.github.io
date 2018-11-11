@@ -12,5 +12,4 @@ In this post I want to present a some [notes]({filename}/documents/hopf_fibratio
 
 The following is an interesting animation of the Hopf fibration I found online:
 
-<iframe width="400" height="255" src="http://www.youtube.com/embed/CxTWEM6RnjA?rel=0" frameborder="0" allowfullscreen> </iframe>
-
+<iframe width="400" height="255" src="https://www.youtube.com/embed/CxTWEM6RnjA?rel=0" frameborder="0" allowfullscreen> </iframe>
