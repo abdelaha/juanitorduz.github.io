@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-11-11T00:00:00+01:00</updated><entry><title>S^1-Equivariant Dirac operators on the Hopf Fibration.</title><link href="/hopf_fibration.html" rel="alternate"></link><published>2018-11-11T00:00:00+01:00</published><updated>2018-11-11T00:00:00+01:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-11-11:/hopf_fibration.html</id><summary type="html">&lt;p&gt;In this expository article I discuss the definition and basic propierties of the Hopf fibration, with particular emphasis on Dirac-type operators induced, in the sense of Brüning and Heintze, by the Hodge-de Rham and spin-Dirac operators. In addition, we compute the Dirac-Schrödinger type operator introduced in my PhD thesis.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post I want to present a some &lt;a href="/documents/hopf_fibration.pdf"&gt;notes&lt;/a&gt; around the fundamentals of the &lt;a href="https://en.wikipedia.org/wiki/Hopf_fibration"&gt;Hopf fibration&lt;/a&gt; \(\pi: S^3 \longrightarrow S^2\) which I wrote during my PhD period at Humboldt Universität zu Berlin. First, I describe its definition and show that is a non-trivial map by computing its first &lt;a href="https://en.wikipedia.org/wiki/Chern_class"&gt;Chern class&lt;/a&gt;. Then I give a detailed treatment of the construction of two important Dirac-type operatos: the Hodge-de Rham and the spin-Dirac. As these two operators commute with the \(S^1\)-action, I describe how to push them down to \(S^2\) trough the orbit map \(\pi\) inspired in the work of Brüning and Heintze.  &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dr. Juan Camilo Orduz</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-11-11T00:00:00+01:00</updated><entry><title>S^1-Equivariant Dirac operators on the Hopf Fibration.</title><link href="/hopf_fibration.html" rel="alternate"></link><published>2018-11-11T00:00:00+01:00</published><updated>2018-11-11T00:00:00+01:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-11-11:/hopf_fibration.html</id><summary type="html">&lt;p&gt;In this expository article I discuss the definition and basic properties of the Hopf fibration, with particular emphasis on Dirac-type operators induced, in the sense of Brüning and Heintze, by the Hodge-de Rham and spin-Dirac operators. In addition, we compute the Dirac-Schrödinger type operator introduced in my PhD thesis.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post I want to present a some &lt;a href="/documents/hopf_fibration.pdf"&gt;notes&lt;/a&gt; around the fundamentals of the &lt;a href="https://en.wikipedia.org/wiki/Hopf_fibration"&gt;Hopf fibration&lt;/a&gt; \(\pi: S^3 \longrightarrow S^2\) which I wrote during my PhD period at Humboldt Universität zu Berlin. First, I describe its definition and show that is a non-trivial map by computing its first &lt;a href="https://en.wikipedia.org/wiki/Chern_class"&gt;Chern class&lt;/a&gt;. Then I give a detailed treatment of the construction of two important Dirac-type operatos: the Hodge-de Rham and the spin-Dirac. As these two operators commute with the \(S^1\)-action, I describe how to push them down to \(S^2\) trough the orbit map \(\pi\) inspired in the work of Brüning and Heintze.  &lt;/p&gt;
 &lt;p&gt;The following is an interesting animation of the Hopf fibration I found online:&lt;/p&gt;
 &lt;iframe width="400" height="255" src="https://www.youtube.com/embed/CxTWEM6RnjA?rel=0" frameborder="0" allowfullscreen&gt; &lt;/iframe&gt;</content><category term="mathematics"></category><category term="geometry"></category></entry><entry><title>Introduction to R Plumber: Expose a Caret model to a web API.</title><link href="/intro_plumber.html" rel="alternate"></link><published>2018-10-12T00:00:00+02:00</published><updated>2018-10-12T00:00:00+02:00</updated><author><name>Juan Camilo Orduz</name></author><id>tag:None,2018-10-12:/intro_plumber.html</id><summary type="html">&lt;p&gt;In this post we present a simple example of how to expose a prediction model to a web API using the Plumber package.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post we explore the basics of the &lt;a href="https://www.rplumber.io"&gt;Plumber&lt;/a&gt; package. Our aim is to ilustrate how to fit a \(L^2\)-regularized linear model and expose it to a web API so that we can request predictions. &lt;/p&gt;
 &lt;h2&gt;Prepare Notebook&lt;/h2&gt;
@@ -3163,10 +3163,10 @@ p_j(n)=
 
 
 
-&lt;div id="13262ba3-6388-4208-ba63-6dfd24e7eaaf"&gt;&lt;/div&gt;
+&lt;div id="d1221296-11f4-4dcb-b974-59c1a28acfa1"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#13262ba3-6388-4208-ba63-6dfd24e7eaaf');
+var element = $('#d1221296-11f4-4dcb-b974-59c1a28acfa1');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -3988,10 +3988,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="cd560f51-c748-44c0-a41b-f4b766d37a46"&gt;&lt;/div&gt;
+&lt;div id="29ddc8d4-4944-4138-9b05-2156c18810ca"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#cd560f51-c748-44c0-a41b-f4b766d37a46');
+var element = $('#29ddc8d4-4944-4138-9b05-2156c18810ca');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -4863,10 +4863,10 @@ p_j := \lim_{n\rightarrow \infty}p_j(n) = e^{-1} \approx 0.3678794
 
 
 
-&lt;div id="bcf81ba9-2fa0-4434-a9e3-2970eca39916"&gt;&lt;/div&gt;
+&lt;div id="f218b706-2f9a-46ad-bc46-d95e3ac272ff"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#bcf81ba9-2fa0-4434-a9e3-2970eca39916');
+var element = $('#f218b706-2f9a-46ad-bc46-d95e3ac272ff');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -5680,10 +5680,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="d4b5a54a-786c-44c6-83b3-76a954338a70"&gt;&lt;/div&gt;
+&lt;div id="5354f4fe-971a-4cb8-adf2-80cf3df4f7a6"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#d4b5a54a-786c-44c6-83b3-76a954338a70');
+var element = $('#5354f4fe-971a-4cb8-adf2-80cf3df4f7a6');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -6659,10 +6659,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-&lt;div id="b8685719-ce9b-4166-a66e-12ce663efc8a"&gt;&lt;/div&gt;
+&lt;div id="177a08a4-c2c2-410a-8a18-e7f84f6c508d"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#b8685719-ce9b-4166-a66e-12ce663efc8a');
+var element = $('#177a08a4-c2c2-410a-8a18-e7f84f6c508d');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
